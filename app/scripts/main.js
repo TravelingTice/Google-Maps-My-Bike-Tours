@@ -2,10 +2,11 @@ let map; // Global variables map
 // Props markers in markers.json must have: title, location, description, date, type.
 // Props it can have: img, links (array of links), rideData, youtube.
 // The lines object contains all the trips (lines) and those contain all the markers.
-let lines = {
+const lines = {
+  none: [],
+  // Add your lines here: LINENAME: [];
   EUp1: [],
-  EUp2: [],
-  none: []
+  EUp2: []
 };
 // This one is to make sure our map is loaded, and the markers don't get redrawn when you drag around the map.
 let mapLoaded = false;
@@ -39,28 +40,30 @@ function makeMarkers(locations) {
     const img = location.img ? location.img : null;
     const rideData = location.rideData ? location.rideData : null;
     const icon = location.icon ? 'images/' + location.icon : null;
+    const line = location.line ? location.line : 'none';
     // Create marker object
     const marker = new google.maps.Marker({
       map: null,
       animation: google.maps.Animation.DROP,
       id: i,
-      icon: icon,
       // Assign props all locations have
       position: location.location,
       title: location.title,
       date: location.date,
       description: location.description,
-      line: location.line,
       // Optional props
       youtube: youtube,
       img: img,
       rideData: rideData,
-      links: links
+      links: links,
+      icon: icon,
+      line: line
     });
     // Push all markers to appropriate array
     if (marker.line === 'none') {
       lines.none.push(marker);
     }
+    // Add your line in the appropriate syntax like the above. 'none' should be the name of your line.
     if (marker.line === 'EUp1') {
       lines.EUp1.push(marker);
     }
