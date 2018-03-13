@@ -1,0 +1,84 @@
+html, body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+  .infowindow {
+    overflow: hidden;
+    font-family: 'Roboto',Helvetica,Arial,Lucida,sans-serif;
+    .heading {
+      #logo {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        top: 4px;
+      }
+      h1 {
+        position: relative;
+        display: inline;
+        left: 10px;
+        font-size: 24px;
+        margin: 2px;
+      }
+    }
+    .main-infowindow-content {
+      margin-top: 5px;
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 14px;
+      font-weight: 500;
+      .description {
+        width: 180px;
+        p:nth-child(1) {
+          margin: 7px 0 3px;
+          font-size: 12px;
+          font-weight: 400;
+        }
+        p:nth-child(2) {
+          margin: 0 5px 0 0;
+          padding-top: 7px;
+          color: #111;
+          font-weight: 500;
+          word-wrap: break-word;
+          border-top: 2px solid #517cb5;
+        }
+        .links a {
+          font-size: 12px;
+          text-decoration: none;
+          color: blue;
+          line-height: 1.5em;
+        }
+        .links a:hover {
+          color: #51b568;
+        }
+        .rideData a {
+          text-decoration: none;
+          color: red;
+        }
+        .rideData, .links {
+          margin: 10px 5px 0 0;
+          padding: 4px 0;
+          border-top: 2px solid #298771;
+          p {
+            font-weight: 500;
+            font-size: 14px;
+          }
+        }
+      }
+      img {
+        max-width: 300px;
+        max-height: 200px;
+        margin: 7px 0 7px 5px;
+      }
+      iframe {
+        margin: 10px 0 5px 5px;
+      }
+    }
+  }
+}
