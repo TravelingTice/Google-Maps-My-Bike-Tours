@@ -44,7 +44,7 @@ To run the application:
 
 **The markers are gonna be appearing in order, so make sure yours are in the order you want them to appear on the screen**
 
-## Extra properties
+### Extra properties
 - `img`: Name of image file in `images/` (**Don't put 'images/' in value,**)(**Do include the extention**)
 - `youtube`: A string of characters positioned: https://www.youtube.com/watch?v=AT_THIS_PART&... of the Youtube Url (to create iframe a different URL is used, but only those characters which are unique to each video is used.)
 - `rideData`: A link to the page where you can see the riding data for that day (I use Strava). Displayed as a link with name: 'View ride data'.
@@ -65,10 +65,30 @@ To run the application:
 - `icon`: Name of image file in `images/` (**Don't put 'images/' in value,**)(**Do include the extention**) that will be the icon of the marker. (Default dimensions of marker icon: 26X42)
 - `line`: This is used to tie the markers with the same value of this property together to create a line. The name you give this prop you'll also have to adjust in `main.js` (see more at [Add a Line](#add-a-line)).
 
-## Add Photos
+## Other Customizations
+
+### Change Focus of Map
+By default, the map is focused on a particular part of the world. To adjust the center of the map and zoom level:
+In `scripts/main.js`:
+```javascript
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: { lat: 53.661212, lng: 10.898780 },
+    zoom: 5
+  });
+  getMarkers();
+}
+```
+Change lat and lngs of `center` which is the center point.
+Change `zoom` number to zoom in/out (the higher, the more zoomed-in (max 21))
+
+### Add Photos
 Add all of the necessary photos in `images/`. These might include photos used inside of info-windows or marker icons.
 
-## Add a Line
+### Add Logo
+If you want to add a logo to your info-window (will appear left of title), adjust in `scripts/main.js` where it says `const logo = 'LogoSmall.png'` Rename the name in quotes to your logo.
+
+### Add a Line
 To add a line when you have a new trip or route:
 1. In `scripts/markers.json`: Add the property of `line` to all of the markers that need to be on this line.
 2. In `scripts/main.js`:
@@ -83,10 +103,10 @@ To add a line when you have a new trip or route:
 
 If you've done everything right, the two points should now be connected!
 
-## Customize Colors
+### Customize Colors
 In `styles/main.scss` you can see at the top are 5 variables. These five describe the color used in these area's (all in the info-window). You can use custom hex-decimals to replace the hex-decimals there to have custom colors for these places.
 
-## The Animations
+### The Animations
 When you come to the point you have quite a few lines and markers you can probably see that your markers in a particular route are being spawn one by one and the line will be drawn when all markers are placed for each route. This is why each marker needs the information about in which `line` it is and why they need to be in order. It makes it a little harder to add markers, but it makes for better customizability.
 
 ## Features that might be added in the future:

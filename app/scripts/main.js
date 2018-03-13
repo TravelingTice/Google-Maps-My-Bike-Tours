@@ -1,6 +1,3 @@
-let map; // Global variables map
-// Props markers in markers.json must have: title, location, description, date, type.
-// Props it can have: img, links (array of links), rideData, youtube.
 // The lines object contains all the trips (lines) and those contain all the markers.
 const lines = {
   none: [],
@@ -8,8 +5,13 @@ const lines = {
   EUp1: [],
   EUp2: []
 };
-// This one is to make sure our map is loaded, and the markers don't get redrawn when you drag around the map.
+
+const logo = 'LogoSmall.png' // Put name of your logo here
+
+let map; // Global variables map
+// Status of the map
 let mapLoaded = false;
+
 // Map gets initialized
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
@@ -132,7 +134,7 @@ function populateInfoWindow(marker, infowindow) {
 
 // Return html that is content of our infowindow
 function generateHtmlInfowindow(marker) {
-  let html = `<div class="infowindow"><div class="heading"><img id="logo" src="images/LogoSmall.png" alt="TravelingTice"><h1>${marker.title}</h1></div><div class="main-infowindow-content"><div class="description"><p class="date">${marker.date}</p><p>${marker.description}</p>`;
+  let html = `<div class="infowindow"><div class="heading"><img id="logo" src="images/${logo}" alt="TravelingTice"><h1>${marker.title}</h1></div><div class="main-infowindow-content"><div class="description"><p class="date">${marker.date}</p><p>${marker.description}</p>`;
   // Check if marker has img, yt etc.. And generate html accordingly
   if (marker.links) {
     html += `<div class="links"><p>${marker.links.title}</p>`;
