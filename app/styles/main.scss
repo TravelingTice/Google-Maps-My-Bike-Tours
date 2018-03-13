@@ -1,3 +1,10 @@
+// Customize theme colors:
+$top-border: #517cb5;
+$bottom-border: #298771;
+$links: #0000ff;
+$links-hover: #51b568;
+$ride-data: #ff0000;
+
 html, body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   margin: 0;
@@ -46,25 +53,25 @@ html, body {
           color: #111;
           font-weight: 500;
           word-wrap: break-word;
-          border-top: 2px solid #517cb5;
+          border-top: 2px solid $top-border;
         }
         .links a {
           font-size: 12px;
           text-decoration: none;
-          color: blue;
+          color: $links;
           line-height: 1.5em;
         }
         .links a:hover {
-          color: #51b568;
+          color: $links-hover;
         }
         .rideData a {
           text-decoration: none;
-          color: red;
+          color: $ride-data;
         }
         .rideData, .links {
           margin: 10px 5px 0 0;
           padding: 4px 0;
-          border-top: 2px solid #298771;
+          border-top: 2px solid $bottom-border;
           p {
             font-weight: 500;
             font-size: 14px;
