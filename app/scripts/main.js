@@ -2,7 +2,7 @@
 const lines = {
   none: [],
   country: [],
-  travelingtice: [],
+  imhere: [],
   // Add your lines here: LINENAME: [];
   EUp1: [],
   EUp2: []
@@ -43,12 +43,13 @@ function makeMarkers(locations) {
     const rideData = location.rideData ? location.rideData : null;
     const icon = location.icon ? 'images/' + location.icon : null;
     const line = location.line ? location.line : 'none';
+    const zIndex = location.line === 'ImHere' ? 1000 : 1;
     // Custom: country points don't have the drop animation.
     const animation = location.line === 'country' ? null : google.maps.Animation.DROP;
     // Create marker object
     const marker = new google.maps.Marker({
       map: null,
-      animation: animation,
+      animation,
       id: i,
       // Assign props all locations have
       position: location.location,
@@ -56,12 +57,13 @@ function makeMarkers(locations) {
       date: location.date,
       description: location.description,
       // Optional props
-      youtube: youtube,
-      img: img,
-      rideData: rideData,
-      links: links,
-      icon: icon,
-      line: line
+      youtube,
+      img,
+      rideData,
+      links,
+      icon,
+      zIndex,
+      line
     });
     // Push all markers to appropriate array
     if (marker.line === 'none') {
@@ -70,8 +72,8 @@ function makeMarkers(locations) {
     if (marker.line === 'country') {
       lines.country.push(marker);
     }
-    if (marker.line === 'TravelingTice') {
-      lines.travelingtice.push(marker);
+    if (marker.line === 'ImHere') {
+      lines.imhere.push(marker);
     }
     // Add your line in the appropriate syntax like the above. 'none' should be the name of your line.
     if (marker.line === 'EUp1') {
@@ -119,7 +121,7 @@ function openMarkers() {
           default:
             interval = 100;
         }
-        if (line != 'travelingtice') {
+        if (line != 'imhere') {
           openMarkerArray(markerArray, 0, interval, line, 1000);
         }
       }
@@ -132,10 +134,10 @@ function openMarkers() {
 // The 'I'm Here' marker will be spawned last
 function openTiceMarker (interval) {
   for (const line in lines) {
-    if (line == 'travelingtice') {
-      const TravelingTiceMarker = lines[line];
-      TravelingTiceMarker[0].setZIndex(100);
-      openMarkerArray(TravelingTiceMarker, 0, interval, line);
+    if (line == 'imhere') {
+      const ImHereMarker = lines[line];
+      ImHereMarker[0].setZIndex(100);
+      openMarkerArray(ImHereMarker, 0, interval, line);
     }
   }
 }
@@ -156,7 +158,7 @@ function openMarkerArray(array, i, interval, line) {
         case 'country':
           // Open no line
           break;
-        case 'travelingtice':
+        case 'imhere':
           // Open no line
           break;
         default:
@@ -197,7 +199,7 @@ function populateInfoWindow(marker, infowindow) {
 
 // Return html that is content of our infowindow
 function generateHtmlInfowindow(marker) {
-  let html = `<div class="infowindow"><div class="heading"><img id="icon" src="${marker.icon}" alt="TravelingTice"><h1>${marker.title}</h1></div><div class="main-infowindow-content"><div class="description"><p class="date">${marker.date}</p><p>${marker.description}</p>`;
+  let html = `<div class="infowindow"><div class="heading"><img id="icon" src="${marker.icon}" alt="marker"><h1>${marker.title}</h1></div><div class="main-infowindow-content"><div class="description"><p class="date">${marker.date}</p><p>${marker.description}</p>`;
   // Check if marker has img, yt etc.. And generate html accordingly
   if (marker.links) {
     html += `<div class="links"><p>${marker.links.title}</p>`;

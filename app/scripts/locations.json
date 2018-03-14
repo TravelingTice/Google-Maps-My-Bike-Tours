@@ -8,7 +8,7 @@
     "description": "This is where I am at the moment. At home preparing to get on the road again!",
     "date": "March 14, 2018",
     "icon": "ImHere.png",
-    "line": "TravelingTice"
+    "line": "ImHere"
   },
   {
     "title": "It's On!",
@@ -1110,16 +1110,5 @@
     "youtube": "YnP3G0zn1Yk",
     "icon": "EUp1vid.png",
     "line": "EUp1"
-  },
-  {
-    "title": "I'M HERE!",
-    "location": {
-      "lat": 52.191081,
-      "lng": 4.441863
-    },
-    "description": "This is where I am at the moment. At home preparing to get on the road again!",
-    "date": "March 14, 2018",
-    "icon": "ImHere.png",
-    "line": "TravelingTice"
   }
 ]
