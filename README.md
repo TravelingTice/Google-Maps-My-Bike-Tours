@@ -100,6 +100,10 @@ To add a line when you have a new trip or route:
 
 If you've done everything right, the two points should now be connected!
 
+### I'm Here!
+There is one more line type: 'ImHere'. This one is special because this is a marker with no lines to it and it will get spawn when all of the other markers are spawn. This means that this one will draw some extra focus and it is meant to be used as an "I'm Here" kind of marker.
+Give your "I'm Here"-marker's `line` property the value "ImHere" and this will be your "I'm Here"-marker.
+
 ### Customize Colors
 In `styles/main.scss` you can see at the top are 5 variables. These five describe the color used in these area's (all in the info-window). You can use custom hex-decimals to replace the hex-decimals there to have custom colors for these places.
 
@@ -107,12 +111,12 @@ In `styles/main.scss` you can see at the top are 5 variables. These five describ
 When you come to the point you have quite a few lines and markers you can probably see that your markers in a particular route are being spawn one by one and the line will be drawn when all markers are placed for each route. This is why each marker needs the information about in which `line` it is and why they need to be in order. It makes it a little harder to add markers, but it makes for better customizability.
 
 ## Code Structure
-| Map is initialized in `initMap()`.
-| getMarkers fetches `locations.json`, pushes data to `locations` array.
-| `makeMarkers(locations)` makes marker of each location.
-|\ `click` ->
-|| `populateInfoWindow(marker, infowindow)` opens `infowindow` on `marker`.
-|| `generateHtmlInfowindow(marker)` generates HTML for info-window of `marker`.
+| Map is initialized in `initMap()`.<br>
+| getMarkers fetches `locations.json`, pushes data to `locations` array.<br>
+| `makeMarkers(locations)` makes marker of each location.<br>
+|\ `click` -> <br>
+| | `populateInfoWindow(marker, infowindow)` opens `infowindow` on `marker`.<br>
+| | `generateHtmlInfowindow(marker)` generates HTML for info-window of `marker`.<br>
 | `openMarkers()` evaluates the interval for each array of markers (line)
 ## Features that might be added in the future:
 - A screen where you can make each marker (instead of directly in locations.json)
