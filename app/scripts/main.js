@@ -43,7 +43,7 @@ function makeMarkers(locations) {
     const rideData = location.rideData ? location.rideData : null;
     const icon = location.icon ? 'images/' + location.icon : null;
     const line = location.line ? location.line : 'none';
-    const zIndex = location.line === 'ImHere' ? 1000 : 1;
+    const zIndex = location.zIndex ? location.zIndex : 1;
     // Custom: country points don't have the drop animation.
     const animation = location.line === 'country' ? null : google.maps.Animation.DROP;
     // Create marker object
@@ -125,7 +125,7 @@ function openMarkers() {
           openMarkerArray(markerArray, 0, interval, line, 1000);
         }
       }
-      interval = interval * longestArray.length + 200;
+      interval = interval * longestArray.length + 1000;
       openImHereMarker(interval);
       mapLoaded = true;
   }

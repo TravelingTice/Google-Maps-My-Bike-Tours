@@ -8,6 +8,7 @@
     "description": "This is where I am at the moment. At home preparing to get on the road again!",
     "date": "March 14, 2018",
     "icon": "ImHere.png",
+    "zIndex": 10,
     "line": "ImHere"
   },
   {
@@ -97,7 +98,8 @@
     "description": "I take a day off to explore the city of Bremen and do some other things. I go to an electronic store, look at some legos and buy some pants. Chinese food in the evening.",
     "date": "Sep 8, 2017",
     "youtube": "UkEjLPXC7Uc",
-    "icon": "EUp1vid.png",
+    "icon": "EUp1H.png",
+    "zIndex": 5,
     "line": "EUp1"
   },
   {
@@ -136,7 +138,8 @@
     "date": "September 11, 2017",
     "rideData": "https://www.strava.com/activities/1179491411",
     "youtube": "jsMSHM7IkwM",
-    "icon": "EUp1vid.png",
+    "icon": "EUp1H.png",
+    "zIndex": 5,
     "line": "EUp1"
   },
   {
@@ -239,7 +242,8 @@
     "description": "A great day exploring the beautiful city of Copenhagen, Denmark!",
     "date": "September 19, 2017",
     "youtube": "EF_4ZZ5l8-0",
-    "icon": "EUp1vid.png",
+    "icon": "EUp1H.png",
+    "zIndex": 5,
     "line": "EUp1"
   },
   {
@@ -395,7 +399,8 @@
         }]
     },
     "youtube": "v50chEh02fw",
-    "icon": "EUp1vid.png",
+    "icon": "EUp1H.png",
+    "zIndex": 5,
     "line": "EUp1"
   },
   {
@@ -548,7 +553,8 @@
     "description": "This day was a day full of exploring all the beautiful things there are to do in Bergen, Norway!",
     "date": "October 19, 2017",
     "youtube": "wGUEsm7tiPM",
-    "icon": "EUp1vid.png",
+    "icon": "EUp1H.png",
+    "zIndex": 5,
     "line": "EUp1"
   },
   {
@@ -730,7 +736,8 @@
         }]
     },
     "youtube": "DDteAqtoIlY",
-    "icon": "EUp1vid.png",
+    "icon": "EUp1H.png",
+    "zIndex": 5,
     "line": "EUp1"
   },
   {
@@ -848,7 +855,8 @@
     "date": "November 8, 2017",
     "rideData": "https://www.strava.com/activities/1267863835",
     "youtube": "yXLw0KZQMko",
-    "icon": "EUp1vid.png",
+    "icon": "EUp1H.png",
+    "zIndex": 5,
     "line": "EUp1"
   },
   {
@@ -861,7 +869,8 @@
     "date": "November 10, 2017",
     "rideData": "https://www.strava.com/activities/1270770399",
     "youtube": "zEQIDIZ8xUY",
-    "icon": "EUp1vid.png",
+    "icon": "EUp1H.png",
+    "zIndex": 5,
     "line": "EUp1"
   },
   {
@@ -916,7 +925,8 @@
         }]
     },
     "youtube": "slMcn73WKPE",
-    "icon": "EUp1vid.png",
+    "icon": "EUp1H.png",
+    "zIndex": 5,
     "line": "EUp1"
   },
   {
@@ -1010,7 +1020,8 @@
     "date": "November 17, 2017",
     "rideData": "https://www.strava.com/activities/1292043674",
     "youtube": "_aBsrVvL8jY",
-    "icon": "EUp1vid.png",
+    "icon": "EUp1H.png",
+    "zIndex": 5,
     "line": "EUp1"
   },
   {
@@ -1022,7 +1033,8 @@
     "description": "Coincidentally it was Latvia Independence Day right when I was there! So I went and celebrated the National Day of a country I barely knew something about. It was quite interesting.",
     "date": "November 18, 2017",
     "youtube": "9lt43_2-XrY",
-    "icon": "EUp1vid.png",
+    "icon": "Finish.png",
+    "zIndex": 7,
     "line": "EUp1"
   },
   {
@@ -1034,8 +1046,8 @@
     "description": "Luckily there was place for my bicycle on the bus to Vilnius. From there I took a nightly bus to Warsaw, where I arrived at 6 AM the next morning.",
     "date": "November 20, 2017",
     "youtube": "ginz41VxIlg",
-    "icon": "EUp1vid.png",
-    "line": "EUp1"
+    "icon": "VisitedVid.png",
+    "line": "none"
   },
   {
     "title": "Exploring Warsaw, Poland!",
@@ -1053,8 +1065,8 @@
         }]
     },
     "youtube": "1PVwwM_PJ3s",
-    "icon": "EUp1vid.png",
-    "line": "EUp1"
+    "icon": "VisitedVid.png",
+    "line": "none"
   },
   {
     "title": "Visiting the Polish War Uprising Museum!",
@@ -1072,8 +1084,8 @@
         }]
     },
     "youtube": "I1FpVi10NSM",
-    "icon": "EUp1vid.png",
-    "line": "EUp1"
+    "icon": "VisitedVid.png",
+    "line": "none"
   },
   {
     "title": "I RECOGNIZE THIS!",
@@ -1084,8 +1096,8 @@
     "description": "Took a train from Warsaw, to Hannover. Due to some problems I had a layover in the city of Magdeburg, where I had been a few years ago.",
     "date": "November 23, 2017",
     "youtube": "Xp1IKfVeLDc",
-    "icon": "EUp1vid.png",
-    "line": "EUp1"
+    "icon": "VisitedVid.png",
+    "line": "none"
   },
   {
     "title": "THE LAST SIGHTSEEING PLACE!",
@@ -1096,19 +1108,19 @@
     "description": "Felt good to be back in Germany! Explored the city of Hanover for a little bit and realised this was gonna be the last place to sightsee on this line.",
     "date": "November 24, 2017",
     "youtube": "jlF1n-73Ajc",
-    "icon": "EUp1vid.png",
-    "line": "EUp1"
+    "icon": "VisitedVid.png",
+    "line": "none"
   },
   {
     "title": "BACK HOME",
     "location": {
-      "lat": 52.188979,
-      "lng": 4.431191
+      "lat": 52.373122,
+      "lng": 9.221643
     },
     "description": "My friend picked me up in Hanover and together we drove back to my home town: Rijnsburg. The trip is over, but next year I'm gonna be back at it again!",
     "date": "November 25, 2017",
     "youtube": "YnP3G0zn1Yk",
-    "icon": "EUp1vid.png",
-    "line": "EUp1"
+    "icon": "VisitedVid.png",
+    "line": "none"
   }
 ]

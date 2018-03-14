@@ -56,13 +56,16 @@ html, body {
           border-top: 2px solid $top-border;
         }
         .links a {
-          font-size: 12px;
+          font-size: 13px;
           text-decoration: none;
           color: $links;
           line-height: 1.5em;
         }
         .links a:hover {
           color: $links-hover;
+        }
+        .links a:before {
+          content: "> ";
         }
         .rideData a {
           text-decoration: none;
