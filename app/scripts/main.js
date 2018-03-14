@@ -43,12 +43,13 @@ function makeMarkers(locations) {
     const rideData = location.rideData ? location.rideData : null;
     const icon = location.icon ? 'images/' + location.icon : null;
     const line = location.line ? location.line : 'none';
+    const zIndex = location.line === 'TravelingTice' ? location.zIndex : 1;
     // Custom: country points don't have the drop animation.
     const animation = location.line === 'country' ? null : google.maps.Animation.DROP;
     // Create marker object
     const marker = new google.maps.Marker({
       map: null,
-      animation: animation,
+      animation,
       id: i,
       // Assign props all locations have
       position: location.location,
@@ -56,12 +57,13 @@ function makeMarkers(locations) {
       date: location.date,
       description: location.description,
       // Optional props
-      youtube: youtube,
-      img: img,
-      rideData: rideData,
-      links: links,
-      icon: icon,
-      line: line
+      youtube,
+      img,
+      rideData,
+      links,
+      icon,
+      zIndex,
+      line
     });
     // Push all markers to appropriate array
     if (marker.line === 'none') {
@@ -99,14 +101,9 @@ function makeMarkers(locations) {
 function openMarkers() {
   // Go through all marker arrays and filter them so right animation is applied.
   if (!mapLoaded) {
-    let longestArray = [];
     let interval;
       for (const line in lines) {
         const markerArray = lines[line];
-        // Set markerArray to longest if this markerArray is longest
-        if (markerArray.length >= longestArray.length) {
-          longestArray = markerArray;
-        }
         // Choose interval for our arrays
         switch (line) {
           case 'none':
@@ -119,24 +116,9 @@ function openMarkers() {
           default:
             interval = 100;
         }
-        if (line != 'travelingtice') {
-          openMarkerArray(markerArray, 0, interval, line, 1000);
-        }
+        openMarkerArray(markerArray, 0, interval, line);
       }
-      interval = interval * longestArray.length + 100;
-      openTiceMarker(interval);
       mapLoaded = true;
-  }
-}
-
-// The 'I'm Here' marker will be spawned last
-function openTiceMarker (interval) {
-  for (const line in lines) {
-    if (line == 'travelingtice') {
-      const TravelingTiceMarker = lines[line];
-      TravelingTiceMarker[0].setZIndex(100);
-      openMarkerArray(TravelingTiceMarker, 0, interval, line);
-    }
   }
 }
 
