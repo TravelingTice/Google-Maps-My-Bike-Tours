@@ -43,7 +43,7 @@ function makeMarkers(locations) {
     const rideData = location.rideData ? location.rideData : null;
     const icon = location.icon ? 'images/' + location.icon : null;
     const line = location.line ? location.line : 'none';
-    const zIndex = location.line === 'ImHere' ? location.zIndex : 1;
+    const zIndex = location.line === 'ImHere' ? 1000 : 1;
     // Custom: country points don't have the drop animation.
     const animation = location.line === 'country' ? null : google.maps.Animation.DROP;
     // Create marker object
@@ -101,9 +101,14 @@ function makeMarkers(locations) {
 function openMarkers() {
   // Go through all marker arrays and filter them so right animation is applied.
   if (!mapLoaded) {
+    let longestArray = [];
     let interval;
       for (const line in lines) {
         const markerArray = lines[line];
+        // Set longestArray to this array if it is the longest
+        if (markerArray.length > longestArray.length) {
+          longestArray = markerArray;
+        }
         // Choose interval for our arrays
         switch (line) {
           case 'none':
@@ -114,11 +119,25 @@ function openMarkers() {
             interval = 0;
             break;
           default:
-            interval = 100;
+            interval = 50;
         }
-        openMarkerArray(markerArray, 0, interval, line);
+        if (line != 'imhere') {
+          openMarkerArray(markerArray, 0, interval, line, 1000);
+        }
       }
+      interval = interval * longestArray.length + 200;
+      openImHereMarker(interval);
       mapLoaded = true;
+  }
+}
+
+// The 'I'm Here' marker will be spawned last
+function openImHereMarker (interval) {
+  for (const line in lines) {
+    if (line == 'imhere') {
+      const ImHereMarker = lines[line];
+      openMarkerArray(ImHereMarker, 0, interval, line);
+    }
   }
 }
 
