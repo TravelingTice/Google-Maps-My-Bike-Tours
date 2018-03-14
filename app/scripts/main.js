@@ -119,7 +119,7 @@ function openMarkers() {
             interval = 0;
             break;
           default:
-            interval = 100;
+            interval = 50;
         }
         if (line != 'imhere') {
           openMarkerArray(markerArray, 0, interval, line, 1000);
