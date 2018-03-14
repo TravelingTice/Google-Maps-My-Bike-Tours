@@ -10,7 +10,7 @@ This content might include:
 - Link to ride data
 - Other links
 - An image or a Youtube video
-In markers.json all the markers are being stored. See [below](#modifying-markers.json) how to modify this file. This particular application has all my routes, marker images and other data I wanted to show on my map.
+In locations.json all the markers are being stored. See [below](#modifying-locations.json) how to modify this file. This particular application has all my routes, marker images and other data I wanted to show on my map.
 
 ## Setup
 To run the application:
@@ -21,9 +21,9 @@ To run the application:
 5. navigate to [localhost:9000](localhost:9000) to see the application
 6. run `gulp` to make a `dist` folder with the code you can put on a website!
 
-## Modifying markers.json
+## Modifying locations.json
 
-`scripts/markers.json` is an array of markers. Each marker is made like this:
+`scripts/locations.json` is an array of markers. Each marker is made like this:
 
 ```json
 {
@@ -33,7 +33,7 @@ To run the application:
     "lng": 12.345678
   },
   "description": "",
-  "date": "",
+  "date": ""
 }
 ```
 **Each of the above properties are required to make the marker.**
@@ -85,12 +85,9 @@ Change `zoom` number to zoom in/out (the higher, the more zoomed-in (max 21))
 ### Add Photos
 Add all of the necessary photos in `images/`. These might include photos used inside of info-windows or marker icons.
 
-### Add Logo
-If you want to add a logo to your info-window (will appear left of title), adjust in `scripts/main.js` where it says `const logo = 'LogoSmall.png'` Rename the name in quotes to your logo.
-
 ### Add a Line
 To add a line when you have a new trip or route:
-1. In `scripts/markers.json`: Add the property of `line` to all of the markers that need to be on this line.
+1. In `scripts/locations.json`: Add the property of `line` to all of the markers that need to be on this line.
 2. In `scripts/main.js`:
   - At `const lines` Add the name of your line below the comment, which corresponds to the value of the `line` property in all of your markers you want to connect with each other like this: `LINENAME: [];`
   - At:
@@ -99,7 +96,7 @@ To add a line when you have a new trip or route:
     lines.none.push(marker);
   }
   ```
-  Copy and paste the above segment below the comment below it and replace `none` with your name (make sure it corresponds with the one at `const lines` and in `markers.json`)
+  Copy and paste the above segment below the comment below it and replace `none` with your name (make sure it corresponds with the one at `const lines` and in `locations.json`)
 
 If you've done everything right, the two points should now be connected!
 
@@ -109,5 +106,13 @@ In `styles/main.scss` you can see at the top are 5 variables. These five describ
 ### The Animations
 When you come to the point you have quite a few lines and markers you can probably see that your markers in a particular route are being spawn one by one and the line will be drawn when all markers are placed for each route. This is why each marker needs the information about in which `line` it is and why they need to be in order. It makes it a little harder to add markers, but it makes for better customizability.
 
+## Code Structure
+| Map is initialized in `initMap()`.
+| getMarkers fetches `locations.json`, pushes data to `locations` array.
+| `makeMarkers(locations)` makes marker of each location.
+|\ `click` ->
+|| `populateInfoWindow(marker, infowindow)` opens `infowindow` on `marker`.
+|| `generateHtmlInfowindow(marker)` generates HTML for info-window of `marker`.
+| `openMarkers()` evaluates the interval for each array of markers (line)
 ## Features that might be added in the future:
-- A screen where you can make each marker (instead of directly in markers.json)
+- A screen where you can make each marker (instead of directly in locations.json)

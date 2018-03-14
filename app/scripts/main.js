@@ -1,12 +1,12 @@
 // The lines object contains all the trips (lines) and those contain all the markers.
 const lines = {
   none: [],
+  country: [],
+  travelingtice: [],
   // Add your lines here: LINENAME: [];
   EUp1: [],
   EUp2: []
 };
-
-const logo = 'LogoSmall.png' // Put name of your logo here
 
 let map; // Global variables map
 // Status of the map
@@ -25,7 +25,7 @@ function initMap() {
 function getMarkers() {
   let locations = [];
   // Get info of all locations
-  fetch('scripts/markers.json').then(resp => resp.json()).then(resp => {
+  fetch('scripts/locations.json').then(resp => resp.json()).then(resp => {
     locations = resp;
     makeMarkers(locations);
   });
@@ -43,10 +43,12 @@ function makeMarkers(locations) {
     const rideData = location.rideData ? location.rideData : null;
     const icon = location.icon ? 'images/' + location.icon : null;
     const line = location.line ? location.line : 'none';
+    // Custom: country points don't have the drop animation.
+    const animation = location.line === 'country' ? null : google.maps.Animation.DROP;
     // Create marker object
     const marker = new google.maps.Marker({
       map: null,
-      animation: google.maps.Animation.DROP,
+      animation: animation,
       id: i,
       // Assign props all locations have
       position: location.location,
@@ -65,9 +67,18 @@ function makeMarkers(locations) {
     if (marker.line === 'none') {
       lines.none.push(marker);
     }
+    if (marker.line === 'country') {
+      lines.country.push(marker);
+    }
+    if (marker.line === 'TravelingTice') {
+      lines.travelingtice.push(marker);
+    }
     // Add your line in the appropriate syntax like the above. 'none' should be the name of your line.
     if (marker.line === 'EUp1') {
       lines.EUp1.push(marker);
+    }
+    if (marker.line === 'EUp2') {
+      lines.EUp2.push(marker);
     }
     // Create click event to open/close infowindow at each marker
     marker.addListener('click', function() {
@@ -81,43 +92,95 @@ function makeMarkers(locations) {
   });
   // When the tiles of the map are loaded, display the markers one by one on the map
   const listener1 = google.maps.event.addListener(map, 'tilesloaded', () => {
-    openMarkers(0);
+    openMarkers();
   });
 }
 
-function openMarkers(i) {
-  // This loop should only happen upon page refresh, so when map is loaded, the markers have been placed so this function will not run anymore.
+function openMarkers() {
+  // Go through all marker arrays and filter them so right animation is applied.
   if (!mapLoaded) {
-    setTimeout(() => {
-      // Check if our map is already done loading (which means the user has only been dragging around)
-      let longestArray = [];
-
+    let longestArray = [];
+    let interval;
       for (const line in lines) {
         const markerArray = lines[line];
-        const marker = markerArray[i]
-        // Check longest array of markers (longest line) to prevent this loop from keeping on going after all markers have been placed.
-        if (markerArray.length > longestArray.length) {
+        // Set markerArray to longest if this markerArray is longest
+        if (markerArray.length >= longestArray.length) {
           longestArray = markerArray;
         }
-        if (marker) {
-          marker.setMap(map)
+        // Choose interval for our arrays
+        switch (line) {
+          case 'none':
+            interval = 0;
+            break;
+            // Custom: my country lines are gonna appear immediately
+          case 'country':
+            interval = 0;
+            break;
+          default:
+            interval = 100;
         }
-        // Check if all markers are set to map ==> line can be drawn.
-        const markersSetToMap = markerArray.filter(marker => marker.map == map)
-        if (markersSetToMap.length === markerArray.length) {
-          if (line != 'none') {
-            openLine(markerArray);
-          }
+        if (line != 'travelingtice') {
+          openMarkerArray(markerArray, 0, interval, line, 1000);
         }
       }
-      ++i;
-      if (i < longestArray.length) {
-         openMarkers(i);
-       } else {
-         mapLoaded = true;
-       }
-    }, 50);
+      interval = interval * longestArray.length + 100;
+      openTiceMarker(interval);
+      mapLoaded = true;
   }
+}
+
+// The 'I'm Here' marker will be spawned last
+function openTiceMarker (interval) {
+  for (const line in lines) {
+    if (line == 'travelingtice') {
+      const TravelingTiceMarker = lines[line];
+      TravelingTiceMarker[0].setZIndex(100);
+      openMarkerArray(TravelingTiceMarker, 0, interval, line);
+    }
+  }
+}
+
+// This sets each marker in the array to map.
+function openMarkerArray(array, i, interval, line) {
+  setTimeout(() => {
+    const marker = array[i];
+    ++i;
+    if (i <= array.length) {
+      marker.setMap(map);
+      openMarkerArray(array, i, interval, line);
+    } else {
+      switch (line) {
+        case 'none':
+          // Open no line
+          break;
+        case 'country':
+          // Open no line
+          break;
+        case 'travelingtice':
+          // Open no line
+          break;
+        default:
+          openLine(array);
+      }
+    }
+  }, interval);
+}
+
+// This one draws the line to the map
+function openLine(array) {
+  const points = [];
+  array.forEach(marker => {
+    points.push(marker.position);
+  });
+  // Options for the polyline
+  const polylineOptions = {
+    path: points,
+    strokeWeight: 0.7
+  };
+  // Create polyline
+  const polyline = new google.maps.Polyline( polylineOptions );
+  // Set polyline to our map
+  polyline.setMap(map);
 }
 
 // Open infowindow at marker
@@ -134,7 +197,7 @@ function populateInfoWindow(marker, infowindow) {
 
 // Return html that is content of our infowindow
 function generateHtmlInfowindow(marker) {
-  let html = `<div class="infowindow"><div class="heading"><img id="logo" src="images/${logo}" alt="TravelingTice"><h1>${marker.title}</h1></div><div class="main-infowindow-content"><div class="description"><p class="date">${marker.date}</p><p>${marker.description}</p>`;
+  let html = `<div class="infowindow"><div class="heading"><img id="icon" src="${marker.icon}" alt="TravelingTice"><h1>${marker.title}</h1></div><div class="main-infowindow-content"><div class="description"><p class="date">${marker.date}</p><p>${marker.description}</p>`;
   // Check if marker has img, yt etc.. And generate html accordingly
   if (marker.links) {
     html += `<div class="links"><p>${marker.links.title}</p>`;
@@ -156,21 +219,4 @@ function generateHtmlInfowindow(marker) {
   html += '</div>';
 
   return html;
-}
-
-// This one draws the line to the map
-function openLine(markerArray) {
-  const points = [];
-  markerArray.forEach(marker => {
-    points.push(marker.position);
-  });
-  // Options for the polyline
-  const polylineOptions = {
-    path: points,
-    strokeWeight: 0.7
-  };
-  // Create polyline
-  const polyline = new google.maps.Polyline( polylineOptions );
-  // Set polyline to our map
-  polyline.setMap(map);
 }

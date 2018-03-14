@@ -1,5 +1,16 @@
 [
   {
+    "title": "I'M HERE!",
+    "location": {
+      "lat": 52.191081,
+      "lng": 4.441863
+    },
+    "description": "This is where I am at the moment. At home preparing to get on the road again!",
+    "date": "March 14, 2018",
+    "icon": "ImHere.png",
+    "line": "TravelingTice"
+  },
+  {
     "title": "It's On!",
     "location": {
       "lat": 52.189941,
@@ -9,7 +20,7 @@
     "date": "September 2, 2017",
     "rideData": "https://www.strava.com/activities/1173236887",
     "youtube": "9SiBEaDGH7s",
-    "icon": "EUp1vid.png",
+    "icon": "EUp1ST.png",
     "line": "EUp1"
   },
   {
@@ -1024,7 +1035,7 @@
     "date": "November 20, 2017",
     "youtube": "ginz41VxIlg",
     "icon": "EUp1vid.png",
-    "line": "none"
+    "line": "EUp1"
   },
   {
     "title": "Exploring Warsaw, Poland!",
@@ -1043,7 +1054,7 @@
     },
     "youtube": "1PVwwM_PJ3s",
     "icon": "EUp1vid.png",
-    "line": "none"
+    "line": "EUp1"
   },
   {
     "title": "Visiting the Polish War Uprising Museum!",
@@ -1062,7 +1073,7 @@
     },
     "youtube": "I1FpVi10NSM",
     "icon": "EUp1vid.png",
-    "line": "none"
+    "line": "EUp1"
   },
   {
     "title": "I RECOGNIZE THIS!",
@@ -1074,7 +1085,7 @@
     "date": "November 23, 2017",
     "youtube": "Xp1IKfVeLDc",
     "icon": "EUp1vid.png",
-    "line": "none"
+    "line": "EUp1"
   },
   {
     "title": "THE LAST SIGHTSEEING PLACE!",
@@ -1086,7 +1097,7 @@
     "date": "November 24, 2017",
     "youtube": "jlF1n-73Ajc",
     "icon": "EUp1vid.png",
-    "line": "none"
+    "line": "EUp1"
   },
   {
     "title": "BACK HOME",
@@ -1098,6 +1109,17 @@
     "date": "November 25, 2017",
     "youtube": "YnP3G0zn1Yk",
     "icon": "EUp1vid.png",
-    "line": "none"
+    "line": "EUp1"
+  },
+  {
+    "title": "I'M HERE!",
+    "location": {
+      "lat": 52.191081,
+      "lng": 4.441863
+    },
+    "description": "This is where I am at the moment. At home preparing to get on the road again!",
+    "date": "March 14, 2018",
+    "icon": "ImHere.png",
+    "line": "TravelingTice"
   }
 ]
