@@ -1,6 +1,7 @@
 // Customize theme colors:
-$top-border: #517cb5;
-$bottom-border: #298771;
+$line-above-description: #517cb5;
+$line-above-links: #298771;
+$line-above-rideData: #298771;
 $links: #0000ff;
 $links-hover: #51b568;
 $ride-data: #ff0000;
@@ -53,7 +54,7 @@ html, body {
           color: #111;
           font-weight: 500;
           word-wrap: break-word;
-          border-top: 2px solid $top-border;
+          border-top: 2px solid $line-above-description;
         }
         .links a {
           font-size: 13px;
@@ -71,10 +72,15 @@ html, body {
           text-decoration: none;
           color: $ride-data;
         }
+        .links {
+          border-top: 2px solid $line-above-links;
+        }
+        .rideData {
+          border-top: 2px solid $line-above-rideData;
+        }
         .rideData, .links {
           margin: 10px 5px 0 0;
           padding: 4px 0;
-          border-top: 2px solid $bottom-border;
           p {
             font-weight: 500;
             font-size: 14px;

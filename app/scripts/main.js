@@ -1,12 +1,18 @@
 // The lines object contains all the trips (lines) and those contain all the markers.
 const lines = {
   none: [],
-  country: [],
   imhere: [],
   // Add your lines here: LINENAME: [];
   EUp1: [],
   EUp2: []
 };
+
+/* WORDPRESS:
+* imgPath = http(s)://travelingtice.com/wp-content/uploads/2018/...
+* jsonPath = http(s)://travelingtice.com/wp-content/uploads/2018/3/locations.json
+*/
+const imgPath = 'images/'
+const jsonPath = 'scripts/'
 
 let map; // Global variables map
 // Status of the map
@@ -25,7 +31,7 @@ function initMap() {
 function getMarkers() {
   let locations = [];
   // Get info of all locations
-  fetch('scripts/locations.json').then(resp => resp.json()).then(resp => {
+  fetch(`${jsonPath}locations.json`).then(resp => resp.json()).then(resp => {
     locations = resp;
     makeMarkers(locations);
   });
@@ -39,13 +45,12 @@ function makeMarkers(locations) {
     // Check if location has these optional props
     const links = location.links ? location.links : null;
     const youtube = location.youtube ? location.youtube : null;
-    const img = location.img ? location.img : null;
+    const img = location.img ? imgPath + location.img : null;
     const rideData = location.rideData ? location.rideData : null;
-    const icon = location.icon ? 'images/' + location.icon : null;
+    const icon = location.icon ? imgPath + location.icon : null;
     const line = location.line ? location.line : 'none';
     const zIndex = location.zIndex ? location.zIndex : 1;
-    // Custom: country points don't have the drop animation.
-    const animation = location.line === 'country' ? null : google.maps.Animation.DROP;
+    const animation = location.animation === false ? null : google.maps.Animation.DROP;
     // Create marker object
     const marker = new google.maps.Marker({
       map: null,
@@ -68,9 +73,6 @@ function makeMarkers(locations) {
     // Push all markers to appropriate array
     if (marker.line === 'none') {
       lines.none.push(marker);
-    }
-    if (marker.line === 'country') {
-      lines.country.push(marker);
     }
     if (marker.line === 'ImHere') {
       lines.imhere.push(marker);
@@ -114,10 +116,6 @@ function openMarkers() {
           case 'none':
             interval = 0;
             break;
-            // Custom: my country lines are gonna appear immediately
-          case 'country':
-            interval = 0;
-            break;
           default:
             interval = 50;
         }
@@ -154,9 +152,6 @@ function openMarkerArray(array, i, interval, line) {
         case 'none':
           // Open no line
           break;
-        case 'country':
-          // Open no line
-          break;
         case 'imhere':
           // Open no line
           break;
@@ -176,7 +171,7 @@ function openLine(array) {
   // Options for the polyline
   const polylineOptions = {
     path: points,
-    strokeWeight: 0.7
+    strokeWeight: 1.5
   };
   // Create polyline
   const polyline = new google.maps.Polyline( polylineOptions );
@@ -198,8 +193,26 @@ function populateInfoWindow(marker, infowindow) {
 
 // Return html that is content of our infowindow
 function generateHtmlInfowindow(marker) {
-  let html = `<div class="infowindow"><div class="heading"><img id="icon" src="${marker.icon}" alt="marker"><h1>${marker.title}</h1></div><div class="main-infowindow-content"><div class="description"><p class="date">${marker.date}</p><p>${marker.description}</p>`;
-  // Check if marker has img, yt etc.. And generate html accordingly
+  let html = `<div class="infowindow"><div class="heading"><img id="icon" src="${marker.icon}" alt="marker"><h1>${marker.title}</h1></div><div class="main-infowindow-content">`;
+  // Check if marker has description, img, yt etc.. And generate html accordingly
+
+  // has description
+  if (marker.description) {
+    html += '<div class="description">';
+    // has date
+    if (marker.date) {
+      html += `<p class="date">${marker.date}</p>`;
+    }
+    html += `<p>${marker.description}</p>`;
+  } else if (marker.date) {
+    // has no description but has date
+    html += `<div class="description"><p class="date">${marker.date}</p>`;
+  } else {
+    // has no description and no date
+    html += 'div class="description">';
+  }
+
+  // has links
   if (marker.links) {
     html += `<div class="links"><p>${marker.links.title}</p>`;
     marker.links.links.forEach(link => {
@@ -211,6 +224,7 @@ function generateHtmlInfowindow(marker) {
     html += `<div class="rideData"><a href="${marker.rideData}" target="_blank">View ride data</a></div>`
   }
   html += '</div>'
+
   if (marker.img) {
     html += `<img src="images/${marker.img}" alt="${marker.title}">`;
   }

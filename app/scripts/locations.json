@@ -5,8 +5,8 @@
       "lat": 52.191081,
       "lng": 4.441863
     },
-    "description": "This is where I am at the moment. At home preparing to get on the road again!",
     "date": "March 14, 2018",
+    "description": "Working my programming skills and building this map, is what I'm doing right now! In May I'll return to the road and continue on the European Bike Tour!",
     "icon": "ImHere.png",
     "zIndex": 10,
     "line": "ImHere"
@@ -842,7 +842,8 @@
     "date": "November 7, 2017",
     "rideData": "https://www.strava.com/activities/1267863661",
     "youtube": "G3X6Aqnos08",
-    "icon": "EUp1vid.png",
+    "icon": "EUp1H.png",
+    "zIndex": 5,
     "line": "EUp1"
   },
   {
@@ -855,8 +856,7 @@
     "date": "November 8, 2017",
     "rideData": "https://www.strava.com/activities/1267863835",
     "youtube": "yXLw0KZQMko",
-    "icon": "EUp1H.png",
-    "zIndex": 5,
+    "icon": "EUp1vid.png",
     "line": "EUp1"
   },
   {

@@ -32,19 +32,17 @@ To run the application:
     "lat": 12.345678,
     "lng": 12.345678
   },
-  "description": "",
-  "date": ""
 }
 ```
 **Each of the above properties are required to make the marker.**
 - `title`: Title of marker (heading of info-window)
 - `location`: Object of `lat`, `lng` coordinates. This is for the location of the marker on the map.
-- `description`: Description of marker. Displayed in info-window.
-- `date`: Date is also displayed in the info-window (above description)
 
 **The markers are gonna be appearing in order, so make sure yours are in the order you want them to appear on the screen**
 
 ### Extra properties
+- `description`: Description of marker. Displayed in info-window.
+- `date`: Date is also displayed in the info-window (above description)
 - `img`: Name of image file in `images/` (**Don't put 'images/' in value,**)(**Do include the extention**)
 - `youtube`: A string of characters positioned: https://www.youtube.com/watch?v=AT_THIS_PART&... of the Youtube Url (to create iframe a different URL is used, but only those characters which are unique to each video is used.)
 - `rideData`: A link to the page where you can see the riding data for that day (I use Strava). Displayed as a link with name: 'View ride data'.
@@ -108,6 +106,12 @@ Give your "I'm Here"-marker's `line` property the value "ImHere" and this will b
 In `styles/main.scss` you can see at the top are 5 variables. These five describe the color used in these area's (all in the info-window). You can use custom hex-decimals to replace the hex-decimals there to have custom colors for these places.
 
 ### The Animations
+#### 'Drop' Animation
+If you do not want to have the 'drop' animation, add this line to your marker in locations.json:
+```json
+"animation": false,
+```
+#### Why Order Matters
 When you come to the point you have quite a few lines and markers you can probably see that your markers in a particular route are being spawn one by one and the line will be drawn when all markers are placed for each route. This is why each marker needs the information about in which `line` it is and why they need to be in order. It makes it a little harder to add markers, but it makes for better customizability.
 
 ## Code Structure
@@ -118,5 +122,6 @@ When you come to the point you have quite a few lines and markers you can probab
 | | `populateInfoWindow(marker, infowindow)` opens `infowindow` on `marker`.<br>
 | | `generateHtmlInfowindow(marker)` generates HTML for info-window of `marker`.<br>
 | `openMarkers()` evaluates the interval for each array of markers (line)
+
 ## Features that might be added in the future:
 - A screen where you can make each marker (instead of directly in locations.json)
