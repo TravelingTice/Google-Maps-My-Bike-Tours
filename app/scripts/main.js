@@ -1,11 +1,23 @@
 // The lines object contains all the trips (lines) and those contain all the markers.
 const lines = {
   none: [],
-  imhere: [],
+  ImHere: [],
   // Add your lines here: LINENAME: [];
   EUp1: [],
+  Planned: [],
   EUp2: []
 };
+
+// Here you can style your lines if you need to
+const lineStyles = {
+  EUp1: {
+    strokeWeight: 1.5,
+  },
+  Planned: {
+    strokeWeight: 0.5,
+    strokeOpacity: 0.5
+  }
+}
 
 /* WORDPRESS:
 * imgPath = http(s)://travelingtice.com/wp-content/uploads/2018/...
@@ -71,18 +83,10 @@ function makeMarkers(locations) {
       line
     });
     // Push all markers to appropriate array
-    if (marker.line === 'none') {
-      lines.none.push(marker);
-    }
-    if (marker.line === 'ImHere') {
-      lines.imhere.push(marker);
-    }
-    // Add your line in the appropriate syntax like the above. 'none' should be the name of your line.
-    if (marker.line === 'EUp1') {
-      lines.EUp1.push(marker);
-    }
-    if (marker.line === 'EUp2') {
-      lines.EUp2.push(marker);
+    for (const lineName in lines) {
+      if (marker.line === lineName) {
+        lines[lineName].push(marker)
+      }
     }
     // Create click event to open/close infowindow at each marker
     marker.addListener('click', function() {
@@ -117,9 +121,9 @@ function openMarkers() {
             interval = 0;
             break;
           default:
-            interval = 50;
+            interval = 30;
         }
-        if (line != 'imhere') {
+        if (line !== 'ImHere') {
           openMarkerArray(markerArray, 0, interval, line, 1000);
         }
       }
@@ -132,7 +136,7 @@ function openMarkers() {
 // The 'I'm Here' marker will be spawned last
 function openImHereMarker (interval) {
   for (const line in lines) {
-    if (line == 'imhere') {
+    if (line === 'ImHere') {
       const ImHereMarker = lines[line];
       openMarkerArray(ImHereMarker, 0, interval, line);
     }
@@ -152,29 +156,33 @@ function openMarkerArray(array, i, interval, line) {
         case 'none':
           // Open no line
           break;
-        case 'imhere':
+        case 'ImHere':
           // Open no line
           break;
         default:
-          openLine(array);
+          openLine(array, line);
       }
     }
   }, interval);
 }
 
 // This one draws the line to the map
-function openLine(array) {
+function openLine(array, line) {
   const points = [];
   array.forEach(marker => {
     points.push(marker.position);
   });
-  // Options for the polyline
-  const polylineOptions = {
-    path: points,
-    strokeWeight: 1.5
-  };
+  let polylineOptions = { strokeWeight: 1.5 };
+  // Options for the polyline (derived from lineStyles)
+  for (const styleLine in lineStyles) {
+    if (styleLine === line) {
+      polylineOptions = lineStyles[styleLine];
+    }
+  }
   // Create polyline
   const polyline = new google.maps.Polyline( polylineOptions );
+  // Set path to path we created using the markers
+  polyline.setPath(points);
   // Set polyline to our map
   polyline.setMap(map);
 }

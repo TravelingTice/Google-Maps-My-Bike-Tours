@@ -87,14 +87,8 @@ Add all of the necessary photos in `images/`. These might include photos used in
 To add a line when you have a new trip or route:
 1. In `scripts/locations.json`: Add the property of `line` to all of the markers that need to be on this line.
 2. In `scripts/main.js`:
-  - At `const lines` Add the name of your line below the comment, which corresponds to the value of the `line` property in all of your markers you want to connect with each other like this: `LINENAME: [];`
-  - At:
-  ```javascript
-  if (marker.line === 'none') {
-    lines.none.push(marker);
-  }
-  ```
-  Copy and paste the above segment below the comment below it and replace `none` with your name (make sure it corresponds with the one at `const lines` and in `locations.json`)
+   At `const lines` Add the name of your line below the comment, which corresponds to the value of the `line` property in all of your markers you want to connect with each other like this: `LINENAME: [];`
+3. (optional): You can style the weight, color and other things of your line in `main.js` at `const lineStyles`.
 
 If you've done everything right, the two points should now be connected!
 
