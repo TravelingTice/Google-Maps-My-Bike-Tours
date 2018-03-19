@@ -4,17 +4,26 @@ const lines = {
   ImHere: [],
   // Add your lines here: LINENAME: [];
   EUp1: [],
-  Planned: [],
+  EUp2P: [],
   EUp2: []
 };
+
+const  lineIntervals = {
+  none: 0,
+  ImHere: 0,
+  // Add intervals here
+  EUp1: 60,
+  EUp2P: 0,
+  EUp2: 60
+}
 
 // Here you can style your lines if you need to
 const lineStyles = {
   EUp1: {
     strokeWeight: 1.5,
   },
-  Planned: {
-    strokeWeight: 0.5,
+  EUp2P: {
+    strokeWeight: 1,
     strokeOpacity: 0.5
   }
 }
@@ -23,6 +32,7 @@ const lineStyles = {
 * imgPath = http(s)://travelingtice.com/wp-content/uploads/2018/...
 * jsonPath = http(s)://travelingtice.com/wp-content/uploads/2018/3/locations.json
 */
+const iconPath = 'images/icons/'
 const imgPath = 'images/'
 const jsonPath = 'scripts/'
 
@@ -59,7 +69,7 @@ function makeMarkers(locations) {
     const youtube = location.youtube ? location.youtube : null;
     const img = location.img ? imgPath + location.img : null;
     const rideData = location.rideData ? location.rideData : null;
-    const icon = location.icon ? imgPath + location.icon : null;
+    const icon = location.icon ? iconPath + location.icon : null;
     const line = location.line ? location.line : 'none';
     const zIndex = location.zIndex ? location.zIndex : 1;
     const animation = location.animation === false ? null : google.maps.Animation.DROP;
@@ -108,28 +118,32 @@ function openMarkers() {
   // Go through all marker arrays and filter them so right animation is applied.
   if (!mapLoaded) {
     let longestArray = [];
+    let longestArrayName;
     let interval;
-      for (const line in lines) {
-        const markerArray = lines[line];
-        // Set longestArray to this array if it is the longest
-        if (markerArray.length > longestArray.length) {
-          longestArray = markerArray;
+    let longestInterval;
+    for (const line in lines) {
+      const markerArray = lines[line];
+      // Set longestArray to this array if it is the longest
+      if (markerArray.length > longestArray.length) {
+        longestArray = markerArray;
+        longestArrayName = line;
+      }
+      // Choose interval for our arrays
+      for (const thisLine in lineIntervals) {
+        if (longestArrayName === thisLine) {
+          longestInterval = lineIntervals[thisLine];
         }
-        // Choose interval for our arrays
-        switch (line) {
-          case 'none':
-            interval = 0;
-            break;
-          default:
-            interval = 30;
-        }
-        if (line !== 'ImHere') {
-          openMarkerArray(markerArray, 0, interval, line, 1000);
+        if (thisLine === line) {
+          if (line !== 'ImHere') {
+            interval = lineIntervals[line];
+            openMarkerArray(markerArray, 0, interval, line)
+          }
         }
       }
-      interval = interval * longestArray.length + 1000;
-      openImHereMarker(interval);
-      mapLoaded = true;
+    }
+    interval = longestArray.length * longestInterval + 1000;
+    openImHereMarker(interval);
+    mapLoaded = true;
   }
 }
 
@@ -217,7 +231,7 @@ function generateHtmlInfowindow(marker) {
     html += `<div class="description"><p class="date">${marker.date}</p>`;
   } else {
     // has no description and no date
-    html += 'div class="description">';
+    html += '<div class="description">';
   }
 
   // has links
@@ -234,7 +248,7 @@ function generateHtmlInfowindow(marker) {
   html += '</div>'
 
   if (marker.img) {
-    html += `<img src="images/${marker.img}" alt="${marker.title}">`;
+    html += `<img src="${marker.img}" alt="${marker.title}">`;
   }
   if (marker.youtube) {
     html += `<iframe width="446" height="251" src="https://www.youtube.com/embed/${marker.youtube}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;

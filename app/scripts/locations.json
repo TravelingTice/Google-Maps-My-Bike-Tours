@@ -1033,7 +1033,7 @@
     "description": "Coincidentally it was Latvia Independence Day right when I was there! So I went and celebrated the National Day of a country I barely knew something about. It was quite interesting.",
     "date": "November 18, 2017",
     "youtube": "9lt43_2-XrY",
-    "icon": "Finish.png",
+    "icon": "F.png",
     "zIndex": 7,
     "line": "EUp1"
   },
@@ -1046,7 +1046,7 @@
     "description": "Luckily there was place for my bicycle on the bus to Vilnius. From there I took a nightly bus to Warsaw, where I arrived at 6 AM the next morning.",
     "date": "November 20, 2017",
     "youtube": "ginz41VxIlg",
-    "icon": "VisitedVid.png"
+    "icon": "Vvid.png"
   },
   {
     "title": "Exploring Warsaw, Poland!",
@@ -1064,7 +1064,7 @@
         }]
     },
     "youtube": "1PVwwM_PJ3s",
-    "icon": "VisitedVid.png"
+    "icon": "Vvid.png"
   },
   {
     "title": "Visiting the Polish War Uprising Museum!",
@@ -1082,7 +1082,7 @@
         }]
     },
     "youtube": "I1FpVi10NSM",
-    "icon": "VisitedVid.png"
+    "icon": "Vvid.png"
   },
   {
     "title": "I RECOGNIZE THIS!",
@@ -1093,7 +1093,7 @@
     "description": "Took a train from Warsaw, to Hannover. Due to some problems I had a layover in the city of Magdeburg, where I had been a few years ago.",
     "date": "November 23, 2017",
     "youtube": "Xp1IKfVeLDc",
-    "icon": "VisitedVid.png"
+    "icon": "Vvid.png"
   },
   {
     "title": "THE LAST SIGHTSEEING PLACE!",
@@ -1104,7 +1104,7 @@
     "description": "Felt good to be back in Germany! Explored the city of Hanover for a little bit and realised this was gonna be the last place to sightsee on this line.",
     "date": "November 24, 2017",
     "youtube": "jlF1n-73Ajc",
-    "icon": "VisitedVid.png"
+    "icon": "Vvid.png"
   },
   {
     "title": "BACK HOME",
@@ -1115,6 +1115,350 @@
     "description": "My friend picked me up in Hanover and together we drove back to my home town: Rijnsburg. The trip is over, but next year I'm gonna be back at it again!",
     "date": "November 25, 2017",
     "youtube": "YnP3G0zn1Yk",
-    "icon": "VisitedVid.png"
+    "icon": "Vvid.png"
+  },
+  {
+    "title": "Riga, Latvia",
+    "location": {
+      "lat": 56.949673,
+      "lng": 24.107274
+    },
+    "description": "This is where I will return to in May 2018.",
+    "img": "riga.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
+    "title": "Vilnius, Lithuania",
+    "location": {
+      "lat": 54.687156,
+      "lng": 25.279651
+    },
+    "description": "This is the city I actually wanted to stop at, and I've actually visited it for 1 night when I was going back home.",
+    "img": "vilnius.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
+    "title": "Minsk, Belarus",
+    "location": {
+      "lat": 53.904540,
+      "lng": 27.561524
+    },
+    "description": "One of the last dictatorships in Europe. It's gonna be quite a hassle to get a visa for this country, but I still want to visit it!",
+    "img": "minsk.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
+    "title": "Auschwitz, Poland",
+    "location": {
+      "lat": 50.034398,
+      "lng": 19.209778
+    },
+    "description": "A place with a lot of awful history, but everyone I spoke to said it is worth a visit.",
+    "img": "auschwitz.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
+    "title": "Prague, Czech Republic",
+    "location": {
+      "lat": 50.075538,
+      "lng": 14.437800
+    },
+    "img": "prague.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
+    "title": "Munich, Germany",
+    "location": {
+      "lat": 48.135125,
+      "lng": 11.581980
+    },
+    "img": "munich.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
+    "title": "Vienna, Austria",
+    "location": {
+      "lat": 48.208174,
+      "lng": 16.373819
+    },
+    "img": "vienna.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
+    "title": "Bratislava, Slovakia",
+    "location": {
+      "lat": 48.148596,
+      "lng": 17.107748
+    },
+    "img": "bratislava.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
+    "title": "Budapest, Hungary",
+    "location": {
+      "lat": 47.497912,
+      "lng": 19.040235
+    },
+    "img": "budapest.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
+    "title": "Chisinau, Moldova",
+    "location": {
+      "lat": 47.010453,
+      "lng": 28.863810
+    },
+    "img": "chisinau.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
+    "title": "Bucharest, Romania",
+    "location": {
+      "lat": 44.426767,
+      "lng": 26.102538
+    },
+    "img": "bucharest.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
+    "title": "Sofia, Bulgaria",
+    "location": {
+      "lat": 42.697708,
+      "lng": 23.321868
+    },
+    "img": "sofia.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
+    "title": "Athens, Greece",
+    "location": {
+      "lat": 37.983810,
+      "lng": 23.727539
+    },
+    "img": "athens.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
+    "title": "Tirana, Albania",
+    "location": {
+      "lat": 41.327546,
+      "lng": 19.818698
+    },
+    "img": "tirana.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
+    "title": "Skopje, Macedonia",
+    "location": {
+      "lat": 41.997346,
+      "lng": 21.427996
+    },
+    "img": "skopje.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
+    "title": "Prishtina, Kosovo",
+    "location": {
+      "lat": 42.662914,
+      "lng": 21.165503
+    },
+    "img": "prishtina.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
+    "title": "Belgrade, Serbia",
+    "location": {
+      "lat": 44.786568,
+      "lng": 20.448922
+    },
+    "img": "belgrade.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
+    "title": "Zagreb, Croatia",
+    "location": {
+      "lat": 45.815011,
+      "lng": 15.981919
+    },
+    "img": "zagreb.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
+    "title": "Ljubljana, Slovenia",
+    "location": {
+      "lat": 46.056947,
+      "lng": 14.505751
+    },
+    "img": "ljubljana.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
+    "title": "Dubrovnik, Croatia",
+    "location": {
+      "lat": 42.650661,
+      "lng": 18.094424
+    },
+    "img": "dubrovnik.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
+    "title": "Podgorica, Montenegro",
+    "location": {
+      "lat": 42.430420,
+      "lng": 19.259364
+    },
+    "img": "podgorica.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
+    "title": "Bari, Italy",
+    "location": {
+      "lat": 41.117143,
+      "lng": 16.871871
+    },
+    "img": "bari.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
+    "title": "Naples, Italy",
+    "location": {
+      "lat": 40.851775,
+      "lng": 14.268124
+    },
+    "img": "naples.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
+    "title": "Rome, Italy",
+    "location": {
+      "lat": 41.902783,
+      "lng": 12.496366
+    },
+    "img": "rome.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
+    "title": "The Vatican",
+    "location": {
+      "lat": 41.902916,
+      "lng": 12.453389
+    },
+    "img": "vatican.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
+    "title": "San Marino",
+    "location": {
+      "lat": 43.942360,
+      "lng": 12.457777
+    },
+    "img": "sanmarino.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
+    "title": "Monaco",
+    "location": {
+      "lat": 43.738418,
+      "lng": 7.424616
+    },
+    "img": "monaco.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
+    "title": "Andorra",
+    "location": {
+      "lat": 42.506317,
+      "lng": 1.521835
+    },
+    "img": "andorra.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
+    "title": "Madrid, Spain",
+    "location": {
+      "lat": 40.416775,
+      "lng": -3.703790
+    },
+    "img": "madrid",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
+    "title": "Lisbon, Portugal",
+    "location": {
+      "lat": 38.722252,
+      "lng": -9.139337
+    },
+    "img": "lisbon.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
+    "title": "Liechtenstein",
+    "location": {
+      "lat": 47.166000,
+      "lng": 9.555373
+    },
+    "img": "liechtenstein.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
+    "title": "Paris, France",
+    "location": {
+      "lat": 48.856614,
+      "lng": 2.352222
+    },
+    "img": "paris.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
+    "title": "Luxembourg",
+    "location": {
+      "lat": 49.815273,
+      "lng": 6.129583
+    },
+    "img": "luxembourg.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
+    "title": "Brussels, Belgium",
+    "location": {
+      "lat": 50.850346,
+      "lng": 4.351721
+    },
+    "img": "brussels.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
   }
 ]
