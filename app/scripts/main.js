@@ -220,18 +220,18 @@ function generateHtmlInfowindow(marker) {
 
   // has description
   if (marker.description) {
-    html += '<div class="description">';
+    html += '<div class="left-panel">';
     // has date
     if (marker.date) {
       html += `<p class="date">${marker.date}</p>`;
     }
-    html += `<p>${marker.description}</p>`;
+    html += `<p class="description">${marker.description}</p>`;
   } else if (marker.date) {
     // has no description but has date
-    html += `<div class="description"><p class="date">${marker.date}</p>`;
+    html += `<div class="left-panel"><p class="date">${marker.date}</p>`;
   } else {
     // has no description and no date
-    html += '<div class="description">';
+    html += '<div class="left-panel">';
   }
 
   // has links

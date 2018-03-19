@@ -21,6 +21,7 @@ html, body {
     overflow: hidden;
     font-family: 'Roboto',Helvetica,Arial,Lucida,sans-serif;
     .heading {
+      margin-bottom: 6px;
       #icon {
         position: relative;
         width: auto;
@@ -28,11 +29,9 @@ html, body {
         top: 4px;
       }
       h1 {
-        position: relative;
         display: inline;
-        left: 10px;
+        margin-left: 12px;
         font-size: 24px;
-        margin: 2px;
       }
     }
     .main-infowindow-content {
@@ -41,15 +40,15 @@ html, body {
       flex-wrap: wrap;
       font-size: 14px;
       font-weight: 500;
-      .description {
+      .left-panel {
         width: 180px;
-        p:nth-child(1) {
-          margin: 7px 0 3px;
+        .date {
           font-size: 12px;
           font-weight: 400;
+          margin: 5px 0 0 0;
         }
-        p:nth-child(2) {
-          margin: 0 5px 0 0;
+        .description {
+          margin: 3px 5px 0 0;
           padding-top: 7px;
           color: #111;
           font-weight: 500;
