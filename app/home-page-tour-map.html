@@ -1,77 +1,94 @@
-(function($){
+<div id="scoped-content">
+  <style type="text/css" scoped>
+  #map {
+    width: 100%;
+    height: 75vh;
+  }
+  #map .infowindow {
+    overflow: hidden;
+    font-family: 'Roboto', Helvetica, Arial, Lucida, sans-serif;
+  }
+  #map .infowindow .heading {
+    margin-bottom: 6px;
+  }
+  #map .infowindow .heading #icon {
+    position: relative;
+    width: auto;
+    height: 30px;
+    top: 4px;
+  }
+  #map .infowindow .heading h1 {
+    display: inline;
+    margin-left: 12px;
+    font-size: 24px;
+  }
+  #map .infowindow .main-infowindow-content {
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  #map .infowindow .main-infowindow-content .left-panel {
+    width: 180px;
+  }
+  #map .infowindow .main-infowindow-content .left-panel .date {
+    font-size: 12px;
+    font-weight: 400;
+    margin: 5px 0 0 0;
+  }
+  #map .infowindow .main-infowindow-content .left-panel .description {
+    margin: 3px 5px 0 0;
+    padding-top: 7px;
+    color: #111;
+    font-weight: 500;
+    word-wrap: break-word;
+    border-top: 2px solid #517cb5;
+  }
+  #map .infowindow .main-infowindow-content .left-panel .links a {
+    font-size: 13px;
+    text-decoration: none;
+    color: #00f;
+    line-height: 1.5em;
+  }
+  #map .infowindow .main-infowindow-content .left-panel .links a:hover {
+    color: #51b568;
+  }
+  #map .infowindow .main-infowindow-content .left-panel .links a:before {
+    content: "> ";
+  }
+  #map .infowindow .main-infowindow-content .left-panel .rideData a {
+    text-decoration: none;
+    color: #f00;
+  }
+  #map .infowindow .main-infowindow-content .left-panel .links {
+    border-top: 2px solid #298771;
+  }
+  #map .infowindow .main-infowindow-content .left-panel .rideData {
+    border-top: 2px solid #298771;
+  }
+  #map .infowindow .main-infowindow-content .left-panel .rideData, #map .infowindow .main-infowindow-content .left-panel .links {
+    margin: 10px 5px 0 0;
+    padding: 4px 0;
+  }
+  #map .infowindow .main-infowindow-content .left-panel .rideData p, #map .infowindow .main-infowindow-content .left-panel .links p {
+    font-weight: 500;
+    font-size: 14px;
+  }
+  #map .infowindow .main-infowindow-content img {
+    max-width: 300px;
+    max-height: 200px;
+    margin: 7px 0 7px 5px;
+  }
+  #map .infowindow .main-infowindow-content iframe {
+    margin: 10px 0 5px 5px;
+  }
+  </style>
+  <div id="map"></div>
+</div>
 
-    var $w=$(window);
-    $.fn.visible = function(partial,hidden,direction,container){
-
-        if (this.length < 1)
-            return;
-
-	// Set direction default to 'both'.
-	direction = direction || 'both';
-
-        var $t          = this.length > 1 ? this.eq(0) : this,
-						isContained = typeof container !== 'undefined' && container !== null,
-						$c				  = isContained ? $(container) : $w,
-						wPosition        = isContained ? $c.position() : 0,
-            t           = $t.get(0),
-            vpWidth     = $c.outerWidth(),
-            vpHeight    = $c.outerHeight(),
-            clientSize  = hidden === true ? t.offsetWidth * t.offsetHeight : true;
-
-        if (typeof t.getBoundingClientRect === 'function'){
-
-            // Use this native browser method, if available.
-            var rec = t.getBoundingClientRect(),
-                tViz = isContained ?
-												rec.top - wPosition.top >= 0 && rec.top < vpHeight + wPosition.top :
-												rec.top >= 0 && rec.top < vpHeight,
-                bViz = isContained ?
-												rec.bottom - wPosition.top > 0 && rec.bottom <= vpHeight + wPosition.top :
-												rec.bottom > 0 && rec.bottom <= vpHeight,
-                lViz = isContained ?
-												rec.left - wPosition.left >= 0 && rec.left < vpWidth + wPosition.left :
-												rec.left >= 0 && rec.left <  vpWidth,
-                rViz = isContained ?
-												rec.right - wPosition.left > 0  && rec.right < vpWidth + wPosition.left  :
-												rec.right > 0 && rec.right <= vpWidth,
-                vVisible   = partial ? tViz || bViz : tViz && bViz,
-                hVisible   = partial ? lViz || rViz : lViz && rViz,
-		vVisible = (rec.top < 0 && rec.bottom > vpHeight) ? true : vVisible,
-                hVisible = (rec.left < 0 && rec.right > vpWidth) ? true : hVisible;
-
-            if(direction === 'both')
-                return clientSize && vVisible && hVisible;
-            else if(direction === 'vertical')
-                return clientSize && vVisible;
-            else if(direction === 'horizontal')
-                return clientSize && hVisible;
-        } else {
-
-            var viewTop 				= isContained ? 0 : wPosition,
-                viewBottom      = viewTop + vpHeight,
-                viewLeft        = $c.scrollLeft(),
-                viewRight       = viewLeft + vpWidth,
-                position          = $t.position(),
-                _top            = position.top,
-                _bottom         = _top + $t.height(),
-                _left           = position.left,
-                _right          = _left + $t.width(),
-                compareTop      = partial === true ? _bottom : _top,
-                compareBottom   = partial === true ? _top : _bottom,
-                compareLeft     = partial === true ? _right : _left,
-                compareRight    = partial === true ? _left : _right;
-
-            if(direction === 'both')
-                return !!clientSize && ((compareBottom <= viewBottom) && (compareTop >= viewTop)) && ((compareRight <= viewRight) && (compareLeft >= viewLeft));
-            else if(direction === 'vertical')
-                return !!clientSize && ((compareBottom <= viewBottom) && (compareTop >= viewTop));
-            else if(direction === 'horizontal')
-                return !!clientSize && ((compareRight <= viewRight) && (compareLeft >= viewLeft));
-        }
-    };
-
-})(jQuery);
-
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzDSC3ZUo1GFyGCinNy70i5LajHjn1oOY&callback=initMap"></script>
+<script>
 // The lines object contains all the trips (lines) and those contain all the markers.
 const lines = {
   none: [],
@@ -115,9 +132,9 @@ const kmlLines = {
   }
 }
 
-const iconPath = '/images/icons/'// 'http://travelingtice.com/wp-content/uploads/google-maps/icons/';
-const imgPath = '/images/'// 'http://travelingtice.com/wp-content/uploads/google-maps/images/';
-const jsonPath = '/scripts/Utils/'// 'http://travelingtice.com/wp-content/uploads/google-maps/';
+const iconPath = 'http://travelingtice.com/wp-content/uploads/google-maps/icons/';
+const imgPath = 'http://travelingtice.com/wp-content/uploads/google-maps/images/';
+const jsonPath = 'http://travelingtice.com/wp-content/uploads/google-maps/';
 
 let map; // Global variables map
 // Status of the map
@@ -202,18 +219,10 @@ function makeMarkers(locations) {
       }
     });
   });
+  google.maps.event.addListener(map, 'tilesloaded', function() {
+    openMarkers();
+  });
 }
-
-// Open the markers when the map is on screen
-$(window).scroll(function() {
-  const mapVisible = $('#map').visible(true);
-  if (mapVisible) {
-    google.maps.event.addListener(map, 'tilesloaded', function() {
-      openMarkers();
-    });
-    $(window).off('scroll');
-  }
-})
 
 function openMarkers() {
   // Go through all marker arrays and filter them so right animation is applied.
@@ -409,3 +418,4 @@ function generateHtmlInfowindow(marker) {
 
   return html;
 }
+</script>
