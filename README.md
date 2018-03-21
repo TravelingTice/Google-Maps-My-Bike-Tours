@@ -89,9 +89,18 @@ To add a line when you have a new trip or route:
 2. In `scripts/main.js`:
    At `const lines` Add the name of your line below the comment, which corresponds to the value of the `line` property in all of your markers you want to connect with each other like this: `LINENAME: [];`
 3. At `const lineIntervals` also add the name of your line, with the desired interval time (in ms) you want for that list of markers to spawn. It is necessary to add your line in here too, otherwise your line won't be spawn.
-4. (optional): You can style the weight, color and other things of your line in `main.js` at `const lineStyles`.
+4. (optional): You can style the weight, color and other things of your line in `main.js` at `const lineStyles`. **Make sure to add `name: 'NAME_OF_LINE'` prop to the line** It might seem redundant, but it's necessary if you want to be able to close the line afterwards via a button.
 
 If you've done everything right, the two points should now be connected!
+
+### Add a KML file
+You can add a KML file, so you can show the actual line you rode, by adding this at `const kmlLines =` in `main.js`:
+```javascript
+LINE_NAME: {
+  url: ''
+}
+```
+By default, the KML file will not be set to our map. To do this, you can invoke `openKmlLines()` using a button with event listener or something.
 
 ### I'm Here!
 There is one more line type: 'ImHere'. This one is special because this is a marker with no lines to it and it will get spawn when all of the other markers are spawn. This means that this one will draw some extra focus and it is meant to be used as an "I'm Here" kind of marker.

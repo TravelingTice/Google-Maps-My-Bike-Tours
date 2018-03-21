@@ -1,52 +1,142 @@
+(function($){
+
+    var $w=$(window);
+    $.fn.visible = function(partial,hidden,direction,container){
+
+        if (this.length < 1)
+            return;
+
+	// Set direction default to 'both'.
+	direction = direction || 'both';
+
+        var $t          = this.length > 1 ? this.eq(0) : this,
+						isContained = typeof container !== 'undefined' && container !== null,
+						$c				  = isContained ? $(container) : $w,
+						wPosition        = isContained ? $c.position() : 0,
+            t           = $t.get(0),
+            vpWidth     = $c.outerWidth(),
+            vpHeight    = $c.outerHeight(),
+            clientSize  = hidden === true ? t.offsetWidth * t.offsetHeight : true;
+
+        if (typeof t.getBoundingClientRect === 'function'){
+
+            // Use this native browser method, if available.
+            var rec = t.getBoundingClientRect(),
+                tViz = isContained ?
+												rec.top - wPosition.top >= 0 && rec.top < vpHeight + wPosition.top :
+												rec.top >= 0 && rec.top < vpHeight,
+                bViz = isContained ?
+												rec.bottom - wPosition.top > 0 && rec.bottom <= vpHeight + wPosition.top :
+												rec.bottom > 0 && rec.bottom <= vpHeight,
+                lViz = isContained ?
+												rec.left - wPosition.left >= 0 && rec.left < vpWidth + wPosition.left :
+												rec.left >= 0 && rec.left <  vpWidth,
+                rViz = isContained ?
+												rec.right - wPosition.left > 0  && rec.right < vpWidth + wPosition.left  :
+												rec.right > 0 && rec.right <= vpWidth,
+                vVisible   = partial ? tViz || bViz : tViz && bViz,
+                hVisible   = partial ? lViz || rViz : lViz && rViz,
+		vVisible = (rec.top < 0 && rec.bottom > vpHeight) ? true : vVisible,
+                hVisible = (rec.left < 0 && rec.right > vpWidth) ? true : hVisible;
+
+            if(direction === 'both')
+                return clientSize && vVisible && hVisible;
+            else if(direction === 'vertical')
+                return clientSize && vVisible;
+            else if(direction === 'horizontal')
+                return clientSize && hVisible;
+        } else {
+
+            var viewTop 				= isContained ? 0 : wPosition,
+                viewBottom      = viewTop + vpHeight,
+                viewLeft        = $c.scrollLeft(),
+                viewRight       = viewLeft + vpWidth,
+                position          = $t.position(),
+                _top            = position.top,
+                _bottom         = _top + $t.height(),
+                _left           = position.left,
+                _right          = _left + $t.width(),
+                compareTop      = partial === true ? _bottom : _top,
+                compareBottom   = partial === true ? _top : _bottom,
+                compareLeft     = partial === true ? _right : _left,
+                compareRight    = partial === true ? _left : _right;
+
+            if(direction === 'both')
+                return !!clientSize && ((compareBottom <= viewBottom) && (compareTop >= viewTop)) && ((compareRight <= viewRight) && (compareLeft >= viewLeft));
+            else if(direction === 'vertical')
+                return !!clientSize && ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+            else if(direction === 'horizontal')
+                return !!clientSize && ((compareRight <= viewRight) && (compareLeft >= viewLeft));
+        }
+    };
+
+})(jQuery);
+
 // The lines object contains all the trips (lines) and those contain all the markers.
 const lines = {
   none: [],
   ImHere: [],
   // Add your lines here: LINENAME: [];
   EUp1: [],
-  EUp2P: [],
-  EUp2: []
+  EUp2: [],
+  EUp2P: []
 };
 
 const  lineIntervals = {
   none: 0,
   ImHere: 0,
   // Add intervals here
-  EUp1: 60,
-  EUp2P: 0,
-  EUp2: 60
+  EUp1: 30,
+  EUp2: 30,
+  EUp2P: 0
 }
 
 // Here you can style your lines if you need to
 const lineStyles = {
   EUp1: {
-    strokeWeight: 1.5,
+    name: 'EUp1',
+    strokeWeight: 1.5
+  },
+  EUp2: {
+    name: 'EUp2',
+    strokeWeight: 1.5
   },
   EUp2P: {
+    name: 'EUp2P',
     strokeWeight: 1,
     strokeOpacity: 0.5
   }
 }
 
-/* WORDPRESS:
-* imgPath = http(s)://travelingtice.com/wp-content/uploads/2018/...
-* jsonPath = http(s)://travelingtice.com/wp-content/uploads/2018/3/locations.json
-*/
-const iconPath = 'images/icons/'
-const imgPath = 'images/'
-const jsonPath = 'scripts/'
+// Add optional KML Lines
+const kmlLines = {
+  EUp1: {
+    url: 'http://travelingtice.com/wp-content/uploads/google-maps/kml/EUp1.kml'
+  }
+}
+
+const iconPath = '/images/icons/'// 'http://travelingtice.com/wp-content/uploads/google-maps/icons/';
+const imgPath = '/images/'// 'http://travelingtice.com/wp-content/uploads/google-maps/images/';
+const jsonPath = '/scripts/Utils/'// 'http://travelingtice.com/wp-content/uploads/google-maps/';
 
 let map; // Global variables map
 // Status of the map
 let mapLoaded = false;
 
+// All of our polylines
+let polylines = [];
+
+// All of our KML layers
+let kmlLayers = [];
+
 // Map gets initialized
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: { lat: 53.661212, lng: 10.898780 },
-    zoom: 5
+    zoom: 4
   });
   getMarkers();
+  getKmlLines();
 }
 
 // Get markers from database
@@ -102,17 +192,28 @@ function makeMarkers(locations) {
     marker.addListener('click', function() {
       if (infoWindow.marker != marker) {
         populateInfoWindow(this, infoWindow);
+        map.addListener('click', function() {
+          infoWindow.close();
+          infoWindow.marker = null;
+        })
       } else {
         infoWindow.close();
         infoWindow.marker = null;
       }
     });
   });
-  // When the tiles of the map are loaded, display the markers one by one on the map
-  const listener1 = google.maps.event.addListener(map, 'tilesloaded', () => {
-    openMarkers();
-  });
 }
+
+// Open the markers when the map is on screen
+$(window).scroll(function() {
+  const mapVisible = $('#map').visible(true);
+  if (mapVisible) {
+    google.maps.event.addListener(map, 'tilesloaded', function() {
+      openMarkers();
+    });
+    $(window).off('scroll');
+  }
+})
 
 function openMarkers() {
   // Go through all marker arrays and filter them so right animation is applied.
@@ -186,7 +287,7 @@ function openLine(array, line) {
   array.forEach(marker => {
     points.push(marker.position);
   });
-  let polylineOptions = { strokeWeight: 1.5 };
+  let polylineOptions = { strokeWeight: 1.5, name: line };
   // Options for the polyline (derived from lineStyles)
   for (const styleLine in lineStyles) {
     if (styleLine === line) {
@@ -199,6 +300,57 @@ function openLine(array, line) {
   polyline.setPath(points);
   // Set polyline to our map
   polyline.setMap(map);
+  // Push to polyline array
+  polylines.push(polyline);
+}
+
+// This closes the line that is connected between marker of a certain line with name
+function closeALine(line) {
+  polylines.forEach(polyline => {
+    if (polyline.name === line) {
+      polyline.setMap(null);
+    }
+  });
+}
+
+// Closes all polylines
+function closeAllLines() {
+  polylines.forEach(polyline => {
+    polyline.setMap(null);
+  });
+}
+
+// Opens all polylines
+function openAllLines() {
+  polylines.forEach(polyline => {
+    polyline.setMap(map);
+  });
+}
+
+// Gets all KML files from url in kmlLines object and does not display them
+function getKmlLines() {
+  for (const line in kmlLines) {
+    const url = kmlLines[line].url;
+    const kml = new google.maps.KmlLayer({
+      url,
+      map: null
+    });
+    kmlLayers.push(kml);
+  }
+}
+
+// Open KML layers
+function openKmlLines() {
+  kmlLayers.forEach(layer => {
+    layer.setMap(map);
+  });
+}
+
+// Close KML layers
+function closeKmlLines() {
+  kmlLayers.forEach(layer => {
+    layer.setMap(null);
+  });
 }
 
 // Open infowindow at marker

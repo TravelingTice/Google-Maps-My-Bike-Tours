@@ -1126,6 +1126,7 @@
     "description": "This is where I will return to in May 2018.",
     "img": "riga.jpg",
     "icon": "P.png",
+    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1137,6 +1138,7 @@
     "description": "This is the city I actually wanted to stop at, and I've actually visited it for 1 night when I was going back home.",
     "img": "vilnius.jpg",
     "icon": "P.png",
+    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1148,6 +1150,7 @@
     "description": "One of the last dictatorships in Europe. It's gonna be quite a hassle to get a visa for this country, but I still want to visit it!",
     "img": "minsk.jpg",
     "icon": "P.png",
+    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1159,6 +1162,7 @@
     "description": "A place with a lot of awful history, but everyone I spoke to said it is worth a visit.",
     "img": "auschwitz.jpg",
     "icon": "P.png",
+    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1169,6 +1173,7 @@
     },
     "img": "prague.jpg",
     "icon": "P.png",
+    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1179,6 +1184,7 @@
     },
     "img": "munich.jpg",
     "icon": "P.png",
+    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1189,6 +1195,7 @@
     },
     "img": "vienna.jpg",
     "icon": "P.png",
+    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1199,6 +1206,7 @@
     },
     "img": "bratislava.jpg",
     "icon": "P.png",
+    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1209,6 +1217,7 @@
     },
     "img": "budapest.jpg",
     "icon": "P.png",
+    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1219,6 +1228,7 @@
     },
     "img": "chisinau.jpg",
     "icon": "P.png",
+    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1229,6 +1239,7 @@
     },
     "img": "bucharest.jpg",
     "icon": "P.png",
+    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1239,6 +1250,7 @@
     },
     "img": "sofia.jpg",
     "icon": "P.png",
+    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1249,6 +1261,7 @@
     },
     "img": "athens.jpg",
     "icon": "P.png",
+    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1259,6 +1272,7 @@
     },
     "img": "tirana.jpg",
     "icon": "P.png",
+    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1269,6 +1283,7 @@
     },
     "img": "skopje.jpg",
     "icon": "P.png",
+    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1279,6 +1294,7 @@
     },
     "img": "prishtina.jpg",
     "icon": "P.png",
+    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1289,6 +1305,7 @@
     },
     "img": "belgrade.jpg",
     "icon": "P.png",
+    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1299,6 +1316,7 @@
     },
     "img": "zagreb.jpg",
     "icon": "P.png",
+    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1309,6 +1327,7 @@
     },
     "img": "ljubljana.jpg",
     "icon": "P.png",
+    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1319,6 +1338,7 @@
     },
     "img": "dubrovnik.jpg",
     "icon": "P.png",
+    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1329,6 +1349,7 @@
     },
     "img": "podgorica.jpg",
     "icon": "P.png",
+    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1339,6 +1360,7 @@
     },
     "img": "bari.jpg",
     "icon": "P.png",
+    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1349,6 +1371,7 @@
     },
     "img": "naples.jpg",
     "icon": "P.png",
+    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1359,6 +1382,7 @@
     },
     "img": "rome.jpg",
     "icon": "P.png",
+    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1369,6 +1393,7 @@
     },
     "img": "vatican.jpg",
     "icon": "P.png",
+    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1379,6 +1404,7 @@
     },
     "img": "sanmarino.jpg",
     "icon": "P.png",
+    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1389,6 +1415,7 @@
     },
     "img": "monaco.jpg",
     "icon": "P.png",
+    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1399,6 +1426,7 @@
     },
     "img": "andorra.jpg",
     "icon": "P.png",
+    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1409,6 +1437,7 @@
     },
     "img": "madrid",
     "icon": "P.png",
+    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1419,6 +1448,7 @@
     },
     "img": "lisbon.jpg",
     "icon": "P.png",
+    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1429,6 +1459,7 @@
     },
     "img": "liechtenstein.jpg",
     "icon": "P.png",
+    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1439,6 +1470,7 @@
     },
     "img": "paris.jpg",
     "icon": "P.png",
+    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1449,6 +1481,7 @@
     },
     "img": "luxembourg.jpg",
     "icon": "P.png",
+    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1459,6 +1492,7 @@
     },
     "img": "brussels.jpg",
     "icon": "P.png",
+    "animation": false,
     "line": "EUp2P"
   }
 ]
