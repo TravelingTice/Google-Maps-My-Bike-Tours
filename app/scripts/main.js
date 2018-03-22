@@ -71,8 +71,8 @@
     };
 
 })(jQuery);
-
-// The lines object contains all the trips (lines) and those contain all the markers.
+/* global google */
+// The lines object contains all the trips (lines) and those contain all the markers
 const lines = {
   none: [],
   ImHere: [],
@@ -122,6 +122,8 @@ const jsonPath = '/scripts/Utils/'// 'http://travelingtice.com/wp-content/upload
 let map; // Global variables map
 // Status of the map
 let mapLoaded = false;
+// Status of KML layer on the map
+let isKmlOnMap = false;
 
 // All of our polylines
 let polylines = [];
@@ -137,6 +139,7 @@ function initMap() {
   });
   getMarkers();
   getKmlLines();
+  addBtnListener();
 }
 
 // Get markers from database
@@ -202,18 +205,20 @@ function makeMarkers(locations) {
       }
     });
   });
+  google.maps.event.addListener(map, 'tilesloaded', function() {
+    openMarkers();
+  });
 }
 
-// Open the markers when the map is on screen
-$(window).scroll(function() {
-  const mapVisible = $('#map').visible(true);
-  if (mapVisible) {
-    google.maps.event.addListener(map, 'tilesloaded', function() {
-      openMarkers();
-    });
-    $(window).off('scroll');
-  }
-})
+// $(window).scroll(function() {
+//   const mapVisible = $('#map').visible(true);
+//   if (mapVisible) {
+//     google.maps.event.addListener(map, 'tilesloaded', function() {
+//       openMarkers();
+//     });
+//     $(window).off('scroll');
+//   }
+// })
 
 function openMarkers() {
   // Go through all marker arrays and filter them so right animation is applied.
@@ -244,7 +249,6 @@ function openMarkers() {
     }
     interval = longestArray.length * longestInterval + 1000;
     openImHereMarker(interval);
-    mapLoaded = true;
   }
 }
 
@@ -265,6 +269,10 @@ function openMarkerArray(array, i, interval, line) {
     ++i;
     if (i <= array.length) {
       marker.setMap(map);
+      // Last marker is ImHere, so after this, our map is loaded!
+      if (line === 'ImHere') {
+        mapLoaded = true;
+      }
       openMarkerArray(array, i, interval, line);
     } else {
       switch (line) {
@@ -326,26 +334,43 @@ function openAllLines() {
     polyline.setMap(map);
   });
 }
-
+// This one opens all our markers, if they have been closed before
+function openAllMarkers() {
+  for (const lineName in lines) {
+    const markerArray = lines[lineName];
+    markerArray.forEach(marker => {
+      marker.setMap(map);
+    });
+  }
+}
+// This one closes all our markers, that are not ImHere
+function closeAllMarkers() {
+  for (const lineName in lines) {
+    const markerArray = lines[lineName];
+    markerArray.forEach(marker => {
+      marker.setMap(null);
+    });
+  }
+}
 // Gets all KML files from url in kmlLines object and does not display them
 function getKmlLines() {
   for (const line in kmlLines) {
     const url = kmlLines[line].url;
     const kml = new google.maps.KmlLayer({
       url,
-      map: null
+      map: null,
+      preserveViewport: true,
+      suppressInfoWindows: true
     });
     kmlLayers.push(kml);
   }
 }
-
 // Open KML layers
 function openKmlLines() {
   kmlLayers.forEach(layer => {
     layer.setMap(map);
   });
 }
-
 // Close KML layers
 function closeKmlLines() {
   kmlLayers.forEach(layer => {
@@ -408,4 +433,24 @@ function generateHtmlInfowindow(marker) {
   html += '</div>';
 
   return html;
+}
+
+function addBtnListener() {
+  const btn1 = document.getElementById('show-route');
+    btn1.addEventListener('click', () => {
+      if (mapLoaded) {
+        if (!isKmlOnMap) {
+          closeAllLines();
+          closeAllMarkers();
+          openKmlLines();
+          btn1.innerHTML = 'Hide Ridden Route';
+        } else {
+          closeKmlLines();
+          openAllMarkers();
+          openAllLines();
+          btn1.innerHTML = 'Show Ridden Route';
+        }
+        isKmlOnMap = !isKmlOnMap;
+      }
+  });
 }
