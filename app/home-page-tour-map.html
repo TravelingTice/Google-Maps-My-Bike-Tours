@@ -1,8 +1,17 @@
 <div id="scoped-content">
   <style type="text/css" scoped>
+    #scoped-content {
+      background-color: #00006f;
+    }
     #map {
       width: 100%;
-      height: 75vh;
+      height: 70vh;
+    }
+    @media screen and (min-width: 887px) {
+      #map, .below-map {
+        width: 80%;
+        margin: 0 10%;
+      }
     }
     #map .infowindow {
       overflow: hidden;
@@ -86,56 +95,57 @@
       margin: 10px 0 5px 5px;
     }
     .below-map {
-      width: 100%;
-      height: 140px;
+      background-color: white;
       font-size: 17px;
       font-family: 'Roboto', Helvetica, Arial, Lucida, sans-serif;
       display: flex;
     }
     .below-map .map-options {
       height: 100%;
-      line-height: 100px;
       text-align: center;
       width: 18vw;
       min-width: 75px;
+      margin: auto 0;
     }
-    .below-map .map-options #show-route {
-      margin-top: 17px;
-      margin: 10px 3px;
+    .below-map .map-options button {
       padding: 10px;
+      margin: 2px;
       border: 3px solid black;
       border-radius: 2px;
       background-color: #fff;
       font-weight: bold;
-    }
-    .below-map .map-legend {
-      display: inline-block;
-      height: 100%;
-      width: 82vw;
-      padding: 5px 0;
+      font-size: 14px;
+      color: black;
     }
     .below-map .map-legend img {
       padding-top: 10px;
-      max-height: 100%;
-      max-width: 100%;
+      height: auto;
+      width: 60vw;
+      max-width: 500px;
+      min-width: 243px;
     }
   </style>
   <div id="map"></div>
+  <div class="below-map">
+    <div class="map-options">
+      <button id="show-route">Show Ridden Route</button>
+      <button onclick="window.location.href='/tour-map'" id="go-to-tour-map">Go To Tour Map </button>
+    </div>
+    <div class="map-legend">
+      <img src="https://travelingtice.com/wp-content/uploads/google-maps/images/legend.png" alt="map legend">
+    </div>
+  </div>
 </div>
 
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0C0AacrdTQ6ihc98emn8zDCwah2o6dIE&callback=initMap"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0C0AacrdTQ6ihc98emn8zDCwah2o6dIE&callback=initMap" onerror="googleError()"></script>
 <script>
 (function($){
-
     var $w=$(window);
     $.fn.visible = function(partial,hidden,direction,container){
-
         if (this.length < 1)
             return;
-
 	// Set direction default to 'both'.
 	direction = direction || 'both';
-
         var $t          = this.length > 1 ? this.eq(0) : this,
 						isContained = typeof container !== 'undefined' && container !== null,
 						$c				  = isContained ? $(container) : $w,
@@ -144,9 +154,7 @@
             vpWidth     = $c.outerWidth(),
             vpHeight    = $c.outerHeight(),
             clientSize  = hidden === true ? t.offsetWidth * t.offsetHeight : true;
-
         if (typeof t.getBoundingClientRect === 'function'){
-
             // Use this native browser method, if available.
             var rec = t.getBoundingClientRect(),
                 tViz = isContained ?
@@ -165,7 +173,6 @@
                 hVisible   = partial ? lViz || rViz : lViz && rViz,
 		vVisible = (rec.top < 0 && rec.bottom > vpHeight) ? true : vVisible,
                 hVisible = (rec.left < 0 && rec.right > vpWidth) ? true : hVisible;
-
             if(direction === 'both')
                 return clientSize && vVisible && hVisible;
             else if(direction === 'vertical')
@@ -173,7 +180,6 @@
             else if(direction === 'horizontal')
                 return clientSize && hVisible;
         } else {
-
             var viewTop 				= isContained ? 0 : wPosition,
                 viewBottom      = viewTop + vpHeight,
                 viewLeft        = $c.scrollLeft(),
@@ -187,7 +193,6 @@
                 compareBottom   = partial === true ? _top : _bottom,
                 compareLeft     = partial === true ? _right : _left,
                 compareRight    = partial === true ? _left : _right;
-
             if(direction === 'both')
                 return !!clientSize && ((compareBottom <= viewBottom) && (compareTop >= viewTop)) && ((compareRight <= viewRight) && (compareLeft >= viewLeft));
             else if(direction === 'vertical')
@@ -196,7 +201,6 @@
                 return !!clientSize && ((compareRight <= viewRight) && (compareLeft >= viewLeft));
         }
     };
-
 })(jQuery);
   /* global google */
   // The lines object contains all the trips (lines) and those contain all the markers.
@@ -235,12 +239,12 @@
   // Add optional KML Lines
   const kmlLines = {
     EUp1: {
-      url: 'http://travelingtice.com/wp-content/uploads/google-maps/kml/EUp1.kml'
+      url: 'https://travelingtice.com/wp-content/uploads/google-maps/kml/EUp1.kml'
     }
   }
-  const iconPath = 'http://travelingtice.com/wp-content/uploads/google-maps/icons/';
-  const imgPath = 'http://travelingtice.com/wp-content/uploads/google-maps/images/';
-  const jsonPath = 'http://travelingtice.com/wp-content/uploads/google-maps/';
+  const iconPath = 'https://travelingtice.com/wp-content/uploads/google-maps/icons/';
+  const imgPath = 'https://travelingtice.com/wp-content/uploads/google-maps/images/';
+  const jsonPath = 'https://travelingtice.com/wp-content/uploads/google-maps/';
   let map; // Global variables map
   // Status of the map
   let mapLoaded = false;
@@ -331,6 +335,7 @@
   }
   $(window).scroll(function() {
     const mapVisible = $('#map').visible(true);
+    console.log(mapVisible);
     if (mapVisible) {
       google.maps.event.addListener(map, 'tilesloaded', function() {
         openMarkers();
@@ -562,5 +567,10 @@
           isKmlOnMap = !isKmlOnMap;
         }
     });
+  }
+  function googleError() {
+    const theMap = document.getElementById('map');
+    const html = 'Unfortunately the map was not able to load 😢. Try reloading the page. If you are using Safari, Opera or Internet Explorer, it might not work for now. Try using <a href="https://www.google.com/chrome/">Google Chrome</a>.';
+    theMap.innerHTML = html;
   }
 </script>

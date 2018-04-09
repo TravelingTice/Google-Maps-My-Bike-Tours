@@ -454,3 +454,9 @@ function addBtnListener() {
       }
   });
 }
+
+function googleError() {
+  const theMap = document.getElementById('map');
+  const html = 'Unfortunately the map was not able to load 😢. Try reloading the page. If you are using Safari, Opera or Internet Explorer, it might not work for now. Try using <a href="https://www.google.com/chrome/">Google Chrome</a>.';
+  theMap.innerHTML = html;
+}
