@@ -205,20 +205,15 @@ function makeMarkers(locations) {
       }
     });
   });
-  google.maps.event.addListener(map, 'tilesloaded', function() {
-    openMarkers();
-  });
 }
 
-// $(window).scroll(function() {
-//   const mapVisible = $('#map').visible(true);
-//   if (mapVisible) {
-//     google.maps.event.addListener(map, 'tilesloaded', function() {
-//       openMarkers();
-//     });
-//     $(window).off('scroll');
-//   }
-// })
+$(window).scroll(function() {
+  const mapVisible = $('#map').visible(true);
+  if (mapVisible) {
+      openMarkers();
+    $(window).off('scroll');
+  }
+})
 
 function openMarkers() {
   // Go through all marker arrays and filter them so right animation is applied.
