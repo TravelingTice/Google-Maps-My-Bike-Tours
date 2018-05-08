@@ -7,12 +7,6 @@
       width: 100%;
       height: 70vh;
     }
-    @media screen and (min-width: 887px) {
-      .below-map {
-        width: 80%;
-        margin: 0 10%;
-      }
-    }
     #map .infowindow {
       overflow: hidden;
       font-family: 'Roboto', Helvetica, Arial, Lucida, sans-serif;
@@ -104,12 +98,12 @@
       height: 100%;
       text-align: center;
       width: 18vw;
-      min-width: 75px;
+      min-width: 90px;
       margin: auto 0;
     }
     .below-map .map-options button {
-      padding: 10px;
-      margin: 2px;
+      padding: 10px 7px;
+      margin: 5px 5px;
       border: 3px solid black;
       border-radius: 2px;
       background-color: #fff;
@@ -119,20 +113,20 @@
     }
     .below-map .map-legend img {
       padding-top: 10px;
-      height: auto;
-      width: 60vw;
-      max-width: 500px;
-      min-width: 243px;
+      max-height: 100px;
+      max-width: 100%;
     }
   </style>
   <div id="map"></div>
   <div class="below-map">
     <div class="map-options">
       <button id="show-route">Show Ridden Route</button>
+      <button id="show-checklist">Show Country Checklist</button>
       <button onclick="window.location.href='/tour-map'" id="go-to-tour-map">Go To Tour Map </button>
     </div>
     <div class="map-legend">
       <img src="https://travelingtice.com/wp-content/uploads/google-maps/images/legend.png" alt="map legend">
+      <img src="https://travelingtice.com/wp-content/uploads/google-maps/images/tourslegend.png" alt="tours legend">
     </div>
   </div>
 </div>
@@ -207,18 +201,20 @@
   const lines = {
     none: [],
     ImHere: [],
+    country: [],
     // Add your lines here: LINENAME: [];
     EUp1: [],
     EUp2: [],
     EUp2P: []
   };
   const lineIntervals = {
-    none: 0,
-    ImHere: 0,
+    none: 1,
+    ImHere: 1,
+    country: 1,
     // Add intervals here
-    EUp1: 30,
-    EUp2: 30,
-    EUp2P: 0
+    EUp1: 20,
+    EUp2: 20,
+    EUp2P: 1
   }
   // Here you can style your lines if you need to
   const lineStyles = {
@@ -232,8 +228,8 @@
     },
     EUp2P: {
       name: 'EUp2P',
-      strokeWeight: 1,
-      strokeOpacity: 0.5
+      strokeWeight: 2,
+      strokeOpacity: 0.4
     }
   }
   // Add optional KML Lines
@@ -250,6 +246,8 @@
   let mapLoaded = false;
   // Status of KML layer on the map
   let isKmlOnMap = false;
+  // Status of country checklist on the map
+  let isChecklist = false;
   // All of our polylines
   let polylines = [];
   // All of our KML layers
@@ -265,7 +263,7 @@
     });
     getMarkers();
     getKmlLines();
-    addBtnListener();
+    addBtnListeners();
   }
   // Get markers from database
   function getMarkers() {
@@ -289,7 +287,12 @@
       const icon = location.icon ? iconPath + location.icon : null;
       const line = location.line ? location.line : 'none';
       const zIndex = location.zIndex ? location.zIndex : 1;
-      const animation = location.animation === false ? null : google.maps.Animation.DROP;
+      let animation;
+      if (location.line === 'EUp2P' || location.line === 'country') {
+        animation = null;
+      } else {
+        animation = google.maps.Animation.DROP;
+      }
       // Create marker object
       const marker = new google.maps.Marker({
         map: null,
@@ -365,7 +368,7 @@
           }
         }
       }
-      interval = longestArray.length * longestInterval + 1000;
+      interval = longestArray.length * longestInterval + 2000;
       openImHereMarker(interval);
     }
   }
@@ -379,12 +382,13 @@
     }
     mapLoaded = true;
   }
-  // This sets each marker in the array to map.
+  // This sets each marker in the array to map except for the line country!
   function openMarkerArray(array, i, interval, line) {
     setTimeout(() => {
       const marker = array[i];
       ++i;
-      if (i <= array.length) {
+        // For my model, the country markers will not be spawn in the beginning, I have a button for that.
+        if (i <= array.length && line !== 'country') {
         marker.setMap(map);
         // Last marker is ImHere, so after this, our map is loaded!
         if (line === 'ImHere') {
@@ -394,8 +398,7 @@
       } else {
         switch (line) {
           case 'none':
-            // Open no line
-            break;
+          case 'country':
           case 'ImHere':
             // Open no line
             break;
@@ -430,36 +433,21 @@
     // Push to polyline array
     polylines.push(polyline);
   }
-  // This closes the line that is connected between marker of a certain line with name
-  function closeALine(line) {
-    polylines.forEach(polyline => {
-      if (polyline.name === line) {
-        polyline.setMap(null);
+  // This one opens all our markers + polylines
+  function openAllMarkers() {
+    for (const lineName in lines) {
+      if (lineName !== 'country') {
+        const markerArray = lines[lineName];
+        markerArray.forEach(marker => {
+          marker.setMap(map);
+        });
       }
-    });
-  }
-  // Closes all polylines
-  function closeAllLines() {
-    polylines.forEach(polyline => {
-      polyline.setMap(null);
-    });
-  }
-  // Opens all polylines
-  function openAllLines() {
+    }
     polylines.forEach(polyline => {
       polyline.setMap(map);
     });
   }
-  // This one opens all our markers, if they have been closed before
-  function openAllMarkers() {
-    for (const lineName in lines) {
-      const markerArray = lines[lineName];
-      markerArray.forEach(marker => {
-        marker.setMap(map);
-      });
-    }
-  }
-  // This one closes all our markers, that are not ImHere
+  // This one closes all our markers + polylines
   function closeAllMarkers() {
     for (const lineName in lines) {
       const markerArray = lines[lineName];
@@ -467,6 +455,9 @@
         marker.setMap(null);
       });
     }
+    polylines.forEach(polyline => {
+      polyline.setMap(null);
+    });
   }
   // Gets all KML files from url in kmlLines object and does not display them
   function getKmlLines() {
@@ -492,6 +483,17 @@
     kmlLayers.forEach(layer => {
       layer.setMap(null);
     });
+  }
+  // Open Country checklist
+  function openChecklist() {
+    lines.country.forEach(country => {
+      country.setMap(map);
+    })
+  }
+  function closeChecklist() {
+    lines.country.forEach(country => {
+      country.setMap(null);
+    })
   }
   // Open infowindow at marker
   function populateInfoWindow(marker, infowindow) {
@@ -544,23 +546,46 @@
     html += '</div>';
     return html;
   }
-  function addBtnListener() {
+  // Add listeners to the buttons below the map
+  function addBtnListeners() {
     const btn1 = document.getElementById('show-route');
-      btn1.addEventListener('click', () => {
-        if (mapLoaded) {
-          if (!isKmlOnMap) {
-            closeAllLines();
-            closeAllMarkers();
-            openKmlLines();
-            btn1.innerHTML = 'Hide Ridden Route';
-          } else {
-            closeKmlLines();
-            openAllMarkers();
-            openAllLines();
-            btn1.innerHTML = 'Show Ridden Route';
+    const btn2 = document.getElementById('show-checklist');
+    btn1.addEventListener('click', () => {
+      if (mapLoaded) {
+        if (!isKmlOnMap) {
+          closeAllMarkers();
+          openKmlLines();
+          if (isChecklist) {
+            openChecklist();
           }
-          isKmlOnMap = !isKmlOnMap;
+          btn1.innerHTML = 'Hide Ridden Route';
+          isKmlOnMap = true;
+        } else {
+          closeKmlLines();
+          if (!isChecklist) {
+            openAllMarkers();
+          }
+          btn1.innerHTML = 'Show Ridden Route';
+          isKmlOnMap = false;
         }
+      }
+    });
+    btn2.addEventListener('click', () => {
+      if (mapLoaded) {
+        if (!isChecklist) {
+          closeAllMarkers();
+          openChecklist();
+          btn2.innerHTML = 'Hide Country Checklist';
+          isChecklist = true;
+        } else {
+          closeChecklist();
+          if (!isKmlOnMap) {
+            openAllMarkers();
+          }
+          btn2.innerHTML = 'Show Country Checklist';
+          isChecklist = false;
+        }
+      }
     });
   }
   function googleError() {
