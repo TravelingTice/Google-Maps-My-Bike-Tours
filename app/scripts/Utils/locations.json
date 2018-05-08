@@ -1,5 +1,4 @@
-[
-  {
+[{
     "title": "I'M HERE!",
     "location": {
       "lat": 52.191081,
@@ -10,6 +9,1937 @@
     "icon": "ImHere.png",
     "zIndex": 10,
     "line": "ImHere"
+  },
+  {
+    "title": "The Netherlands",
+    "location": {
+      "lat": 51.824280,
+      "lng": 5.245750
+    },
+    "zIndex": 9,
+    "icon": "checkSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Germany",
+    "location": {
+      "lat": 50.698369,
+      "lng": 10.201007
+    },
+    "zIndex": 9,
+    "icon": "checkMd.png",
+    "line": "country"
+  },
+  {
+    "title": "Denmark",
+    "location": {
+      "lat": 55.607360,
+      "lng": 10.275769
+    },
+    "zIndex": 9,
+    "icon": "checkSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Sweden",
+    "location": {
+      "lat": 63.207368,
+      "lng": 17.398726
+    },
+    "zIndex": 9,
+    "icon": "checkMd.png",
+    "line": "country"
+  },
+  {
+    "title": "Norway",
+    "location": {
+      "lat": 62.117732,
+      "lng": 9.137007
+    },
+    "zIndex": 9,
+    "icon": "checkMd.png",
+    "line": "country"
+  },
+  {
+    "title": "Finland",
+    "location": {
+      "lat": 63.873077,
+      "lng": 26.539351
+    },
+    "zIndex": 9,
+    "icon": "checkMd.png",
+    "line": "country"
+  },
+  {
+    "title": "Estonia",
+    "location": {
+      "lat": 58.737968,
+      "lng": 25.660445
+    },
+    "zIndex": 9,
+    "icon": "checkSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Latvia",
+    "location": {
+      "lat": 57.000233,
+      "lng": 24.325972
+    },
+    "zIndex": 9,
+    "icon": "checkSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Lithuania",
+    "location": {
+      "lat": 55.186573,
+      "lng": 23.974410
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Poland",
+    "location": {
+      "lat": 52.383837,
+      "lng": 19.228316
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Belarus",
+    "location": {
+      "lat": 53.529214,
+      "lng": 27.872039
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Ukraine",
+    "location": {
+      "lat": 48.739178,
+      "lng": 31.463439
+    },
+    "zIndex": 9,
+    "icon": "NotYetMd.png",
+    "line": "country"
+  },
+  {
+    "title": "Moldova",
+    "location": {
+      "lat": 46.714646,
+      "lng": 28.672911
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Romania",
+    "location": {
+      "lat": 44.845275,
+      "lng": 25.075892
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Bulgaria",
+    "location": {
+      "lat": 41.972886,
+      "lng": 25.251674
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Turkey",
+    "location": {
+      "lat": 38.209180,
+      "lng": 35.446986
+    },
+    "zIndex": 9,
+    "icon": "NotYetMd.png",
+    "line": "country"
+  },
+  {
+    "title": "Greece",
+    "location": {
+      "lat": 38.528180,
+      "lng": 21.970131
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Albania",
+    "location": {
+      "lat": 41.195612,
+      "lng": 20.071746
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Macedonia (FYROM)",
+    "location": {
+      "lat": 41.638718,
+      "lng": 21.637217
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Serbia",
+    "location": {
+      "lat": 44.007311,
+      "lng": 20.758311
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Bosnia and Herzegovina",
+    "location": {
+      "lat": 44.149375,
+      "lng": 17.682139
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Croatia",
+    "location": {
+      "lat": 45.103261,
+      "lng": 15.375010
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Hungary",
+    "location": {
+      "lat": 46.856191,
+      "lng": 19.255198
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Austria",
+    "location": {
+      "lat": 47.230518,
+      "lng": 14.179515
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Liechtenstein",
+    "location": {
+      "lat": 47.136604,
+      "lng": 9.539421
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Switzerland",
+    "location": {
+      "lat": 46.612906,
+      "lng": 8.179522
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Czechia",
+    "location": {
+      "lat": 49.520389,
+      "lng": 15.320717
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Luxembourg",
+    "location": {
+      "lat": 49.648598,
+      "lng": 6.114174
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Belgium",
+    "location": {
+      "lat": 50.634302,
+      "lng": 4.400307
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "France",
+    "location": {
+      "lat": 46.614162,
+      "lng": 2.444741
+    },
+    "zIndex": 9,
+    "icon": "NotYetMd.png",
+    "line": "country"
+  },
+  {
+    "title": "Italy",
+    "location": {
+      "lat": 42.448384,
+      "lng": 12.815835
+    },
+    "zIndex": 9,
+    "icon": "NotYetMd.png",
+    "line": "country"
+  },
+  {
+    "title": "Slovakia",
+    "location": {
+      "lat": 48.469956,
+      "lng": 19.752013
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Spain",
+    "location": {
+      "lat": 39.563982,
+      "lng": -3.971275
+    },
+    "zIndex": 9,
+    "icon": "NotYetMd.png",
+    "line": "country"
+  },
+  {
+    "title": "Portugal",
+    "location": {
+      "lat": 39.156255,
+      "lng": -8.146079
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Andorra",
+    "location": {
+      "lat": 42.502137,
+      "lng": 1.539577
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Monaco",
+    "location": {
+      "lat": 43.735281,
+      "lng": 7.419609
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "San Marino",
+    "location": {
+      "lat": 43.929645,
+      "lng": 12.457686
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Vatican City",
+    "location": {
+      "lat": 41.902722,
+      "lng": 12.452785
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Malta",
+    "location": {
+      "lat": 35.624594,
+      "lng": 14.384367
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Montenegro",
+    "location": {
+      "lat": 42.755722,
+      "lng": 19.235655
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "United Kingdom",
+    "location": {
+      "lat": 52.312842,
+      "lng": -1.455910
+    },
+    "zIndex": 9,
+    "icon": "NotYetMd.png",
+    "line": "country"
+  },
+  {
+    "title": "Ireland",
+    "location": {
+      "lat": 52.727308,
+      "lng": -7.893898
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Iceland",
+    "location": {
+      "lat": 64.078345,
+      "lng": -18.358727
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Canada",
+    "location": {
+      "lat": 56.624212,
+      "lng": -100.765429
+    },
+    "zIndex": 9,
+    "icon": "NotYetLg.png",
+    "line": "country"
+  },
+  {
+    "title": "United States of America",
+    "location": {
+      "lat": 37.811526,
+      "lng": -100.413866
+    },
+    "zIndex": 9,
+    "icon": "NotYetLg.png",
+    "line": "country"
+  },
+  {
+    "title": "Mexico",
+    "location": {
+      "lat": 19.046742,
+      "lng": -100.941210
+    },
+    "zIndex": 9,
+    "icon": "NotYetLg.png",
+    "line": "country"
+  },
+  {
+    "title": "The Bahamas",
+    "location": {
+      "lat": 23.595682,
+      "lng": -77.952778
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Cuba",
+    "location": {
+      "lat": 20.094838,
+      "lng": -78.525777
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Haiti",
+    "location": {
+      "lat": 18.080804,
+      "lng": -72.439351
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Dominican Republic",
+    "location": {
+      "lat": 18.122574,
+      "lng": -70.329976
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Antigua and Barbuda",
+    "location": {
+      "lat": 16.873712,
+      "lng": -61.618874
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "St Kitts And Nevis",
+    "location": {
+      "lat": 17.020841,
+      "lng": -62.690041
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Dominica",
+    "location": {
+      "lat": 15.117595,
+      "lng": -61.351861
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "St Lucia",
+    "location": {
+      "lat": 13.569843,
+      "lng": -60.967340
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Barbados",
+    "location": {
+      "lat": 12.937286,
+      "lng": -59.535486
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "St Vincent and the Grenadines",
+    "location": {
+      "lat": 12.921224,
+      "lng": -61.221887
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Grenada",
+    "location": {
+      "lat": 11.886708,
+      "lng": -61.691091
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Trinidad and Tobago",
+    "location": {
+      "lat": 10.064861,
+      "lng": -61.240855
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Venezuela",
+    "location": {
+      "lat": 6.421812,
+      "lng": -66.389453
+    },
+    "zIndex": 9,
+    "icon": "NotYetMd.png",
+    "line": "country"
+  },
+  {
+    "title": "Colombia",
+    "location": {
+      "lat": 3.093951,
+      "lng": -73.266894
+    },
+    "zIndex": 9,
+    "icon": "NotYetMd.png",
+    "line": "country"
+  },
+  {
+    "title": "Panama",
+    "location": {
+      "lat": 7.991295,
+      "lng": -80.173625
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Costa Rica",
+    "location": {
+      "lat": 9.272969,
+      "lng": -84.304485
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Nicaragua",
+    "location": {
+      "lat": 12.398485,
+      "lng": -85.007610
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "El Salvador",
+    "location": {
+      "lat": 13.148684,
+      "lng": -88.874997
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Honduras",
+    "location": {
+      "lat": 14.365171,
+      "lng": -86.963376
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Guatemala",
+    "location": {
+      "lat": 14.960366,
+      "lng": -90.457028
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Belize",
+    "location": {
+      "lat": 16.548254,
+      "lng": -88.630833
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Jamaica",
+    "location": {
+      "lat": 17.586182,
+      "lng": -77.270874
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Guyana",
+    "location": {
+      "lat": 4.188274,
+      "lng": -58.913652
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Suriname",
+    "location": {
+      "lat": 3.596384,
+      "lng": -55.859453
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Ecuador",
+    "location": {
+      "lat": -2.543560,
+      "lng": -78.536993
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Peru",
+    "location": {
+      "lat": -11.518745,
+      "lng": -75.197149
+    },
+    "zIndex": 9,
+    "icon": "NotYetMd.png",
+    "line": "country"
+  },
+  {
+    "title": "Bolivia",
+    "location": {
+      "lat": -17.197599,
+      "lng": -64.508466
+    },
+    "zIndex": 9,
+    "icon": "NotYetMd.png",
+    "line": "country"
+  },
+  {
+    "title": "Brazil",
+    "location": {
+      "lat": -13.461064,
+      "lng": -52.994794
+    },
+    "zIndex": 9,
+    "icon": "NotYetLg.png",
+    "line": "country"
+  },
+  {
+    "title": "Paraguay",
+    "location": {
+      "lat": -24.253833,
+      "lng": -58.531903
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Argentina",
+    "location": {
+      "lat": -36.818911,
+      "lng": -64.905471
+    },
+    "zIndex": 9,
+    "icon": "NotYetMd.png",
+    "line": "country"
+  },
+  {
+    "title": "Uruguay",
+    "location": {
+      "lat": -33.734340,
+      "lng": -56.028517
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Chile",
+    "location": {
+      "lat": -36.395592,
+      "lng": -72.727736
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "New Zealand",
+    "location": {
+      "lat": -43.805425,
+      "lng": 172.534627
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Australia",
+    "location": {
+      "lat": -28.301171,
+      "lng": 133.408786
+    },
+    "zIndex": 9,
+    "icon": "NotYetLg.png",
+    "line": "country"
+  },
+  {
+    "title": "Papua New Guinea",
+    "location": {
+      "lat": -7.794466,
+      "lng": 144.483004
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Indonesia",
+    "location": {
+      "lat": -9.011702,
+      "lng": 117.940036
+    },
+    "zIndex": 9,
+    "icon": "NotYetMd.png",
+    "line": "country"
+  },
+  {
+    "title": "Singapore",
+    "location": {
+      "lat": 1.084779,
+      "lng": 103.862012
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Malaysia",
+    "location": {
+      "lat": 2.457175,
+      "lng": 107.255572
+    },
+    "zIndex": 9,
+    "icon": "NotYetMd.png",
+    "line": "country"
+  },
+  {
+    "title": "Brunei",
+    "location": {
+      "lat": 4.080451,
+      "lng": 114.682330
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Thailand",
+    "location": {
+      "lat": 13.557052,
+      "lng": 100.591837
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Myanmar",
+    "location": {
+      "lat": 19.204019,
+      "lng": 95.977579
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Laos",
+    "location": {
+      "lat": 18.996389,
+      "lng": 102.481485
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Cambodia",
+    "location": {
+      "lat": 11.971313,
+      "lng": 105.030313
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Vietnam",
+    "location": {
+      "lat": 13.727874,
+      "lng": 108.238321
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Philippines",
+    "location": {
+      "lat": 10.321065,
+      "lng": 123.406786
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Palau",
+    "location": {
+      "lat": 6.889002,
+      "lng": 134.568895
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Federated States of Micronesia",
+    "location": {
+      "lat": 5.928258,
+      "lng": 158.167528
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Marshall Islands",
+    "location": {
+      "lat": 6.539851,
+      "lng": 168.846239
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Nauru",
+    "location": {
+      "lat": -0.828686,
+      "lng": 167.033539
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Tuvalu",
+    "location": {
+      "lat": -9.312826,
+      "lng": 179.338226
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Solomon Islands",
+    "location": {
+      "lat": -10.200665,
+      "lng": 160.178070
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Vanuatu",
+    "location": {
+      "lat": -16.596177,
+      "lng": 167.182479
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Fiji",
+    "location": {
+      "lat": -18.570139,
+      "lng": 178.481823
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Samoa",
+    "location": {
+      "lat": -14.144067,
+      "lng": -172.070073
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Tonga",
+    "location": {
+      "lat": -21.497550,
+      "lng": -175.101244
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Kiribati",
+    "location": {
+      "lat": 1.200237,
+      "lng": -157.073619
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Japan",
+    "location": {
+      "lat": 35.482738,
+      "lng": 138.512162
+    },
+    "zIndex": 9,
+    "icon": "NotYetMd.png",
+    "line": "country"
+  },
+  {
+    "title": "South Korea",
+    "location": {
+      "lat": 35.697156,
+      "lng": 127.745561
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "North Korea",
+    "location": {
+      "lat": 39.151077,
+      "lng": 126.646928
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "China",
+    "location": {
+      "lat": 31.735448,
+      "lng": 103.373771
+    },
+    "zIndex": 9,
+    "icon": "NotYetLg.png",
+    "line": "country"
+  },
+  {
+    "title": "Mongolia",
+    "location": {
+      "lat": 44.960580,
+      "lng": 103.074937
+    },
+    "zIndex": 9,
+    "icon": "NotYetMd.png",
+    "line": "country"
+  },
+  {
+    "title": "Kazachstan",
+    "location": {
+      "lat": 47.188177,
+      "lng": 67.128346
+    },
+    "zIndex": 9,
+    "icon": "NotYetMd.png",
+    "line": "country"
+  },
+  {
+    "title": "Russia",
+    "location": {
+      "lat": 61.192014,
+      "lng": 87.114629
+    },
+    "zIndex": 9,
+    "icon": "NotYetLg.png",
+    "line": "country"
+  },
+  {
+    "title": "Kyrgyzstan",
+    "location": {
+      "lat": 41.204649,
+      "lng": 74.594061
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Tajikistan",
+    "location": {
+      "lat": 38.156767,
+      "lng": 71.034491
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Afghanistan",
+    "location": {
+      "lat": 32.900996,
+      "lng": 65.211737
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Iran",
+    "location": {
+      "lat": 31.525364,
+      "lng": 54.093573
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Turkmenistan",
+    "location": {
+      "lat": 38.593162,
+      "lng": 59.179341
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Uzbekistan",
+    "location": {
+      "lat": 41.452926,
+      "lng": 63.442036
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Pakistan",
+    "location": {
+      "lat": 28.949763,
+      "lng": 68.989589
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "India",
+    "location": {
+      "lat": 20.072238,
+      "lng": 78.708896
+    },
+    "zIndex": 9,
+    "icon": "NotYetMd.png",
+    "line": "country"
+  },
+  {
+    "title": "Nepal",
+    "location": {
+      "lat": 27.698900,
+      "lng": 83.894443
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Bhutan",
+    "location": {
+      "lat": 27.094147,
+      "lng": 90.470180
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Taiwan",
+    "location": {
+      "lat": 22.912929,
+      "lng": 120.971396
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Bahrain",
+    "location": {
+      "lat": 25.831223,
+      "lng": 50.565472
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Qatar",
+    "location": {
+      "lat": 24.718573,
+      "lng": 51.213665
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "United Arab Emirates",
+    "location": {
+      "lat": 23.535466,
+      "lng": 54.179974
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Oman",
+    "location": {
+      "lat": 18.957463,
+      "lng": 55.961761
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Yemen",
+    "location": {
+      "lat": 14.740461,
+      "lng": 47.247795
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Saudi Arabia",
+    "location": {
+      "lat": 21.475544,
+      "lng": 45.328829
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Kuwait",
+    "location": {
+      "lat": 29.038865,
+      "lng": 47.515108
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Iraq",
+    "location": {
+      "lat": 31.971103,
+      "lng": 43.368674
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Syria",
+    "location": {
+      "lat": 34.506847,
+      "lng": 38.402854
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Cyprus",
+    "location": {
+      "lat": 34.664127,
+      "lng": 33.195335
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Armenia",
+    "location": {
+      "lat": 39.941567,
+      "lng": 44.694880
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Azerbaijan",
+    "location": {
+      "lat": 40.059391,
+      "lng": 48.056696
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Georgia",
+    "location": {
+      "lat": 41.731585,
+      "lng": 43.781298
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Lebanon",
+    "location": {
+      "lat": 33.495010,
+      "lng": 35.798537
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Israel",
+    "location": {
+      "lat": 31.196324,
+      "lng": 34.961954
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Jordan",
+    "location": {
+      "lat": 30.518973,
+      "lng": 36.394458
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Egypt",
+    "location": {
+      "lat": 25.682847,
+      "lng": 29.714770
+    },
+    "zIndex": 9,
+    "icon": "NotYetMd.png",
+    "line": "country"
+  },
+  {
+    "title": "Palestine",
+    "location": {
+      "lat": 31.761657,
+      "lng": 35.421832
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Libya",
+    "location": {
+      "lat": 25.971933,
+      "lng": 17.318586
+    },
+    "zIndex": 9,
+    "icon": "NotYetMd.png",
+    "line": "country"
+  },
+  {
+    "title": "Algeria",
+    "location": {
+      "lat": 27.229292,
+      "lng": 2.640851
+    },
+    "zIndex": 9,
+    "icon": "NotYetMd.png",
+    "line": "country"
+  },
+  {
+    "title": "Morocco",
+    "location": {
+      "lat": 31.103801,
+      "lng": -6.631610
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Mauritania",
+    "location": {
+      "lat": 18.700850,
+      "lng": -10.864878
+    },
+    "zIndex": 9,
+    "icon": "NotYetMd.png",
+    "line": "country"
+  },
+  {
+    "title": "Mali",
+    "location": {
+      "lat": 16.270013,
+      "lng": -2.769727
+    },
+    "zIndex": 9,
+    "icon": "NotYetMd.png",
+    "line": "country"
+  },
+  {
+    "title": "Niger",
+    "location": {
+      "lat": 15.932242,
+      "lng": 9.051563
+    },
+    "zIndex": 9,
+    "icon": "NotYetMd.png",
+    "line": "country"
+  },
+  {
+    "title": "Chad",
+    "location": {
+      "lat": 13.509788,
+      "lng": 18.763477
+    },
+    "zIndex": 9,
+    "icon": "NotYetMd.png",
+    "line": "country"
+  },
+  {
+    "title": "Nigeria",
+    "location": {
+      "lat": 8.420715,
+      "lng": 7.865039
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Sudan",
+    "location": {
+      "lat": 15.509228,
+      "lng": 30.189258
+    },
+    "zIndex": 9,
+    "icon": "NotYetMd.png",
+    "line": "country"
+  },
+  {
+    "title": "South Sudan",
+    "location": {
+      "lat": 6.721854,
+      "lng": 30.233203
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Central African Republic",
+    "location": {
+      "lat": 6.066779,
+      "lng": 20.301563
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Cameroon",
+    "location": {
+      "lat": 4.666729,
+      "lng": 12.523242
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Equatorial Guinea",
+    "location": {
+      "lat": 0.936504,
+      "lng": 10.355364
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Benin",
+    "location": {
+      "lat": 7.942238,
+      "lng": 2.181536
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Togo",
+    "location": {
+      "lat": 7.506773,
+      "lng": 1.038958
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Burkina Faso",
+    "location": {
+      "lat": 11.708682,
+      "lng": -1.861433
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Ghana",
+    "location": {
+      "lat": 6.983642,
+      "lng": -1.070417
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Ivory Coast",
+    "location": {
+      "lat": 6.634560,
+      "lng": -5.596785
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Liberia",
+    "location": {
+      "lat": 5.673346,
+      "lng": -9.244246
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Sierra Leone",
+    "location": {
+      "lat": 7.855181,
+      "lng": -11.793074
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Guinea",
+    "location": {
+      "lat": 9.679238,
+      "lng": -10.035261
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Guinea Bissau",
+    "location": {
+      "lat": 11.364223,
+      "lng": -15.264753
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Senegal",
+    "location": {
+      "lat": 13.936695,
+      "lng": -14.517683
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "The Gambia",
+    "location": {
+      "lat": 13.146315,
+      "lng": -15.682234
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Gabon",
+    "location": {
+      "lat": -1.268247,
+      "lng": 11.629272
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Republic of the Congo",
+    "location": {
+      "lat": -1.971086,
+      "lng": 15.584351
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Democratic Republic of the Congo",
+    "location": {
+      "lat": -3.945891,
+      "lng": 23.626343
+    },
+    "zIndex": 9,
+    "icon": "NotYetMd.png",
+    "line": "country"
+  },
+  {
+    "title": "Uganda",
+    "location": {
+      "lat": 0.703736,
+      "lng": 32.453916
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Rwanda",
+    "location": {
+      "lat": -2.635160,
+      "lng": 29.861142
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Burundi",
+    "location": {
+      "lat": -4.389602,
+      "lng": 29.773252
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Tanzania",
+    "location": {
+      "lat": -7.370295,
+      "lng": 34.976288
+    },
+    "zIndex": 9,
+    "icon": "NotYetMd.png",
+    "line": "country"
+  },
+  {
+    "title": "Kenya",
+    "location": {
+      "lat": -0.139729,
+      "lng": 37.920624
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Somalia",
+    "location": {
+      "lat": 3.126111,
+      "lng": 46.153836
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Ethiopia",
+    "location": {
+      "lat": 7.587808,
+      "lng": 39.825711
+    },
+    "zIndex": 9,
+    "icon": "NotYetMd.png",
+    "line": "country"
+  },
+  {
+    "title": "Djibouti",
+    "location": {
+      "lat": 11.185805,
+      "lng": 42.660184
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Eritrea",
+    "location": {
+      "lat": 14.824666,
+      "lng": 38.917084
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Malawi",
+    "location": {
+      "lat": -14.573490,
+      "lng": 34.016728
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Zambia",
+    "location": {
+      "lat": -15.634153,
+      "lng": 27.424931
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Angola",
+    "location": {
+      "lat": -13.923832,
+      "lng": 17.592283
+    },
+    "zIndex": 9,
+    "icon": "NotYetMd.png",
+    "line": "country"
+  },
+  {
+    "title": "Namibia",
+    "location": {
+      "lat": -23.846595,
+      "lng": 17.392268
+    },
+    "zIndex": 9,
+    "icon": "NotYetMd.png",
+    "line": "country"
+  },
+  {
+    "title": "South Africa",
+    "location": {
+      "lat": -31.541970,
+      "lng": 24.335628
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Lesotho",
+    "location": {
+      "lat": -30.221994,
+      "lng": 28.378596
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Swaziland",
+    "location": {
+      "lat": -27.196933,
+      "lng": 31.476741
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Mozambique",
+    "location": {
+      "lat": -19.411583,
+      "lng": 35.840640
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Botswana",
+    "location": {
+      "lat": -23.031360,
+      "lng": 23.957329
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Zimbabwe",
+    "location": {
+      "lat": -19.569701,
+      "lng": 29.955864
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Madagascar",
+    "location": {
+      "lat": -21.421954,
+      "lng": 46.523247
+    },
+    "zIndex": 9,
+    "icon": "NotYetMd.png",
+    "line": "country"
+  },
+  {
+    "title": "Mauritius",
+    "location": {
+      "lat": -20.694024,
+      "lng": 57.608452
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Seychelles",
+    "location": {
+      "lat": -5.297394,
+      "lng": 55.541934
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Maldives",
+    "location": {
+      "lat": 1.181368,
+      "lng": 73.355051
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Sri Lanka",
+    "location": {
+      "lat": 6.397608,
+      "lng": 80.781809
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Timor-Leste",
+    "location": {
+      "lat": -9.446609,
+      "lng": 126.057767
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Comoros",
+    "location": {
+      "lat": -12.476015,
+      "lng": 43.966702
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Sao Tome and Principe",
+    "location": {
+      "lat": -0.389837,
+      "lng": 6.846560
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
+    "title": "Antarctica",
+    "location": {
+      "lat": -83.161595,
+      "lng": -24.886048
+    },
+    "description": "Cauz why not?",
+    "zIndex": 9,
+    "icon": "NotYetLg.png",
+    "line": "country"
   },
   {
     "title": "It's On!",
@@ -376,7 +2306,7 @@
       "links": [{
         "name": "Exploring Oslo!! (A little better than yesterday!!)",
         "link": "https://www.youtube.com/watch?v=v50chEh02fw"
-        }]
+      }]
     },
     "rideData": "https://www.strava.com/activities/1227090792",
     "youtube": "Y2nN5oHqEus",
@@ -396,7 +2326,7 @@
       "links": [{
         "name": "Everything Is So EXPENSIVE Here!!",
         "link": "https://www.youtube.com/watch?v=Y2nN5oHqEus"
-        }]
+      }]
     },
     "youtube": "v50chEh02fw",
     "icon": "EUp1H.png",
@@ -696,17 +2626,18 @@
     "links": {
       "title": "More videos from Stockholm, Sweden: ",
       "links": [{
-        "name": "Exploring Stockholm with my Mom!",
-        "link": "https://www.youtube.com/watch?v=DDteAqtoIlY"
+          "name": "Exploring Stockholm with my Mom!",
+          "link": "https://www.youtube.com/watch?v=DDteAqtoIlY"
         },
         {
-        "name": "Going to Skansen Open Air Museum, Traditional Swedish Clothing and Houses!",
-        "link": "https://www.youtube.com/watch?v=L_wdFqZ8VMo"
+          "name": "Going to Skansen Open Air Museum, Traditional Swedish Clothing and Houses!",
+          "link": "https://www.youtube.com/watch?v=L_wdFqZ8VMo"
         },
         {
-        "name": "WEIRDEST Place I've Ever Camped At!",
-        "link": "https://www.youtube.com/watch?v=cJNg9-6I9yo"
-        }]
+          "name": "WEIRDEST Place I've Ever Camped At!",
+          "link": "https://www.youtube.com/watch?v=cJNg9-6I9yo"
+        }
+      ]
     },
     "youtube": "ZK6YH65xZeE",
     "icon": "EUp1vid.png",
@@ -723,17 +2654,18 @@
     "links": {
       "title": "More videos from Stockholm, Sweden: ",
       "links": [{
-        "name": "My Mom Has Arrived!",
-        "link": "https://www.youtube.com/watch?v=ZK6YH65xZeE"
+          "name": "My Mom Has Arrived!",
+          "link": "https://www.youtube.com/watch?v=ZK6YH65xZeE"
         },
         {
-        "name": "Going to Skansen Open Air Museum, Traditional Swedish Clothing and Houses!",
-        "link": "https://www.youtube.com/watch?v=L_wdFqZ8VMo"
+          "name": "Going to Skansen Open Air Museum, Traditional Swedish Clothing and Houses!",
+          "link": "https://www.youtube.com/watch?v=L_wdFqZ8VMo"
         },
         {
-        "name": "WEIRDEST Place I've Ever Camped At!",
-        "link": "https://www.youtube.com/watch?v=cJNg9-6I9yo"
-        }]
+          "name": "WEIRDEST Place I've Ever Camped At!",
+          "link": "https://www.youtube.com/watch?v=cJNg9-6I9yo"
+        }
+      ]
     },
     "youtube": "DDteAqtoIlY",
     "icon": "EUp1H.png",
@@ -751,17 +2683,18 @@
     "links": {
       "title": "More videos from Stockholm, Sweden: ",
       "links": [{
-        "name": "My Mom Has Arrived!",
-        "link": "https://www.youtube.com/watch?v=ZK6YH65xZeE"
+          "name": "My Mom Has Arrived!",
+          "link": "https://www.youtube.com/watch?v=ZK6YH65xZeE"
         },
         {
-        "name": "Exploring Stockholm with my Mom!",
-        "link": "https://www.youtube.com/watch?v=DDteAqtoIlY"
+          "name": "Exploring Stockholm with my Mom!",
+          "link": "https://www.youtube.com/watch?v=DDteAqtoIlY"
         },
         {
-        "name": "WEIRDEST Place I've Ever Camped At!",
-        "link": "https://www.youtube.com/watch?v=cJNg9-6I9yo"
-        }]
+          "name": "WEIRDEST Place I've Ever Camped At!",
+          "link": "https://www.youtube.com/watch?v=cJNg9-6I9yo"
+        }
+      ]
     },
     "youtube": "L_wdFqZ8VMo",
     "icon": "EUp1vid.png",
@@ -778,17 +2711,18 @@
     "links": {
       "title": "More videos from Stockholm, Sweden: ",
       "links": [{
-        "name": "My Mom Has Arrived!",
-        "link": "https://www.youtube.com/watch?v=ZK6YH65xZeE"
+          "name": "My Mom Has Arrived!",
+          "link": "https://www.youtube.com/watch?v=ZK6YH65xZeE"
         },
         {
-        "name": "Exploring Stockholm with my Mom!",
-        "link": "https://www.youtube.com/watch?v=DDteAqtoIlY"
+          "name": "Exploring Stockholm with my Mom!",
+          "link": "https://www.youtube.com/watch?v=DDteAqtoIlY"
         },
         {
-        "name": "Going to Skansen Open Air Museum, Traditional Swedish Clothing and Houses!",
-        "link": "https://www.youtube.com/watch?v=L_wdFqZ8VMo"
-        }]
+          "name": "Going to Skansen Open Air Museum, Traditional Swedish Clothing and Houses!",
+          "link": "https://www.youtube.com/watch?v=L_wdFqZ8VMo"
+        }
+      ]
     },
     "youtube": "cJNg9-6I9yo",
     "icon": "EUp1vid.png",
@@ -885,17 +2819,18 @@
     "links": {
       "title": "Other videos from Tallinn, Estonia: ",
       "links": [{
-        "name": "Some Sightseeing In Tallinn, Estonia!",
-        "link": "https://www.youtube.com/watch?v=slMcn73WKPE"
+          "name": "Some Sightseeing In Tallinn, Estonia!",
+          "link": "https://www.youtube.com/watch?v=slMcn73WKPE"
         },
         {
-        "name": "Last Full Day in Tallinn! Last Thoughts About Forever Living",
-        "link": "https://www.youtube.com/watch?v=_eAN0JojR7g"
+          "name": "Last Full Day in Tallinn! Last Thoughts About Forever Living",
+          "link": "https://www.youtube.com/watch?v=_eAN0JojR7g"
         },
         {
-        "name": "MY TIRE EXPLODED",
-        "link": "https://www.youtube.com/watch?v=KSEI6sEiAIE"
-        }]
+          "name": "MY TIRE EXPLODED",
+          "link": "https://www.youtube.com/watch?v=KSEI6sEiAIE"
+        }
+      ]
     },
     "youtube": "KtIjIWYRFCU",
     "icon": "EUp1vid.png",
@@ -912,17 +2847,18 @@
     "links": {
       "title": "Other videos from Tallinn, Estonia: ",
       "links": [{
-        "name": "BEAUTIFUL TALLINN",
-        "link": "https://www.youtube.com/watch?v=KtIjIWYRFCU"
+          "name": "BEAUTIFUL TALLINN",
+          "link": "https://www.youtube.com/watch?v=KtIjIWYRFCU"
         },
         {
-        "name": "Last Full Day in Tallinn! Last Thoughts About Forever Living",
-        "link": "https://www.youtube.com/watch?v=_eAN0JojR7g"
+          "name": "Last Full Day in Tallinn! Last Thoughts About Forever Living",
+          "link": "https://www.youtube.com/watch?v=_eAN0JojR7g"
         },
         {
-        "name": "MY TIRE EXPLODED",
-        "link": "https://www.youtube.com/watch?v=KSEI6sEiAIE"
-        }]
+          "name": "MY TIRE EXPLODED",
+          "link": "https://www.youtube.com/watch?v=KSEI6sEiAIE"
+        }
+      ]
     },
     "youtube": "slMcn73WKPE",
     "icon": "EUp1H.png",
@@ -940,17 +2876,18 @@
     "links": {
       "title": "Other videos from Tallinn, Estonia: ",
       "links": [{
-        "name": "BEAUTIFUL TALLINN",
-        "link": "https://www.youtube.com/watch?v=KtIjIWYRFCU"
+          "name": "BEAUTIFUL TALLINN",
+          "link": "https://www.youtube.com/watch?v=KtIjIWYRFCU"
         },
         {
-        "name": "Some Sightseeing In Tallinn, Estonia!",
-        "link": "https://www.youtube.com/watch?v=slMcn73WKPE"
+          "name": "Some Sightseeing In Tallinn, Estonia!",
+          "link": "https://www.youtube.com/watch?v=slMcn73WKPE"
         },
         {
-        "name": "MY TIRE EXPLODED",
-        "link": "https://www.youtube.com/watch?v=KSEI6sEiAIE"
-        }]
+          "name": "MY TIRE EXPLODED",
+          "link": "https://www.youtube.com/watch?v=KSEI6sEiAIE"
+        }
+      ]
     },
     "youtube": "_eAN0JojR7g",
     "icon": "EUp1vid.png",
@@ -968,17 +2905,18 @@
     "links": {
       "title": "Other videos from Tallinn, Estonia: ",
       "links": [{
-        "name": "BEAUTIFUL TALLINN",
-        "link": "https://www.youtube.com/watch?v=KtIjIWYRFCU"
+          "name": "BEAUTIFUL TALLINN",
+          "link": "https://www.youtube.com/watch?v=KtIjIWYRFCU"
         },
         {
-        "name": "Some Sightseeing In Tallinn, Estonia!",
-        "link": "https://www.youtube.com/watch?v=slMcn73WKPE"
+          "name": "Some Sightseeing In Tallinn, Estonia!",
+          "link": "https://www.youtube.com/watch?v=slMcn73WKPE"
         },
         {
-        "name": "Last Full Day in Tallinn! Last Thoughts About Forever Living",
-        "link": "https://www.youtube.com/watch?v=_eAN0JojR7g"
-        }]
+          "name": "Last Full Day in Tallinn! Last Thoughts About Forever Living",
+          "link": "https://www.youtube.com/watch?v=_eAN0JojR7g"
+        }
+      ]
     },
     "youtube": "KSEI6sEiAIE",
     "icon": "EUp1vid.png",
@@ -1061,7 +2999,7 @@
       "links": [{
         "name": "Visiting the Polish War Uprising Museum!",
         "link": "https://www.youtube.com/watch?v=I1FpVi10NSM"
-        }]
+      }]
     },
     "youtube": "1PVwwM_PJ3s",
     "icon": "Vvid.png"
@@ -1079,7 +3017,7 @@
       "links": [{
         "name": "Exploring Warsaw, Poland!",
         "link": "https://www.youtube.com/watch?v=1PVwwM_PJ3s"
-        }]
+      }]
     },
     "youtube": "I1FpVi10NSM",
     "icon": "Vvid.png"
@@ -1126,7 +3064,6 @@
     "description": "This is where I will return to in May 2018.",
     "img": "riga.jpg",
     "icon": "P.png",
-    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1138,7 +3075,6 @@
     "description": "This is the city I actually wanted to stop at, and I've actually visited it for 1 night when I was going back home.",
     "img": "vilnius.jpg",
     "icon": "P.png",
-    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1150,7 +3086,6 @@
     "description": "One of the last dictatorships in Europe. It's gonna be quite a hassle to get a visa for this country, but I still want to visit it!",
     "img": "minsk.jpg",
     "icon": "P.png",
-    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1162,7 +3097,6 @@
     "description": "A place with a lot of awful history, but everyone I spoke to said it is worth a visit.",
     "img": "auschwitz.jpg",
     "icon": "P.png",
-    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1173,7 +3107,6 @@
     },
     "img": "prague.jpg",
     "icon": "P.png",
-    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1184,7 +3117,6 @@
     },
     "img": "munich.jpg",
     "icon": "P.png",
-    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1195,7 +3127,6 @@
     },
     "img": "vienna.jpg",
     "icon": "P.png",
-    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1206,7 +3137,6 @@
     },
     "img": "bratislava.jpg",
     "icon": "P.png",
-    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1217,7 +3147,6 @@
     },
     "img": "budapest.jpg",
     "icon": "P.png",
-    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1228,7 +3157,6 @@
     },
     "img": "chisinau.jpg",
     "icon": "P.png",
-    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1239,7 +3167,6 @@
     },
     "img": "bucharest.jpg",
     "icon": "P.png",
-    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1250,7 +3177,6 @@
     },
     "img": "sofia.jpg",
     "icon": "P.png",
-    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1261,7 +3187,6 @@
     },
     "img": "athens.jpg",
     "icon": "P.png",
-    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1272,7 +3197,6 @@
     },
     "img": "tirana.jpg",
     "icon": "P.png",
-    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1283,7 +3207,6 @@
     },
     "img": "skopje.jpg",
     "icon": "P.png",
-    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1294,7 +3217,6 @@
     },
     "img": "prishtina.jpg",
     "icon": "P.png",
-    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1305,7 +3227,6 @@
     },
     "img": "belgrade.jpg",
     "icon": "P.png",
-    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1316,7 +3237,6 @@
     },
     "img": "zagreb.jpg",
     "icon": "P.png",
-    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1327,7 +3247,6 @@
     },
     "img": "ljubljana.jpg",
     "icon": "P.png",
-    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1338,7 +3257,6 @@
     },
     "img": "dubrovnik.jpg",
     "icon": "P.png",
-    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1349,7 +3267,6 @@
     },
     "img": "podgorica.jpg",
     "icon": "P.png",
-    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1360,7 +3277,6 @@
     },
     "img": "bari.jpg",
     "icon": "P.png",
-    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1371,7 +3287,6 @@
     },
     "img": "naples.jpg",
     "icon": "P.png",
-    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1382,7 +3297,6 @@
     },
     "img": "rome.jpg",
     "icon": "P.png",
-    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1393,7 +3307,6 @@
     },
     "img": "vatican.jpg",
     "icon": "P.png",
-    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1404,7 +3317,6 @@
     },
     "img": "sanmarino.jpg",
     "icon": "P.png",
-    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1415,7 +3327,6 @@
     },
     "img": "monaco.jpg",
     "icon": "P.png",
-    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1426,7 +3337,6 @@
     },
     "img": "andorra.jpg",
     "icon": "P.png",
-    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1437,7 +3347,6 @@
     },
     "img": "madrid",
     "icon": "P.png",
-    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1448,7 +3357,6 @@
     },
     "img": "lisbon.jpg",
     "icon": "P.png",
-    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1459,7 +3367,6 @@
     },
     "img": "liechtenstein.jpg",
     "icon": "P.png",
-    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1470,7 +3377,6 @@
     },
     "img": "paris.jpg",
     "icon": "P.png",
-    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1481,7 +3387,6 @@
     },
     "img": "luxembourg.jpg",
     "icon": "P.png",
-    "animation": false,
     "line": "EUp2P"
   },
   {
@@ -1492,7 +3397,6 @@
     },
     "img": "brussels.jpg",
     "icon": "P.png",
-    "animation": false,
     "line": "EUp2P"
   }
 ]

@@ -7,18 +7,18 @@
     <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
-    <div class="filler"></div>
     <div id="map"></div>
     <div class="below-map">
       <div class="map-options">
         <button id="show-route">Show Ridden Route</button>
+        <button id="show-checklist">Show Country Checklist</button>
       </div>
       <div class="map-legend">
         <!-- TODO: imagepath here! -->
         <img src="images/legend.png" alt="map legend">
+        <img src="images/tourslegend.png" alt="tours legend">
       </div>
     </div>
-    <div class="filler"></div>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzDSC3ZUo1GFyGCinNy70i5LajHjn1oOY&callback=initMap" onerror="googleError()"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="scripts/main.js"></script>

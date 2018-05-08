@@ -1,74 +1,74 @@
-(function($){
+(function($) {
 
-    var $w=$(window);
-    $.fn.visible = function(partial,hidden,direction,container){
+  var $w = $(window);
+  $.fn.visible = function(partial, hidden, direction, container) {
 
-        if (this.length < 1)
-            return;
+    if (this.length < 1)
+      return;
 
-	// Set direction default to 'both'.
-	direction = direction || 'both';
+    // Set direction default to 'both'.
+    direction = direction || 'both';
 
-        var $t          = this.length > 1 ? this.eq(0) : this,
-						isContained = typeof container !== 'undefined' && container !== null,
-						$c				  = isContained ? $(container) : $w,
-						wPosition        = isContained ? $c.position() : 0,
-            t           = $t.get(0),
-            vpWidth     = $c.outerWidth(),
-            vpHeight    = $c.outerHeight(),
-            clientSize  = hidden === true ? t.offsetWidth * t.offsetHeight : true;
+    var $t = this.length > 1 ? this.eq(0) : this,
+      isContained = typeof container !== 'undefined' && container !== null,
+      $c = isContained ? $(container) : $w,
+      wPosition = isContained ? $c.position() : 0,
+      t = $t.get(0),
+      vpWidth = $c.outerWidth(),
+      vpHeight = $c.outerHeight(),
+      clientSize = hidden === true ? t.offsetWidth * t.offsetHeight : true;
 
-        if (typeof t.getBoundingClientRect === 'function'){
+    if (typeof t.getBoundingClientRect === 'function') {
 
-            // Use this native browser method, if available.
-            var rec = t.getBoundingClientRect(),
-                tViz = isContained ?
-												rec.top - wPosition.top >= 0 && rec.top < vpHeight + wPosition.top :
-												rec.top >= 0 && rec.top < vpHeight,
-                bViz = isContained ?
-												rec.bottom - wPosition.top > 0 && rec.bottom <= vpHeight + wPosition.top :
-												rec.bottom > 0 && rec.bottom <= vpHeight,
-                lViz = isContained ?
-												rec.left - wPosition.left >= 0 && rec.left < vpWidth + wPosition.left :
-												rec.left >= 0 && rec.left <  vpWidth,
-                rViz = isContained ?
-												rec.right - wPosition.left > 0  && rec.right < vpWidth + wPosition.left  :
-												rec.right > 0 && rec.right <= vpWidth,
-                vVisible   = partial ? tViz || bViz : tViz && bViz,
-                hVisible   = partial ? lViz || rViz : lViz && rViz,
-		vVisible = (rec.top < 0 && rec.bottom > vpHeight) ? true : vVisible,
-                hVisible = (rec.left < 0 && rec.right > vpWidth) ? true : hVisible;
+      // Use this native browser method, if available.
+      var rec = t.getBoundingClientRect(),
+        tViz = isContained ?
+        rec.top - wPosition.top >= 0 && rec.top < vpHeight + wPosition.top :
+        rec.top >= 0 && rec.top < vpHeight,
+        bViz = isContained ?
+        rec.bottom - wPosition.top > 0 && rec.bottom <= vpHeight + wPosition.top :
+        rec.bottom > 0 && rec.bottom <= vpHeight,
+        lViz = isContained ?
+        rec.left - wPosition.left >= 0 && rec.left < vpWidth + wPosition.left :
+        rec.left >= 0 && rec.left < vpWidth,
+        rViz = isContained ?
+        rec.right - wPosition.left > 0 && rec.right < vpWidth + wPosition.left :
+        rec.right > 0 && rec.right <= vpWidth,
+        vVisible = partial ? tViz || bViz : tViz && bViz,
+        hVisible = partial ? lViz || rViz : lViz && rViz,
+        vVisible = (rec.top < 0 && rec.bottom > vpHeight) ? true : vVisible,
+        hVisible = (rec.left < 0 && rec.right > vpWidth) ? true : hVisible;
 
-            if(direction === 'both')
-                return clientSize && vVisible && hVisible;
-            else if(direction === 'vertical')
-                return clientSize && vVisible;
-            else if(direction === 'horizontal')
-                return clientSize && hVisible;
-        } else {
+      if (direction === 'both')
+        return clientSize && vVisible && hVisible;
+      else if (direction === 'vertical')
+        return clientSize && vVisible;
+      else if (direction === 'horizontal')
+        return clientSize && hVisible;
+    } else {
 
-            var viewTop 				= isContained ? 0 : wPosition,
-                viewBottom      = viewTop + vpHeight,
-                viewLeft        = $c.scrollLeft(),
-                viewRight       = viewLeft + vpWidth,
-                position          = $t.position(),
-                _top            = position.top,
-                _bottom         = _top + $t.height(),
-                _left           = position.left,
-                _right          = _left + $t.width(),
-                compareTop      = partial === true ? _bottom : _top,
-                compareBottom   = partial === true ? _top : _bottom,
-                compareLeft     = partial === true ? _right : _left,
-                compareRight    = partial === true ? _left : _right;
+      var viewTop = isContained ? 0 : wPosition,
+        viewBottom = viewTop + vpHeight,
+        viewLeft = $c.scrollLeft(),
+        viewRight = viewLeft + vpWidth,
+        position = $t.position(),
+        _top = position.top,
+        _bottom = _top + $t.height(),
+        _left = position.left,
+        _right = _left + $t.width(),
+        compareTop = partial === true ? _bottom : _top,
+        compareBottom = partial === true ? _top : _bottom,
+        compareLeft = partial === true ? _right : _left,
+        compareRight = partial === true ? _left : _right;
 
-            if(direction === 'both')
-                return !!clientSize && ((compareBottom <= viewBottom) && (compareTop >= viewTop)) && ((compareRight <= viewRight) && (compareLeft >= viewLeft));
-            else if(direction === 'vertical')
-                return !!clientSize && ((compareBottom <= viewBottom) && (compareTop >= viewTop));
-            else if(direction === 'horizontal')
-                return !!clientSize && ((compareRight <= viewRight) && (compareLeft >= viewLeft));
-        }
-    };
+      if (direction === 'both')
+        return !!clientSize && ((compareBottom <= viewBottom) && (compareTop >= viewTop)) && ((compareRight <= viewRight) && (compareLeft >= viewLeft));
+      else if (direction === 'vertical')
+        return !!clientSize && ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+      else if (direction === 'horizontal')
+        return !!clientSize && ((compareRight <= viewRight) && (compareLeft >= viewLeft));
+    }
+  };
 
 })(jQuery);
 /* global google */
@@ -76,19 +76,21 @@
 const lines = {
   none: [],
   ImHere: [],
+  country: [],
   // Add your lines here: LINENAME: [];
   EUp1: [],
   EUp2: [],
   EUp2P: []
 };
 
-const  lineIntervals = {
-  none: 0,
-  ImHere: 0,
+const lineIntervals = {
+  none: 1,
+  ImHere: 1,
+  country: 1,
   // Add intervals here
-  EUp1: 30,
-  EUp2: 30,
-  EUp2P: 0
+  EUp1: 20,
+  EUp2: 20,
+  EUp2P: 1
 }
 
 // Here you can style your lines if you need to
@@ -103,8 +105,8 @@ const lineStyles = {
   },
   EUp2P: {
     name: 'EUp2P',
-    strokeWeight: 1,
-    strokeOpacity: 0.5
+    strokeWeight: 2,
+    strokeOpacity: 0.4
   }
 }
 
@@ -115,16 +117,17 @@ const kmlLines = {
   }
 }
 
-const iconPath = '/images/icons/'// 'http://travelingtice.com/wp-content/uploads/google-maps/icons/';
-const imgPath = '/images/'// 'http://travelingtice.com/wp-content/uploads/google-maps/images/';
-const jsonPath = '/scripts/Utils/'// 'http://travelingtice.com/wp-content/uploads/google-maps/';
+const iconPath = '/images/icons/' // 'http://travelingtice.com/wp-content/uploads/google-maps/icons/';
+const imgPath = '/images/' // 'http://travelingtice.com/wp-content/uploads/google-maps/images/';
+const jsonPath = '/scripts/Utils/' // 'http://travelingtice.com/wp-content/uploads/google-maps/';
 
 let map; // Global variables map
 // Status of the map
 let mapLoaded = false;
 // Status of KML layer on the map
 let isKmlOnMap = false;
-
+// Status of country checklist on the map
+let isChecklist = false;
 // All of our polylines
 let polylines = [];
 
@@ -134,12 +137,15 @@ let kmlLayers = [];
 // Map gets initialized
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
-    center: { lat: 53.661212, lng: 10.898780 },
+    center: {
+      lat: 53.661212,
+      lng: 10.898780
+    },
     zoom: 4
   });
   getMarkers();
   getKmlLines();
-  addBtnListener();
+  addBtnListeners();
 }
 
 // Get markers from database
@@ -165,7 +171,12 @@ function makeMarkers(locations) {
     const icon = location.icon ? iconPath + location.icon : null;
     const line = location.line ? location.line : 'none';
     const zIndex = location.zIndex ? location.zIndex : 1;
-    const animation = location.animation === false ? null : google.maps.Animation.DROP;
+    let animation;
+    if (location.line === 'EUp2P' || location.line === 'country') {
+      animation = null;
+    } else {
+      animation = google.maps.Animation.DROP;
+    }
     // Create marker object
     const marker = new google.maps.Marker({
       map: null,
@@ -205,15 +216,8 @@ function makeMarkers(locations) {
       }
     });
   });
+  openMarkers();
 }
-
-$(window).scroll(function() {
-  const mapVisible = $('#map').visible(true);
-  if (mapVisible) {
-      openMarkers();
-    $(window).off('scroll');
-  }
-})
 
 function openMarkers() {
   // Go through all marker arrays and filter them so right animation is applied.
@@ -242,13 +246,13 @@ function openMarkers() {
         }
       }
     }
-    interval = longestArray.length * longestInterval + 1000;
+    interval = longestArray.length * longestInterval + 2000;
     openImHereMarker(interval);
   }
 }
 
 // The 'I'm Here' marker will be spawned last
-function openImHereMarker (interval) {
+function openImHereMarker(interval) {
   for (const line in lines) {
     if (line === 'ImHere') {
       const ImHereMarker = lines[line];
@@ -257,12 +261,13 @@ function openImHereMarker (interval) {
   }
 }
 
-// This sets each marker in the array to map.
+// This sets each marker in the array to map except for the line country!
 function openMarkerArray(array, i, interval, line) {
   setTimeout(() => {
     const marker = array[i];
     ++i;
-    if (i <= array.length) {
+    // For my model, the country markers will not be spawn in the beginning, I have a button for that.
+    if (i <= array.length && line !== 'country') {
       marker.setMap(map);
       // Last marker is ImHere, so after this, our map is loaded!
       if (line === 'ImHere') {
@@ -272,8 +277,7 @@ function openMarkerArray(array, i, interval, line) {
     } else {
       switch (line) {
         case 'none':
-          // Open no line
-          break;
+        case 'country':
         case 'ImHere':
           // Open no line
           break;
@@ -290,7 +294,10 @@ function openLine(array, line) {
   array.forEach(marker => {
     points.push(marker.position);
   });
-  let polylineOptions = { strokeWeight: 1.5, name: line };
+  let polylineOptions = {
+    strokeWeight: 1.5,
+    name: line
+  };
   // Options for the polyline (derived from lineStyles)
   for (const styleLine in lineStyles) {
     if (styleLine === line) {
@@ -298,7 +305,7 @@ function openLine(array, line) {
     }
   }
   // Create polyline
-  const polyline = new google.maps.Polyline( polylineOptions );
+  const polyline = new google.maps.Polyline(polylineOptions);
   // Set path to path we created using the markers
   polyline.setPath(points);
   // Set polyline to our map
@@ -307,38 +314,21 @@ function openLine(array, line) {
   polylines.push(polyline);
 }
 
-// This closes the line that is connected between marker of a certain line with name
-function closeALine(line) {
-  polylines.forEach(polyline => {
-    if (polyline.name === line) {
-      polyline.setMap(null);
+// This one opens all our markers + polylines
+function openAllMarkers() {
+  for (const lineName in lines) {
+    if (lineName !== 'country') {
+      const markerArray = lines[lineName];
+      markerArray.forEach(marker => {
+        marker.setMap(map);
+      });
     }
-  });
-}
-
-// Closes all polylines
-function closeAllLines() {
-  polylines.forEach(polyline => {
-    polyline.setMap(null);
-  });
-}
-
-// Opens all polylines
-function openAllLines() {
+  }
   polylines.forEach(polyline => {
     polyline.setMap(map);
   });
 }
-// This one opens all our markers, if they have been closed before
-function openAllMarkers() {
-  for (const lineName in lines) {
-    const markerArray = lines[lineName];
-    markerArray.forEach(marker => {
-      marker.setMap(map);
-    });
-  }
-}
-// This one closes all our markers, that are not ImHere
+// This one closes all our markers + polylines
 function closeAllMarkers() {
   for (const lineName in lines) {
     const markerArray = lines[lineName];
@@ -346,6 +336,9 @@ function closeAllMarkers() {
       marker.setMap(null);
     });
   }
+  polylines.forEach(polyline => {
+    polyline.setMap(null);
+  });
 }
 // Gets all KML files from url in kmlLines object and does not display them
 function getKmlLines() {
@@ -371,6 +364,19 @@ function closeKmlLines() {
   kmlLayers.forEach(layer => {
     layer.setMap(null);
   });
+}
+
+// Open Country checklist
+function openChecklist() {
+  lines.country.forEach(country => {
+    country.setMap(map);
+  })
+}
+
+function closeChecklist() {
+  lines.country.forEach(country => {
+    country.setMap(null);
+  })
 }
 
 // Open infowindow at marker
@@ -430,23 +436,46 @@ function generateHtmlInfowindow(marker) {
   return html;
 }
 
-function addBtnListener() {
+// Add listeners to the buttons below the map
+function addBtnListeners() {
   const btn1 = document.getElementById('show-route');
-    btn1.addEventListener('click', () => {
-      if (mapLoaded) {
-        if (!isKmlOnMap) {
-          closeAllLines();
-          closeAllMarkers();
-          openKmlLines();
-          btn1.innerHTML = 'Hide Ridden Route';
-        } else {
-          closeKmlLines();
-          openAllMarkers();
-          openAllLines();
-          btn1.innerHTML = 'Show Ridden Route';
+  const btn2 = document.getElementById('show-checklist');
+  btn1.addEventListener('click', () => {
+    if (mapLoaded) {
+      if (!isKmlOnMap) {
+        closeAllMarkers();
+        openKmlLines();
+        if (isChecklist) {
+          openChecklist();
         }
-        isKmlOnMap = !isKmlOnMap;
+        btn1.innerHTML = 'Hide Ridden Route';
+        isKmlOnMap = true;
+      } else {
+        closeKmlLines();
+        if (!isChecklist) {
+          openAllMarkers();
+        }
+        btn1.innerHTML = 'Show Ridden Route';
+        isKmlOnMap = false;
       }
+    }
+  });
+  btn2.addEventListener('click', () => {
+    if (mapLoaded) {
+      if (!isChecklist) {
+        closeAllMarkers();
+        openChecklist();
+        btn2.innerHTML = 'Hide Country Checklist';
+        isChecklist = true;
+      } else {
+        closeChecklist();
+        if (!isKmlOnMap) {
+          openAllMarkers();
+        }
+        btn2.innerHTML = 'Show Country Checklist';
+        isChecklist = false;
+      }
+    }
   });
 }
 
