@@ -321,6 +321,16 @@
     "line": "country"
   },
   {
+    "title": "Slovenia",
+    "location": {
+      "lat": 45.789974,
+      "lng": 14.628869
+    },
+    "zIndex": 9,
+    "icon": "NotYetSm.png",
+    "line": "country"
+  },
+  {
     "title": "Slovakia",
     "location": {
       "lat": 48.469956,

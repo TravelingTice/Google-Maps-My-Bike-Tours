@@ -85,6 +85,23 @@
     #map .infowindow .main-infowindow-content iframe {
       margin: 10px 0 5px 5px;
     }
+    @media all and (max-width: 700px) {
+      #map .infowindow {
+        max-width: 400px;
+      }
+      #map .infowindow .heading h1 {
+        font-size: 20px;
+      }
+      #map .infowindow .main-infowindow-content {
+        display: block;
+      }
+      #map .infowindow .main-infowindow-content .left-panel {
+        width: 100%;
+      }
+      #map .infowindow .main-infowindow-content iframe {
+        width: 100%;
+      }
+    }
     .below-map {
       background-color: white;
       font-size: 17px;
