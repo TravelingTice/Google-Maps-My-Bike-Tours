@@ -3,28 +3,34 @@
     #scoped-content {
       background-color: #fff;
     }
+
     #map {
       width: 100%;
       height: 70vh;
     }
+
     #map .infowindow {
       overflow: hidden;
       font-family: 'Roboto', Helvetica, Arial, Lucida, sans-serif;
     }
+
     #map .infowindow .heading {
       margin-bottom: 6px;
     }
+
     #map .infowindow .heading #icon {
       position: relative;
       width: auto;
       height: 30px;
       top: 4px;
     }
+
     #map .infowindow .heading h1 {
       display: inline;
       margin-left: 12px;
       font-size: 24px;
     }
+
     #map .infowindow .main-infowindow-content {
       margin-top: 5px;
       display: flex;
@@ -32,14 +38,17 @@
       font-size: 14px;
       font-weight: 500;
     }
+
     #map .infowindow .main-infowindow-content .left-panel {
       width: 180px;
     }
+
     #map .infowindow .main-infowindow-content .left-panel .date {
       font-size: 12px;
       font-weight: 400;
       margin: 5px 0 0 0;
     }
+
     #map .infowindow .main-infowindow-content .left-panel .description {
       margin: 3px 5px 0 0;
       padding-top: 7px;
@@ -48,46 +57,57 @@
       word-wrap: break-word;
       border-top: 2px solid #517cb5;
     }
+
     #map .infowindow .main-infowindow-content .left-panel .links a {
       font-size: 13px;
       text-decoration: none;
       color: #00f;
       line-height: 1.5em;
     }
+
     #map .infowindow .main-infowindow-content .left-panel .links a:hover {
       color: #51b568;
     }
+
     #map .infowindow .main-infowindow-content .left-panel .links a:before {
       content: "> ";
     }
+
     #map .infowindow .main-infowindow-content .left-panel .rideData a {
       text-decoration: none;
       color: #f00;
     }
+
     #map .infowindow .main-infowindow-content .left-panel .links {
       border-top: 2px solid #298771;
     }
+
     #map .infowindow .main-infowindow-content .left-panel .rideData {
       border-top: 2px solid #298771;
     }
+
     #map .infowindow .main-infowindow-content .left-panel .rideData,
     #map .infowindow .main-infowindow-content .left-panel .links {
       margin: 10px 5px 0 0;
       padding: 4px 0;
     }
+
     #map .infowindow .main-infowindow-content .left-panel .rideData p,
     #map .infowindow .main-infowindow-content .left-panel .links p {
       font-weight: 500;
       font-size: 14px;
     }
+
     #map .infowindow .main-infowindow-content img {
       max-width: 300px;
       max-height: 200px;
       margin: 7px 0 7px 5px;
     }
+
     #map .infowindow .main-infowindow-content iframe {
       margin: 10px 0 5px 5px;
     }
+
     @media all and (max-width: 700px) {
       #map .infowindow {
         max-width: 400px;
@@ -105,12 +125,14 @@
         width: 100%;
       }
     }
+
     .below-map {
       background-color: white;
       font-size: 17px;
       font-family: 'Roboto', Helvetica, Arial, Lucida, sans-serif;
       display: flex;
     }
+
     .below-map .map-options {
       height: 100%;
       text-align: center;
@@ -118,6 +140,7 @@
       min-width: 90px;
       margin: auto 0;
     }
+
     .below-map .map-options button {
       padding: 10px 7px;
       margin: 5px 5px;
@@ -128,6 +151,7 @@
       font-size: 14px;
       color: black;
     }
+
     .below-map .map-legend img {
       padding-top: 10px;
       max-height: 100px;
@@ -150,69 +174,71 @@
 
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0C0AacrdTQ6ihc98emn8zDCwah2o6dIE&callback=initMap" onerror="googleError()"></script>
 <script>
-(function($){
-    var $w=$(window);
-    $.fn.visible = function(partial,hidden,direction,container){
-        if (this.length < 1)
-            return;
-	// Set direction default to 'both'.
-	direction = direction || 'both';
-        var $t          = this.length > 1 ? this.eq(0) : this,
-						isContained = typeof container !== 'undefined' && container !== null,
-						$c				  = isContained ? $(container) : $w,
-						wPosition        = isContained ? $c.position() : 0,
-            t           = $t.get(0),
-            vpWidth     = $c.outerWidth(),
-            vpHeight    = $c.outerHeight(),
-            clientSize  = hidden === true ? t.offsetWidth * t.offsetHeight : true;
-        if (typeof t.getBoundingClientRect === 'function'){
-            // Use this native browser method, if available.
-            var rec = t.getBoundingClientRect(),
-                tViz = isContained ?
-												rec.top - wPosition.top >= 0 && rec.top < vpHeight + wPosition.top :
-												rec.top >= 0 && rec.top < vpHeight,
-                bViz = isContained ?
-												rec.bottom - wPosition.top > 0 && rec.bottom <= vpHeight + wPosition.top :
-												rec.bottom > 0 && rec.bottom <= vpHeight,
-                lViz = isContained ?
-												rec.left - wPosition.left >= 0 && rec.left < vpWidth + wPosition.left :
-												rec.left >= 0 && rec.left <  vpWidth,
-                rViz = isContained ?
-												rec.right - wPosition.left > 0  && rec.right < vpWidth + wPosition.left  :
-												rec.right > 0 && rec.right <= vpWidth,
-                vVisible   = partial ? tViz || bViz : tViz && bViz,
-                hVisible   = partial ? lViz || rViz : lViz && rViz,
-		vVisible = (rec.top < 0 && rec.bottom > vpHeight) ? true : vVisible,
-                hVisible = (rec.left < 0 && rec.right > vpWidth) ? true : hVisible;
-            if(direction === 'both')
-                return clientSize && vVisible && hVisible;
-            else if(direction === 'vertical')
-                return clientSize && vVisible;
-            else if(direction === 'horizontal')
-                return clientSize && hVisible;
-        } else {
-            var viewTop 				= isContained ? 0 : wPosition,
-                viewBottom      = viewTop + vpHeight,
-                viewLeft        = $c.scrollLeft(),
-                viewRight       = viewLeft + vpWidth,
-                position          = $t.position(),
-                _top            = position.top,
-                _bottom         = _top + $t.height(),
-                _left           = position.left,
-                _right          = _left + $t.width(),
-                compareTop      = partial === true ? _bottom : _top,
-                compareBottom   = partial === true ? _top : _bottom,
-                compareLeft     = partial === true ? _right : _left,
-                compareRight    = partial === true ? _left : _right;
-            if(direction === 'both')
-                return !!clientSize && ((compareBottom <= viewBottom) && (compareTop >= viewTop)) && ((compareRight <= viewRight) && (compareLeft >= viewLeft));
-            else if(direction === 'vertical')
-                return !!clientSize && ((compareBottom <= viewBottom) && (compareTop >= viewTop));
-            else if(direction === 'horizontal')
-                return !!clientSize && ((compareRight <= viewRight) && (compareLeft >= viewLeft));
-        }
+  (function($) {
+    var $w = $(window);
+    $.fn.visible = function(partial, hidden, direction, container) {
+      if (this.length < 1)
+        return;
+      // Set direction default to 'both'.
+      direction = direction 'both';
+      var $t = this.length > 1 ? this.eq(0) : this,
+        isContained = typeof container !== 'undefined' && container !== null,
+        $c = isContained ? $(container) : $w,
+        wPosition = isContained ? $c.position() : 0,
+        t = $t.get(0),
+        vpWidth = $c.outerWidth(),
+        vpHeight = $c.outerHeight(),
+        clientSize = hidden === true ? t.offsetWidth * t.offsetHeight : true;
+      if (typeof t.getBoundingClientRect === 'function') {
+        // Use this native browser method, if available.
+        var rec = t.getBoundingClientRect(),
+          tViz = isContained ?
+          rec.top - wPosition.top >= 0 && rec.top < vpHeight + wPosition.top :
+          rec.top >= 0 && rec.top < vpHeight,
+          bViz = isContained ?
+          rec.bottom - wPosition.top > 0 && rec.bottom <= vpHeight + wPosition.top :
+          rec.bottom > 0 && rec.bottom <= vpHeight,
+          lViz = isContained ?
+          rec.left - wPosition.left >= 0 && rec.left < vpWidth + wPosition.left :
+          rec.left >= 0 && rec.left < vpWidth,
+          rViz = isContained ?
+          rec.right - wPosition.left > 0 && rec.right < vpWidth + wPosition.left :
+          rec.right > 0 && rec.right <= vpWidth,
+          vVisible = partial ? tViz
+        bViz: tViz && bViz,
+          hVisible = partial ? lViz
+        rViz: lViz && rViz,
+          vVisible = (rec.top < 0 && rec.bottom > vpHeight) ? true : vVisible,
+          hVisible = (rec.left < 0 && rec.right > vpWidth) ? true : hVisible;
+        if (direction === 'both')
+          return clientSize && vVisible && hVisible;
+        else if (direction === 'vertical')
+          return clientSize && vVisible;
+        else if (direction === 'horizontal')
+          return clientSize && hVisible;
+      } else {
+        var viewTop = isContained ? 0 : wPosition,
+          viewBottom = viewTop + vpHeight,
+          viewLeft = $c.scrollLeft(),
+          viewRight = viewLeft + vpWidth,
+          position = $t.position(),
+          _top = position.top,
+          _bottom = _top + $t.height(),
+          _left = position.left,
+          _right = _left + $t.width(),
+          compareTop = partial === true ? _bottom : _top,
+          compareBottom = partial === true ? _top : _bottom,
+          compareLeft = partial === true ? _right : _left,
+          compareRight = partial === true ? _left : _right;
+        if (direction === 'both')
+          return !!clientSize && ((compareBottom <= viewBottom) && (compareTop >= viewTop)) && ((compareRight <= viewRight) && (compareLeft >= viewLeft));
+        else if (direction === 'vertical')
+          return !!clientSize && ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+        else if (direction === 'horizontal')
+          return !!clientSize && ((compareRight <= viewRight) && (compareLeft >= viewLeft));
+      }
     };
-})(jQuery);
+  })(jQuery);
   /* global google */
   // The lines object contains all the trips (lines) and those contain all the markers.
   const lines = {
@@ -305,7 +331,8 @@
       const line = location.line ? location.line : 'none';
       const zIndex = location.zIndex ? location.zIndex : 1;
       let animation;
-      if (location.line === 'EUp2P' || location.line === 'country') {
+      if (location.line === 'EUp2P'
+        location.line === 'country') {
         animation = null;
       } else {
         animation = google.maps.Animation.DROP;
@@ -358,6 +385,7 @@
       jQuery(window).off('scroll');
     }
   });
+
   function openMarkers() {
     // Go through all marker arrays and filter them so right animation is applied.
     if (!mapLoaded) {
@@ -404,8 +432,8 @@
     setTimeout(() => {
       const marker = array[i];
       ++i;
-        // For my model, the country markers will not be spawn in the beginning, I have a button for that.
-        if (i <= array.length && line !== 'country') {
+      // For my model, the country markers will not be spawn in the beginning, I have a button for that.
+      if (i <= array.length && line !== 'country') {
         marker.setMap(map);
         // Last marker is ImHere, so after this, our map is loaded!
         if (line === 'ImHere') {
@@ -507,6 +535,7 @@
       country.setMap(map);
     })
   }
+
   function closeChecklist() {
     lines.country.forEach(country => {
       country.setMap(null);
@@ -605,6 +634,7 @@
       }
     });
   }
+
   function googleError() {
     const theMap = document.getElementById('map');
     const html = 'Unfortunately the map was not able to load 😢. Try reloading the page. If you are using Safari, Opera or Internet Explorer, it might not work for now. Try using <a href="https://www.google.com/chrome/">Google Chrome</a>.';
