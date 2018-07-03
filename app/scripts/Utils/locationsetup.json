@@ -1,0 +1,21 @@
+{
+  "title": "",
+  "location": {
+    "lat": ,
+    "lng":
+  },
+  "date": "",
+  "description": "",
+  "youtube": "",
+  "rideData": "",
+  "icon": "",
+  "line": "",
+  "links": {
+    "title": "",
+    "links": [{
+      "name": "",
+      "link": ""
+      }
+    ]
+  }
+},

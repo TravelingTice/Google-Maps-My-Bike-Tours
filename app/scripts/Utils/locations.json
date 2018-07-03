@@ -1,13 +1,13 @@
 [{
     "title": "I'M HERE!",
     "location": {
-      "lat": 52.191081,
-      "lng": 4.441863
+      "lat": 53.488156,
+      "lng": 22.732326
     },
-    "date": "March 14, 2018",
-    "description": "Working my programming skills and building this map, is what I'm doing right now! In May I'll return to the road and continue on the European Bike Tour!",
+    "date": "June 12, 2018",
+    "description": "Making my way through Europe! Currently in Poland! (The vlogs are about a week behind as you can see)",
     "icon": "ImHere.png",
-    "zIndex": 10,
+    "zIndex": 1000,
     "line": "ImHere"
   },
   {
@@ -3066,35 +3066,13 @@
     "icon": "Vvid.png"
   },
   {
-    "title": "Riga, Latvia",
+    "title": "Kaunas, Lithuania",
     "location": {
-      "lat": 56.949673,
-      "lng": 24.107274
+      "lat": 54.902994,
+      "lng": 23.897006
     },
-    "description": "This is where I will return to in May 2018.",
-    "img": "riga.jpg",
-    "icon": "P.png",
-    "line": "EUp2P"
-  },
-  {
-    "title": "Vilnius, Lithuania",
-    "location": {
-      "lat": 54.687156,
-      "lng": 25.279651
-    },
-    "description": "This is the city I actually wanted to stop at, and I've actually visited it for 1 night when I was going back home.",
-    "img": "vilnius.jpg",
-    "icon": "P.png",
-    "line": "EUp2P"
-  },
-  {
-    "title": "Minsk, Belarus",
-    "location": {
-      "lat": 53.904540,
-      "lng": 27.561524
-    },
-    "description": "One of the last dictatorships in Europe. It's gonna be quite a hassle to get a visa for this country, but I still want to visit it!",
-    "img": "minsk.jpg",
+    "description": "Because I already visited Vilnius, Lithuania, I'm only going to stop in Kaunas when cycling. Seems like a cool place!.",
+    "img": "kaunas.jpg",
     "icon": "P.png",
     "line": "EUp2P"
   },
@@ -3408,5 +3386,270 @@
     "img": "brussels.jpg",
     "icon": "P.png",
     "line": "EUp2P"
+  },
+  {
+    "title": "Saying Goodbye and The Road to BERLIN!",
+    "location": {
+      "lat": 51.466787,
+      "lng": 6.468025
+    },
+    "date": "June 3, 2018",
+    "description": "Finally European Bike Tour part 2 is starting! The plan is to slowly get back to Riga, to pick up the bike and start cycling again.",
+    "youtube": "IK5Aj_pFAKY",
+    "icon": "Vvid.png"
+  },
+  {
+    "title": "Exploring Berlin, Walking Along Berlin Wall and More!",
+    "location": {
+      "lat": 52.516325,
+      "lng": 13.408821
+    },
+    "date": "June 4, 2018",
+    "description": "In this vlog I start exploring the city of Berlin. I first went to Alexander Platz. Compared West-Berlin with East-Berlin and that the differences are very noticeable. Walked to East-Side Gallery where parts of the original wall were still standing.",
+    "youtube": "BJNH5j4XZ4I",
+    "links": {
+      "title": "Another video from Berlin:",
+      "links": [{
+        "name": "Another Impressive Day in Berlin! Checkpoint Charlie, Potsdamer Platz, Memorial to the Murdered Jews",
+        "link": "https://www.youtube.com/watch?v=iiorX4NSgY8"
+        }]
+    },
+    "zIndex": 2,
+    "icon": "Vvid.png"
+  },
+  {
+    "title": "Another Impressive Day in Berlin! Checkpoint Charlie, Potsdamer Platz, Memorial to the Murdered Jews",
+    "location": {
+      "lat": 52.522175,
+      "lng": 13.421181
+    },
+    "date": "June 5, 2018",
+    "description": "On this second day in Berlin I visit Checkpoint Charlie, and start walking along the wall border again. I past Potsdamer Platz, told some history about it, went to the Memorial to the Murdered Jews in Europe and walked until I came back to the place I was yesterday.",
+    "youtube": "iiorX4NSgY8",
+    "links": {
+      "title": "Another video from Berlin:",
+      "links": [{
+        "name": "Exploring Berlin, Walking Along Berlin Wall and More!",
+        "link": "https://www.youtube.com/watch?v=BJNH5j4XZ4I"
+        }]
+    },
+    "icon": "Vvid.png"
+  },
+  {
+    "title": "Can't Believe I Made It Onto That Bus!",
+    "location": {
+      "lat": 52.140372,
+      "lng": 19.184646
+    },
+    "date": "June 6, 2018",
+    "description": "A full day of bustravel from Berlin to Vilnius! And a lot more eventful than I expected...",
+    "youtube": "r601ZXluMwc",
+    "icon": "Vvid.png"
+  },
+  {
+    "title": "I Ate PIG'S EARS?!",
+    "location": {
+      "lat": 54.655219,
+      "lng": 25.213091
+    },
+    "date": "June 7th, 2018",
+    "description": "In this vlog I finally arrive in Vilnius, Lithuania! I looked around the city a bit, settled in my Airbnb room and ate out with a fan of the channel who got me some very interesting dinner...",
+    "youtube": "xY96b9w2zhY",
+    "links": {
+      "title": "More videos from Vilnius:",
+      "links": [{
+        "name": "Visiting Trakai Island Castle (Trakų Salos Pilis)!",
+        "link": "https://www.youtube.com/watch?v=SCVHJOCE_24"
+        },
+        {
+          "name": "Free Walking Tour Through Vilnius!",
+          "link": "https://www.youtube.com/watch?v=oR0J-2VUrl8"
+        }
+      ]
+    },
+    "icon": "Vvid.png"
+  },
+  {
+    "title": "Visiting Trakai Island Castle (Trakų Salos Pilis)!",
+    "location": {
+      "lat": 54.651192,
+      "lng": 24.932940
+    },
+    "date": "June 8th, 2018",
+    "description": "In this episode I visit Trakai Castle about 1 hour outside of Vilnius. The castle is a beautiful orange Lithuanian castle, that originates from the Middle Ages. I rented a bike and rode around the area as well!",
+    "youtube": "SCVHJOCE_24",
+    "links": {
+      "title": "More videos from Vilnius:",
+      "links": [{
+        "name": "I Ate PIG'S EARS?!",
+        "link": "https://www.youtube.com/watch?v=xY96b9w2zhY"
+        },
+        {
+          "name": "Free Walking Tour Through Vilnius!",
+          "link": "https://www.youtube.com/watch?v=oR0J-2VUrl8"
+        }
+      ]
+    },
+    "icon": "Vvid.png"
+  },
+  {
+    "title": "Free Walking Tour Through Vilnius!",
+    "location": {
+      "lat": 54.680308,
+      "lng": 25.285108
+    },
+    "date": "June 10, 2018",
+    "description": "In this vlog I joined a free walking tour through Vilnius, which was very nice. The organization is called Vilnius With Locals (www.vilniuswithlocals.com) and the tour was about 2.5 hours. We walked past all the main highlights and heard a lot about the history of the city.",
+    "youtube": "oR0J-2VUrl8",
+    "links": {
+      "title": "More videos from Vilnius:",
+      "links": [{
+        "name": "Visiting Trakai Island Castle (Trakų Salos Pilis)!",
+        "link": "https://www.youtube.com/watch?v=SCVHJOCE_24"
+        },
+        {
+          "name": "I Ate PIG'S EARS?!",
+          "link": "https://www.youtube.com/watch?v=xY96b9w2zhY"
+        }
+      ]
+    },
+    "icon": "Vvid.png"
+  },
+  {
+    "title": "A Very Interesting Hostel..",
+    "location": {
+      "lat": 56.010279,
+      "lng": 24.379746
+    },
+    "date": "June 11, 2018",
+    "description": "On the road from Vilnius to Riga, where I will start my tour again! In Riga I had booked a very interesting hostel...",
+    "youtube": "NL1cu2MMSzs",
+    "links": {
+      "title": "Another video from Riga:",
+      "links": [{
+        "name": "Reunited With My Bike!!",
+        "link": "https://www.youtube.com/watch?v=W-2xUEPowYg"
+        }
+      ]
+    },
+    "icon": "Vvid.png"
+  },
+  {
+    "title": "Reunited With My Bike!!",
+    "location": {
+      "lat": 56.877011,
+      "lng": 24.154228
+    },
+    "date": "June 12, 2018",
+    "description": "Start the day with the news that I might not be cycling alone for the first couple of days. Then picking up the bike. We are reunited again!",
+    "youtube": "W-2xUEPowYg",
+    "links": {
+      "title": "Another video from Riga:",
+      "links": [{
+        "name": "A Very Interesting Hostel..",
+        "link": "https://www.youtube.com/watch?v=NL1cu2MMSzs"
+        }
+      ]
+    },
+    "icon": "Vvid.png"
+  },
+  {
+    "title": "First Day Of Cycling!!",
+    "location": {
+      "lat": 56.952385,
+      "lng": 24.033378
+    },
+    "date": "June 13, 2018",
+    "description": "So today the cycling officially began! It was a relaxed day because Sofie likes to sleep in and wanted to leave at around noon, which was ok for me because I still had to do laundry (which didn't happen unfortunately) and afterwards I went to Sofie's hostel and together we rode out of the city of Riga towards the coast.",
+    "youtube": "SddG4am6fsM",
+    "icon": "EUp2ST.png",
+    "line": "EUp2",
+    "rideData": "https://www.strava.com/activities/1642166179",
+    "zIndex": 15
+  },
+  {
+    "title": "Reaching the Northernmost Point for the Trip!",
+    "location": {
+      "lat": 57.203506,
+      "lng": 23.199293
+    },
+    "date": "June 14, 2018",
+    "description": "So today we woke up on our incredible location along the beach. Probably the best campsite I've ever stayed at. Sofie is not so much of a morning person, so I had some time while she was still sleeping to explore the coast a little bit. We reached Kolka, the tip of Latvia, which meant that it is all south from here for me!",
+    "youtube": "cDyUUJ24YQg",
+    "icon": "EUp2vid.png",
+    "rideData": "https://www.strava.com/activities/1642166125",
+    "line": "EUp2"
+  },
+  {
+    "title": "I've Got 42 Mosquito Bites!!",
+    "location": {
+      "lat": 57.751326,
+      "lng": 22.595960
+    },
+    "date": "June 15, 2018",
+    "description": "We rode southwards through beautiful nature. The water filter came in handy because there were no places with clean drinking water. Sofie had to buy bottled water. Headwinds.. At camp, I counted my mosquito bites, I had 42 of them!! Oh, and Sofie had ZERO!",
+    "youtube": "qa0V5fG-vjw",
+    "rideData": "https://www.strava.com/activities/1642166394",
+    "icon": "EUp2vid.png",
+    "line": "EUp2"
+  },
+  {
+    "title": "WRONG ROAD!!",
+    "location": {
+      "lat": 57.377155,
+      "lng": 21.549576
+    },
+    "date": "June 17, 2018",
+    "description": "We started the day at our campsite in Ventspils. Then we cycled out of town, but stumbled across a road that would turn into dirt, which was indicated by a sign. We turned around, which was the better choice!",
+    "youtube": "E9iNv7rGHuk",
+    "rideData": "https://www.strava.com/activities/1654281245",
+    "icon": "EUp2vid.png",
+    "line": "EUp2"
+  },
+  {
+    "title": "Made It To Lithuania!!",
+    "location": {
+      "lat": 56.736139,
+      "lng": 21.223782
+    },
+    "date": "June 18, 2018",
+    "description": "Rainstorm last night. New kickstand for Sofie. Came across the first recumbent cyclist I've seen so far. A lot of storks. Found a bike shop in Liepaja, Latvia. Cycled across the border into Lithuania! Country nr. 9!! Dirt road to our beautiful campsite in Sventoji, Lithuania.",
+    "youtube": "nohKFmVzuqY",
+    "rideData": "https://www.strava.com/activities/1654281297",
+    "icon": "EUp2vid.png",
+    "line": "EUp2"
+  },
+  {
+    "title": "Only Cycling Paths!! Cycling On The Curonian Spit!",
+    "location": {
+      "lat": 56.014505,
+      "lng": 21.077914
+    },
+    "date": "June 19, 2018",
+    "description": "Cycling on cycle paths pretty much all the way. Reminds me of home, also because of the landscape having a lot of dunes. Passed the town of Klaipeda, where we took a ferry to ride on the Curonian Spit, all the way to Nida!",
+    "youtube": "RQncKFNmM0Y",
+    "rideData": "https://www.strava.com/activities/1654281403",
+    "icon": "EUp2vid.png",
+    "line": "EUp2"
+  },
+  {
+    "title": "Walking On Dunes on The Curonian Spit! And Saying Goodbye To Sofie",
+    "location": {
+      "lat": 55.303453,
+      "lng": 21.005569
+    },
+    "date": "June 20, 2018",
+    "description": "Full day in Nida. Sofie and I took a look at the Russian border, climbed some sandy dunes and eventually we said goodbye to each other and Sofie took the ferry to the mainland.",
+    "youtube": "q9tPdeUkzNc",
+    "icon": "EUp2H.png",
+    "line": "EUp2",
+    "links": {
+      "title": "Another video from the Curonian Spit:",
+      "links": [{
+        "name": "Flying The Drone Over The Curonian Spit!",
+        "link": "https://www.youtube.com/watch?v=S-vUImXKa74"
+        }
+      ]
+    }
   }
 ]
