@@ -1,11 +1,11 @@
 [{
     "title": "I'M HERE!",
     "location": {
-      "lat": 53.488156,
-      "lng": 22.732326
+      "lat": 52.189278,
+      "lng": 4.443176
     },
-    "date": "June 12, 2018",
-    "description": "Making my way through Europe! Currently in Poland! (The vlogs are about a week behind as you can see)",
+    "description": "Back home... but not for long! Soon I'll be going to a different part of the world for a whole new set of adventures. Stay tuned!",
+    "youtube": "CtxBq8-ytqI",
     "icon": "ImHere.png",
     "zIndex": 1000,
     "line": "ImHere"
@@ -97,7 +97,7 @@
       "lng": 23.974410
     },
     "zIndex": 9,
-    "icon": "NotYetSm.png",
+    "icon": "checkSm.png",
     "line": "country"
   },
   {
@@ -107,7 +107,7 @@
       "lng": 19.228316
     },
     "zIndex": 9,
-    "icon": "NotYetSm.png",
+    "icon": "checkSm.png",
     "line": "country"
   },
   {
@@ -127,7 +127,7 @@
       "lng": 31.463439
     },
     "zIndex": 9,
-    "icon": "NotYetMd.png",
+    "icon": "checkMd.png",
     "line": "country"
   },
   {
@@ -277,7 +277,7 @@
       "lng": 15.320717
     },
     "zIndex": 9,
-    "icon": "NotYetSm.png",
+    "icon": "checkSm.png",
     "line": "country"
   },
   {
@@ -337,7 +337,7 @@
       "lng": 19.752013
     },
     "zIndex": 9,
-    "icon": "NotYetSm.png",
+    "icon": "checkSm.png",
     "line": "country"
   },
   {
@@ -403,8 +403,8 @@
   {
     "title": "Malta",
     "location": {
-      "lat": 35.624594,
-      "lng": 14.384367
+      "lat": 35.904935,
+      "lng": 14.352198
     },
     "zIndex": 9,
     "icon": "NotYetSm.png",
@@ -3066,28 +3066,6 @@
     "icon": "Vvid.png"
   },
   {
-    "title": "Kaunas, Lithuania",
-    "location": {
-      "lat": 54.902994,
-      "lng": 23.897006
-    },
-    "description": "Because I already visited Vilnius, Lithuania, I'm only going to stop in Kaunas when cycling. Seems like a cool place!.",
-    "img": "kaunas.jpg",
-    "icon": "P.png",
-    "line": "EUp2P"
-  },
-  {
-    "title": "Auschwitz, Poland",
-    "location": {
-      "lat": 50.034398,
-      "lng": 19.209778
-    },
-    "description": "A place with a lot of awful history, but everyone I spoke to said it is worth a visit.",
-    "img": "auschwitz.jpg",
-    "icon": "P.png",
-    "line": "EUp2P"
-  },
-  {
     "title": "Prague, Czech Republic",
     "location": {
       "lat": 50.075538,
@@ -3104,6 +3082,26 @@
       "lng": 11.581980
     },
     "img": "munich.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
+    "title": "Zurich, Switzerland",
+    "location": {
+      "lat": 47.367703,
+      "lng": 8.532522
+    },
+    "img": "zurich.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
+    "title": "Liechtenstein",
+    "location": {
+      "lat": 47.166000,
+      "lng": 9.555373
+    },
+    "img": "liechtenstein.jpg",
     "icon": "P.png",
     "line": "EUp2P"
   },
@@ -3158,12 +3156,32 @@
     "line": "EUp2P"
   },
   {
+    "title": "Varna, Bulgaria",
+    "location": {
+      "lat": 43.226702,
+      "lng": 27.903267
+    },
+    "img": "varna.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
     "title": "Sofia, Bulgaria",
     "location": {
       "lat": 42.697708,
       "lng": 23.321868
     },
     "img": "sofia.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
+    "title": "Cyprus",
+    "location": {
+      "lat": 35.064747,
+      "lng": 33.248132
+    },
+    "img": "cyprus.jpg",
     "icon": "P.png",
     "line": "EUp2P"
   },
@@ -3268,6 +3286,16 @@
     "line": "EUp2P"
   },
   {
+    "title": "Malta",
+    "location": {
+      "lat": 35.904935,
+      "lng": 14.352198
+    },
+    "img": "malta.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
     "title": "Naples, Italy",
     "location": {
       "lat": 40.851775,
@@ -3333,7 +3361,7 @@
       "lat": 40.416775,
       "lng": -3.703790
     },
-    "img": "madrid",
+    "img": "madrid.jpg",
     "icon": "P.png",
     "line": "EUp2P"
   },
@@ -3344,16 +3372,6 @@
       "lng": -9.139337
     },
     "img": "lisbon.jpg",
-    "icon": "P.png",
-    "line": "EUp2P"
-  },
-  {
-    "title": "Liechtenstein",
-    "location": {
-      "lat": 47.166000,
-      "lng": 9.555373
-    },
-    "img": "liechtenstein.jpg",
     "icon": "P.png",
     "line": "EUp2P"
   },
@@ -3384,6 +3402,36 @@
       "lng": 4.351721
     },
     "img": "brussels.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
+    "title": "London, UK",
+    "location": {
+      "lat": 51.496191,
+      "lng": -0.125588
+    },
+    "img": "london.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
+    "title": "Edinburgh, Scotland",
+    "location": {
+      "lat": 55.959877,
+      "lng": -3.192640
+    },
+    "img": "edinburgh.jpg",
+    "icon": "P.png",
+    "line": "EUp2P"
+  },
+  {
+    "title": "Dublin, Ireland",
+    "location": {
+      "lat": 53.361116,
+      "lng": -6.256919
+    },
+    "img": "dublin.jpg",
     "icon": "P.png",
     "line": "EUp2P"
   },
@@ -3651,5 +3699,484 @@
         }
       ]
     }
+  },
+  {
+    "title": "Lots of Rain, Drone Flying and How to Clean Yourself While Wild Camping!",
+    "location": {
+      "lat": 55.358507,
+      "lng": 21.225383
+    },
+    "date": "June 23rd, 2018",
+    "description": "Started the day in heavy rain. Got a ferry to the mainland of Lithuania and started cycling eastwards. Flew the drone and showed how to clean yourself while wildcamping.",
+    "youtube": "i0e_00q9bXY",
+    "rideData": "https://www.strava.com/activities/1659797438",
+    "icon": "EUp2vid.png",
+    "line": "EUp2"
+  },
+  {
+    "title": "Getting Some Fuel and Germans Everywhere!",
+    "location": {
+      "lat": 55.103988,
+      "lng": 22.313029
+    },
+    "date": "June 24th, 2018",
+    "description": "Had a good night sleep in the forest. Went to a gas station to fill up my fuel bottle for my campstove, which I've never done before! Only had to pay 72 cents for it. Lunch in Jurbarkas, Lithuania. Thought it was a local place, but ended up meeting 3 other German bicycle tourists at this place! Cycled to a campground which turned out to be really good.",
+    "youtube": "saCqckcO-_k",
+    "rideData": "https://www.strava.com/activities/1659797492",
+    "icon": "EUp2vid.png",
+    "line": "EUp2"
+  },
+  {
+    "title": "I Accidentally Treated Myself!",
+    "location": {
+      "lat": 55.082553,
+      "lng": 23.391159
+    },
+    "date": "June 25th, 2018",
+    "description": "Cycling to Kaunas. It is pretty cold, almost feels like autumn! But soon will be better again. A hungry climb towards a supermarket. Bought a bit too much. Made it to Kaunas and to my own airbnb apartment! I didn't know I was gonna have an entire apartment for myself. So I accidentally treated myself to an entire apartment for 3 nights.",
+    "youtube": "9L_5LxfWLOw",
+    "rideData": "https://www.strava.com/activities/1661200650",
+    "icon": "EUp2vid.png",
+    "line": "EUp2"
+  },
+  {
+    "title": "Beautiful Kaunas!",
+    "location": {
+      "lat": 54.897339,
+      "lng": 23.910693
+    },
+    "date": "June 27th, 2018",
+    "description": "Today I went out to explore the city of Kaunas. The second biggest town of Lithuania. I went to St. Michael the Archangel's Church, Kaunas Cathedral Basilica and Kaunas Castle. Also ventured out of the center up the hill and then back down towards the castle, from which I went back to the apartment to do some work.",
+    "youtube": "KtO4znuJIzs",
+    "icon": "EUp2H.png",
+    "zIndex": 10,
+    "line": "EUp2"
+  },
+  {
+    "title": "Hot Weather and Dirt Roads means Sweat!",
+    "location": {
+      "lat": 54.856441,
+      "lng": 23.883707
+    },
+    "date": "June 28th, 2018",
+    "description": "hecking out of my Airbnb apartment. Riding out of Kaunas. Construction on cycle lanes. No direct route to Poland so taking the backroads is best, but not guaranteed to be paved so I had some dirt roads and it was hot, so I was very sweaty.",
+    "youtube": "vBMQld75pBY",
+    "rideData": "https://www.strava.com/activities/1676762007",
+    "icon": "EUp2vid.png",
+    "line": "EUp2"
+  },
+  {
+    "title": "Hello Poland!",
+    "location": {
+      "lat": 54.520630,
+      "lng": 23.343352
+    },
+    "date": "June 29th, 2018",
+    "description": "Very late start today. I met up with a Swiss guy called Jan yesterday and showed him in the vlog a bit. He is motorbiking around Northern Europe. I have to edit a video with a deadline, which takes up all morning and a bit of the afternoon. I leave camp at 2 PM and head south. Made a choice to not follow the main highway to Poland but instead take a side road. Found a WWII bunker at the side of the road and decided to take a look.",
+    "youtube": "MSSIxXVAo18",
+    "rideData": "https://www.strava.com/dashboard/following/40",
+    "icon": "EUp2vid.png",
+    "line": "EUp2"
+  },
+  {
+    "title": "Following The Green Velo Route in Poland!",
+    "location": {
+      "lat": 54.012481,
+      "lng": 23.348532
+    },
+    "date": "June 30, 2018",
+    "description": "First full day of cycling in Poland. Packed up at my wild camping place and headed to a place called Augustow to do some website work that had a deadline. Then I went on to cycling in the afternoon and encountered the Green Velo route in Poland, which was very well laid out and had rest stops along it.",
+    "youtube": "ORuleAXyBkY",
+    "rideData": "https://www.strava.com/activities/1676762089",
+    "icon": "EUp2vid.png",
+    "line": "EUp2"
+  },
+  {
+    "title": "Beard Or No Beard?",
+    "location": {
+      "lat": 53.550423,
+      "lng": 22.902287
+    },
+    "date": "July 1, 2018",
+    "description": "Rain in the morning, cold weather. Following the Green Velo Route again. Found a place to warm up and charge my items and eat some Polish soup. Found a free place to stay again. Cold cooking, talking about the financial situation and that I can't keep this train rolling for much longer.. as well as you guys decide what I should do with the beard. Beard or no beard, you decide!",
+    "youtube": "spVSZCnXmsM",
+    "rideData": "https://www.strava.com/activities/1676753743",
+    "icon": "EUp2vid.png",
+    "line": "EUp2"
+  },
+  {
+    "title": "I'm So Done!!!",
+    "location": {
+      "lat": 53.214209,
+      "lng": 22.551093
+    },
+    "date": "July 2, 2018",
+    "description": "Start riding in the rain.. my plans changed because of the weather. I decided to take a break a bit early, instead of cycling for another 2 days. I rented another airbnb in Bialystok which was definitely the right choice because the weather for the next days were horrible.",
+    "youtube": "FcWxGHcKAcQ",
+    "rideData": "https://www.strava.com/activities/1676753889",
+    "icon": "EUp2vid.png",
+    "line": "EUp2"
+  },
+  {
+    "title": "Sorry, I Don't Speak Polish..",
+    "location": {
+      "lat": 53.136563,
+      "lng": 23.183169
+    },
+    "date": "July 5, 2018",
+    "description": "Talk about Esperanto in Bialystok, then ride out towards the east, to Bialowieza forest.",
+    "youtube": "2Xvt7OeNNWs",
+    "rideData": "https://www.strava.com/activities/1684979344",
+    "icon": "EUp2vid.png",
+    "line": "EUp2"
+  },
+  {
+    "title": "Sometimes You Gotta Be Flexible...",
+    "location": {
+      "lat": 52.930088,
+      "lng": 23.761307
+    },
+    "date": "July 6, 2018",
+    "description": "Josef from TheOneGoodRoad called me this morning and we talked for 2.5 hours, which threw my plans for the day a little off-guard. Unfortunately my plans fell completely through when I came across a sign which said that the road to the Primieval forest (Bialowieza) was closed. It forced me to ride around the forest..",
+    "youtube": "iLTKGbXav6Y",
+    "rideData": "https://www.strava.com/activities/1684979342",
+    "icon": "EUp2vid.png",
+    "line": "EUp2"
+  },
+  {
+    "title": "Droning Around Ancient Ruins In Poland!!",
+    "location": {
+      "lat": 52.739246,
+      "lng": 23.584653
+    },
+    "date": "July 7, 2018",
+    "description": "Check out of hotel, make my way south. Unfortunately skipping the Bialowieza forest for now. Some nice dirt roads first, but they turned into bad sandy ones later. Showcasing my staple foods for lunch, talking about going to a Sklep, but there was no one around. Diverge from Green velo for a bit to avoid the dirt roads.",
+    "youtube": "TL6q9sfk5yw",
+    "rideData": "https://www.strava.com/activities/1689909230",
+    "icon": "EUp2vid.png",
+    "line": "EUp2"
+  },
+  {
+    "title": "MY FIRST CENTURY!!",
+    "location": {
+      "lat": 52.321604,
+      "lng": 23.072785
+    },
+    "date": "July 8, 2018",
+    "description": "When I was waiting for a ferry that didn't go, I realised I made a mistake... To rectify I wanted today to be the longest ever and ended up cycling my first 100 miles on 1 day! I was completely shattered by the end of the day and allowed myself to have a little hotel.",
+    "youtube": "xblvhBp3Fao",
+    "rideData": "https://www.strava.com/activities/1689909299",
+    "icon": "EUp2vid.png",
+    "line": "EUp2"
+  },
+  {
+    "title": "That Is Ukraine!",
+    "location": {
+      "lat": 51.551780,
+      "lng": 23.554340
+    },
+    "date": "July 9, 2018",
+    "description": "Cycling along the Poland-Ukraine border. Nice encounter with a truck. Dji Spark drone flying. Crossed the town of Sobibor, where one of the extermination nazi camps were located. Past the highway bordercrossing, but I'll cross into Ukraine tomorrow. I did see Ukraine today, across the river. Went to a Polish Sklep, where I left the cassier very confused because of the language barrier. Sometimes you gotta make a fool of yourself.",
+    "youtube": "6_ZVvV5rDHk",
+    "rideData": "https://www.strava.com/activities/1697304142",
+    "icon": "EUp2vid.png",
+    "line": "EUp2"
+  },
+  {
+    "title": "I'M IN UKRAINE!!",
+    "location": {
+      "lat": 51.030118,
+      "lng": 23.898397
+    },
+    "date": "July 10, 2018",
+    "description": "Crossed the border to Ukraine! First time cycling across a guarded border. Cycled to a town called Chervonohrad where I had a motel for 13 euros a night. Tomorrow ride to a town called Lviv, where I will take a little break for a few days.",
+    "youtube": "VBhkDnJtK1Q",
+    "rideData": "https://www.strava.com/activities/1697305434",
+    "icon": "EUp2vid.png",
+    "line": "EUp2"
+  },
+  {
+    "title": "Crazy Steep Hills and Bad Roads in Ukraine!",
+    "location": {
+      "lat": 50.387177,
+      "lng": 24.219945
+    },
+    "date": "July 11, 2018",
+    "description": "Cycling Ukraine is very different from the rest of Europe. Highway is kind of dangerous, found some tracks of trucks going into the shoulder. Diverged from the highway, to some backroads, which was a bad idea, because the hills became very steep and the roads very bad. I had to push my bike up some very steep hills to the point I was covered in sweat.",
+    "youtube": "ele5xHAHvKc",
+    "rideData": "https://www.strava.com/activities/1697292611",
+    "icon": "EUp2vid.png",
+    "line": "EUp2"
+  },
+  {
+    "title": "Rainy Lviv!!",
+    "location": {
+      "lat": 49.839683,
+      "lng": 24.029717
+    },
+    "date": "July 14 - 15, 2018",
+    "description": "Today I explored rainy Lviv in Ukraine while I was there for 5 days. The first few days I was inside working and as soon as I wanted to get out and explore the city, it started pooring down! I went to the city center, after which I made my way to the Park Lviv High Castle to see a nice view of the city. ",
+    "youtube": "h_NYjDqRXNM",
+    "rideData": "https://www.strava.com/activities/1710058796",
+    "icon": "EUp2vid.png",
+    "line": "EUp2"
+  },
+  {
+    "title": "I'm The Master Rain Avoider!!!",
+    "location": {
+      "lat": 49.799572,
+      "lng": 23.983758
+    },
+    "date": "July 16, 2018",
+    "description": "Cycle out of Lviv in the rain, a lot of rain and thunder so I wanted to take a train in the direction that I'm going, unfortunately that was not an option. So I cycled, it became dryer, but there were a lot of dark clouds around me all the time. Cycled to a place called Sambir, stayed there in a really cheap hotel with a very nice owner.",
+    "youtube": "hbWnj3ex4UE",
+    "icon": "EUp2vid.png",
+    "line": "EUp2"
+  },
+  {
+    "title": "Camping On Top Of A Mountain!",
+    "location": {
+      "lat": 49.520715,
+      "lng": 23.206550
+    },
+    "date": "July 18, 2018",
+    "description": "Cycling from Sambir, Ukraine into the Carpathian mountains.Talking about my experience yesterday with going to a Ukrainian church with my hotel host, Igor. Then I said goodbye and cycled into the rain. Dji Spark drone flying. Couldn't find a place to stay in a town, so i decided to camp in the wild. First place got scared away by dogs of herders, then I found a beautiful spot on top of a mountain.",
+    "youtube": "j8AY41JoIQo",
+    "rideData": "https://www.strava.com/activities/1713360968",
+    "icon": "EUp2vid.png",
+    "line": "EUp2"
+  },
+  {
+    "title": "Cycling Through The Carpathian Mountains In Ukraine!",
+    "location": {
+      "lat": 49.128607,
+      "lng": 23.031367
+    },
+    "date": "July 19, 2018",
+    "description": "Woke up on top of Mount. Ostra in Ukraine. Cycling through foggy Carpathian Mountains in Ukraine. First part was very hilly but after I passed a military checkpoint the road became worse but it was only downhill. I made it to a place called Uzhhorod where I booked a hostel for 4 euros a night.",
+    "youtube": "O6x0NN4E1QI",
+    "rideData": "https://www.strava.com/activities/1713361231",
+    "icon": "EUp2vid.png",
+    "line": "EUp2"
+  },
+  {
+    "title": "Bye Ukraine, Hello Slovakia!!",
+    "location": {
+      "lat": 48.620800,
+      "lng": 22.287880
+    },
+    "date": "July 21, 2018",
+    "description": "Crossed the border into Slovakia. Had an interesting hostel experience, Hrishna meditators came to the hostel to meditate. Back in the EU, Slovakia uses the euros, prices are a bit more expensive. Dji Spark drone flying. Steep hill on the way to Kosice, which was the end destination for the day. My apartment is at Sandor Marai's place, a popular Hungarian writer.",
+    "youtube": "MlsERHc13Yc",
+    "rideData": "https://www.strava.com/activities/1719790033",
+    "icon": "EUp2vid.png",
+    "line": "EUp2"
+  },
+  {
+    "title": "Practice Cooking And Feeling A Bit Lonely...",
+    "location": {
+      "lat": 48.717110,
+      "lng": 21.259780
+    },
+    "date": "July 24, 2018",
+    "description": "Full day in Kosice, did some sightseeing because I needed to find a cafe with wifi, because the wifi at my airbnb place really sucked. Practiced some cooking and at the end of the day I felt a bit down.. I hadn't met many people there and felt a bit lonely..",
+    "youtube": "lBfHsXujuDc",
+    "icon": "EUp2vid.png",
+    "line": "EUp2"
+  },
+  {
+    "title": "Meeting People In Krakow! - Couchsurfing Experience",
+    "location": {
+      "lat": 50.064651,
+      "lng": 19.944981
+    },
+    "date": "July 25, 2018",
+    "description": "Leaving Kosice by bus. Arriving in Krakow, I felt a bit lonely in Kosice and wanted to make an effort to meet people in Krakow. So I went on Couchsurfing and found people who wanted to hangout with me. I hung out with a French teacher in Lithuania, and afterwards went to a Couchsurfing meetup in the city. I completely forgot to film that, but it was a lot of fun and I got a little tipsy...",
+    "links": {
+      "title": "A playlist to all videos I did during my stay in Krakow:",
+      "links": [{
+        "name": "Click here!",
+        "link": "https://www.youtube.com/playlist?list=PLjgLkAIC7y4HtDsWDTZvXH6vaqHSGkoCN"
+        }
+      ]
+    },
+    "youtube": "nQ87tcfrHEY",
+    "icon": "EUp2H.png",
+    "line": "EUp2"
+  },
+  {
+    "title": "Climbing My First Mountain In the Tatra Mountains!",
+    "location": {
+      "lat": 49.299183,
+      "lng": 19.949562
+    },
+    "date": "August 7, 2018",
+    "description": "Early train to Zakopane. Start hiking from Kuznice, into the Tatra mountains towards a mountain called Koscielec. I climbed this 2155 m mountain with some tough terrain at the end. Spectacular views, unfortunately no DJI drone flying..",
+    "youtube": "X8TtuRLpL6Y",
+    "icon": "EUp2vid.png"
+  },
+  {
+    "title": "Meeting BicycleTouringPro In Poznan, Poland!",
+    "location": {
+      "lat": 52.406376,
+      "lng": 16.925167
+    },
+    "date": "August 2, 2018",
+    "description": "Today I met Darren Alff from  BicycleTouringPro, the man who made bicycle touring popular. It was very interesting to meet up with him and ride around Poznan together. We had Indian Curry for lunch and then we went for another round around Poznan. Afterwards I went back to my apartment to have some sushi.",
+    "youtube": "TEr5eZGcNv4",
+    "icon": "EUp2H.png"
+  },
+  {
+    "title": "I Don't Like Buses!",
+    "location": {
+      "lat": 52.292690,
+      "lng": 17.076253
+    },
+    "date": "August 3, 2018",
+    "description": "Bus from Poznan to Krakow.",
+    "youtube": "MOeCDibw1fk",
+    "icon": "EUp2vid.png"
+  },
+  {
+    "title": "Climbing My First Mountain In the Tatra Mountains!",
+    "location": {
+      "lat": 49.299183,
+      "lng": 19.949562
+    },
+    "date": "August 7, 2018",
+    "description": "Early train to Zakopane. Start hiking from Kuznice, into the Tatra mountains towards a mountain called Koscielec. I climbed this 2155 m mountain with some tough terrain at the end. Spectacular views, unfortunately no DJI drone flying..",
+    "youtube": "X8TtuRLpL6Y",
+    "icon": "EUp2H.png"
+  },
+  {
+    "title": "Desert In Poland?!! Exploring Lesser Poland with a Local, Błędów Desert, Park Gródek and More!",
+    "location": {
+      "lat": 50.342404,
+      "lng": 19.499825
+    },
+    "date": "August 9, 2018",
+    "description": "Left Krakow today, went to a small place in Lesser Poland called Krzykawa. In this place a fan of the channel lives, who really wanted to hosted me and showed me around the area. We went to Błędów Desert, Park Gródek in Jaworzno and explored a lot in this beautiful region between Katowice and Krakow and shot some beautiful DJI Spark drone shots.",
+    "youtube": "tGvfiiJ0keg",
+    "links": {
+      "title": "The 2nd day of my stay at Zbigniew:",
+      "links": [{
+        "name": "Visiting Amazing Polish Castles And A Cave + Gear Update!",
+        "link": "https://www.youtube.com/watch?v=RrHwOmALxvs"
+        }
+      ]
+    },
+    "rideData": "https://www.strava.com/activities/1769054772",
+    "icon": "EUp2vid.png",
+    "line": "EUp2"
+  },
+  {
+    "title": "Back In The Saddle Again!",
+    "location": {
+      "lat": 50.300964,
+      "lng": 19.407346
+    },
+    "date": "August 12, 2018",
+    "description": "Today saying goodbye to Zbigniew, back in the saddle again. Going to the Czech Republic. Today was just Poland. Camping at a campground and cooking some soup and dumplings.",
+    "youtube": "aHEEzCxvk6Q",
+    "rideData": "https://www.strava.com/activities/1769054800",
+    "icon": "EUp2vid.png",
+    "line": "EUp2"
+  },
+  {
+    "title": "Crossed Into Czechia!!",
+    "location": {
+      "lat": 49.847293,
+      "lng": 18.767056
+    },
+    "date": "August 12, 2018",
+    "description": "Today I made it to my last new European country: The Czech Republic. Told about my future plans and about Australia. Made it to the town of Ostrava where I got a room in a pension for 2 nights. For the last days of cycling to Prague I didn't want to spend any money on a place to stay.",
+    "youtube": "cPPYwYMblUY",
+    "rideData": "https://www.strava.com/activities/1769051456",
+    "icon": "EUp2vid.png",
+    "line": "EUp2"
+  },
+  {
+    "title": "My First Night Couchsurfing!!",
+    "location": {
+      "lat": 49.785886,
+      "lng": 18.166132
+    },
+    "date": "August 14, 2018",
+    "description": "Have a challenge to not spend on places to sleep until Prague. Hilly cycling, met Pavel that traveled for 2 weeks without any money. Arrived in Olomouc where I luckily was able to be hosted by a couchsurfer. It's gonna be a short night because I had to get up at 5 AM!",
+    "youtube": "ayT8wIyknk0",
+    "rideData": "https://www.strava.com/activities/1779868859",
+    "icon": "EUp2vid.png",
+    "line": "EUp2"
+  },
+  {
+    "title": "Cooking Some Nice Meals While Wild Camping In The Czechian Woods!",
+    "location": {
+      "lat": 49.595390,
+      "lng": 17.251869
+    },
+    "date": "August 15, 2018",
+    "description": "Early start this morning because of my couchsurfing host having to go to work. Very tired, taking a lot of breaks. Hilly riding. Found a beer factory. At night wild camping and making some nice dishes. An omelette and afterwards spicy peanut butter pasta from the Bike camp cook book. I also show how to clean your dishes while wild camping.",
+    "youtube": "mPaIHShCa7s",
+    "rideData": "https://www.strava.com/activities/1779868879",
+    "icon": "EUp2vid.png",
+    "line": "EUp2"
+  },
+  {
+    "title": "Trying To Make Some Pancakes While Wild Camping!",
+    "location": {
+      "lat": 49.683280,
+      "lng": 16.592808
+    },
+    "date": "August 16, 2018",
+    "description": "Woke up at my wild camping place, well rested. Cycling through some more hilly terrain again. Sparsely populated area in Czechia I was cycling through, a lot of old houses, small villages. Another wild camping place in the night. Making some pancakes, learning more to become a camp cook. They didn't come out perfectly and I burnt myself a bit, but I learnt and I can move on.",
+    "youtube": "KEB_wysid3c",
+    "rideData": "https://www.strava.com/activities/1779868879",
+    "icon": "EUp2vid.png",
+    "line": "EUp2"
+  },
+  {
+    "title": "Last Day Of Cycling For A While...",
+    "location": {
+      "lat": 49.724440,
+      "lng": 15.709596
+    },
+    "date": "August 17, 2018",
+    "description": "Omelette for breakfast, long cycling day to Prague. A very hot day as well so I rewarded myself multiple times with good food. Have a little talk about my trip so far and that it has been another amazing experience. Made it to my Airbnb place at night. Very tired.",
+    "youtube": "hjZid5Lbj1g",
+    "rideData": "https://www.strava.com/activities/1779869093",
+    "icon": "EUp2vid.png",
+    "line": "EUp2"
+  },
+  {
+    "title": "",
+    "location": {
+      "lat": 50.075539,
+      "lng": 14.437800
+    },
+    "date": "August 20th, 2018",
+    "description": "A lot happened in Prague. I explored the city, made some friends and went beyond my comfort zone. In this video I explain what happened in Prague.",
+    "youtube": "bFQiymUkpHQ",
+    "links": {
+      "title": "I also made 4 vlogs there:",
+      "links": [{
+        "name": "Finally Reached Prague Center! + A New YouTube Channel!",
+        "link": "https://www.youtube.com/watch?v=uCx9C02N7iE"
+      },
+      {
+        "name": "Exploring The City Of Prague! + AMAZING Drone Footage!!",
+        "link": "https://www.youtube.com/watch?v=5OO9JUqPbkc"
+      },
+      {
+        "name": "Another Day Exploring Prague! + Visiting Communism Museum",
+        "link": "https://www.youtube.com/watch?v=OlOWNaNe6_0"
+      },
+      {
+        "name": "Last Day In Prague 😥 | Exploring Vysehrad Fortress!",
+        "link": "https://www.youtube.com/watch?v=fdtTe8JZawY&t"
+        }
+      ]
+    },
+    "icon": "EUp2H.png",
+    "line": "EUp2"
   }
 ]

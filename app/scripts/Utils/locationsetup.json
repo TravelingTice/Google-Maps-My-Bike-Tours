@@ -2,14 +2,11 @@
   "title": "",
   "location": {
     "lat": ,
-    "lng":
+    "lng": 
   },
   "date": "",
   "description": "",
   "youtube": "",
-  "rideData": "",
-  "icon": "",
-  "line": "",
   "links": {
     "title": "",
     "links": [{
@@ -17,5 +14,8 @@
       "link": ""
       }
     ]
-  }
+  },
+  "rideData": "",
+  "icon": "",
+  "line": ""
 },
