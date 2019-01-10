@@ -1,10 +1,10 @@
 [{
     "title": "I'M HERE!",
     "location": {
-      "lat": 52.189278,
-      "lng": 4.443176
+      "lat": -31.950527,
+      "lng": 115.860458
     },
-    "description": "Back home... but not for long! Soon I'll be going to a different part of the world for a whole new set of adventures. Stay tuned!",
+    "description": "I'm in Perth, Australia for about half a year to kick off my business and have amazing adventures Down Under!",
     "youtube": "CtxBq8-ytqI",
     "icon": "ImHere.png",
     "zIndex": 1000,
@@ -4178,5 +4178,44 @@
     },
     "icon": "EUp2H.png",
     "line": "EUp2"
+  },
+  {
+    "title": "Flying To Australia And Starting A New Life!",
+    "location": {
+      "lat": -31.939315,
+      "lng": 115.965269
+    },
+    "date": "September 20, 2018",
+    "description": "In this episode I fly to Australia with my bike. The bike got transported in a bike box and I had a layover in Jakarta. After I arrived in Perth, Josef and I met up and we cycled to the place Josef was staying at. We spent the night there. The next day we cycled to South Perth to have a great view of the skyline.",
+    "youtube": "fLdAJ-JVNNE",
+    "zIndex": 5,
+    "links": {
+      "title": "Watch all videos from my time in Perth! (September 2018 - Now)",
+      "links": [{
+        "name": "Click here!",
+        "link": "https://www.youtube.com/playlist?list=PLjgLkAIC7y4Gt0tQDPyOizilQbKT1dfwJ"
+        }
+      ]
+    },
+    "icon": "AUH.png"
+  },
+  {
+    "title": "Cycling Around Perth And Looking For An Apartment!",
+    "location": {
+      "lat": -31.976614,
+      "lng": 115.865042
+    },
+    "date": "September 26, 2018",
+    "description": "Cycling around Perth and looking for an apartment to rent for the next 3 months. Also talking about what I'm doing in Perth at the moment and what the plan is for the next 3 months. ",
+    "youtube": "pUKLieA4OA4",
+    "links": {
+      "title": "Watch all videos from my time in Perth! (September 2018 - Now)",
+      "links": [{
+        "name": "Click here!",
+        "link": "https://www.youtube.com/playlist?list=PLjgLkAIC7y4Gt0tQDPyOizilQbKT1dfwJ"
+        }
+      ]
+    },
+    "icon": "AUvid.png"
   }
 ]

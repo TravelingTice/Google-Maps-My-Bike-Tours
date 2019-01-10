@@ -40,7 +40,19 @@ const lineStyles = {
 // Add optional KML Lines
 const kmlLines = {
   EUp1: {
-    url: 'https://travelingtice.com/wp-content/uploads/google-maps/kml/EUp1.kml'
+    url: 'https://travelingtice.com/wp-content/uploads/google-maps/kml/EUp1-3.kml'
+  },
+  EUp2part1: {
+    url: 'https://travelingtice.com/wp-content/uploads/google-maps/kml/EUp2part1.kml'
+  },
+  EUp2part2: {
+    url: 'https://travelingtice.com/wp-content/uploads/google-maps/kml/EUp2part2.kml'
+  },
+  EUp2part3: {
+    url: 'https://travelingtice.com/wp-content/uploads/google-maps/kml/EUp2part3.kml'
+  },
+  EUp2part4: {
+    url: 'https://travelingtice.com/wp-content/uploads/google-maps/kml/EUp2part4.kml'
   }
 }
 

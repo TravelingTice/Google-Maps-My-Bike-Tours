@@ -1,0 +1,475 @@
+<div id="scoped-content">
+  <style type="text/css" scoped>
+    #map {
+      width: 100%;
+      height: 85vh;
+    }
+    #map .infowindow {
+      overflow: hidden;
+      font-family: 'Roboto', Helvetica, Arial, Lucida, sans-serif;
+    }
+    #map .infowindow .heading {
+      margin-bottom: 6px;
+    }
+    #map .infowindow .heading #icon {
+      position: relative;
+      width: auto;
+      height: 30px;
+      top: 4px;
+    }
+    #map .infowindow .heading h1 {
+      display: inline;
+      margin-left: 12px;
+      font-weight: bold;
+      font-size: 24px;
+    }
+    #map .infowindow .main-infowindow-content {
+      margin-top: 5px;
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    #map .infowindow .main-infowindow-content .left-panel {
+      width: 180px;
+    }
+    #map .infowindow .main-infowindow-content .left-panel .date {
+      font-size: 12px;
+      font-weight: 400;
+      margin: 5px 0 0 0;
+    }
+    #map .infowindow .main-infowindow-content .left-panel .description {
+      margin: 3px 5px 0 0;
+      padding-top: 7px;
+      color: #111;
+      font-weight: 400;
+      word-wrap: break-word;
+      border-top: 1px solid #111;
+    }
+    #map .infowindow .main-infowindow-content .left-panel .links a {
+      font-size: 13px;
+      text-decoration: none;
+      color: #00f;
+      line-height: 1.5em;
+    }
+    #map .infowindow .main-infowindow-content .left-panel .links a:hover {
+      color: #51b568;
+    }
+    #map .infowindow .main-infowindow-content .left-panel .links a:before {
+      content: "> ";
+    }
+    #map .infowindow .main-infowindow-content .left-panel .rideData a {
+      text-decoration: none;
+      color: #f00;
+    }
+    #map .infowindow .main-infowindow-content .left-panel .links {
+      border-top: 2px solid #298771;
+    }
+    #map .infowindow .main-infowindow-content .left-panel .rideData {
+      border-top: 2px solid #298771;
+    }
+    #map .infowindow .main-infowindow-content .left-panel .rideData,
+    #map .infowindow .main-infowindow-content .left-panel .links {
+      margin: 10px 5px 0 0;
+      padding: 4px 0;
+    }
+    #map .infowindow .main-infowindow-content .left-panel .rideData p,
+    #map .infowindow .main-infowindow-content .left-panel .links p {
+      font-weight: 500;
+      font-size: 14px;
+    }
+    #map .infowindow .main-infowindow-content img {
+      max-width: 300px;
+      max-height: 200px;
+      margin: 7px 0 7px 5px;
+    }
+    #map .infowindow .main-infowindow-content iframe {
+      margin: 10px 0 5px 5px;
+    }
+    #credits {
+      position: absolute;
+      display: inline-block;
+      border-radius: 5px;
+      background: rgba(255,255,255,0.5);
+      top: 11px;
+      left: 128px;
+      padding: 3px;
+    }
+    #credits img {
+      display: inline-block;
+      position: relative;
+      top: 4px;
+      margin: 0 4px 0 1px;
+      width: 25px;
+      height: 20px;
+    }
+    #credits a {
+      font-family: sans-serif;
+      font-size: 14px;
+      color: #2a62ba;
+    }
+    @media all and (max-width: 700px) {
+      #map .infowindow {
+        max-width: 400px;
+      }
+      #map .infowindow .heading h1 {
+        font-size: 16px;
+        margin-left: 7px;
+      }
+      #map .infowindow .heading #icon {
+        height: 20px;
+      }
+      #map .infowindow .main-infowindow-content {
+        display: block;
+      }
+      #map .infowindow .main-infowindow-content .left-panel {
+        width: 250px;
+        font-size: 13px;
+      }
+      #map .infowindow .main-infowindow-content .left-panel .date {
+        font-size: 11px;
+      }
+      #map .infowindow .main-infowindow-content iframe {
+        width: 250px;
+        height: 141px;
+      }
+      #map .infowindow .main-infowindow-content img {
+        max-width: 250px;
+      }
+    }
+    .below-map {
+      background-color: white;
+      font-size: 17px;
+      font-family: 'Roboto', Helvetica, Arial, Lucida, sans-serif;
+      display: flex;
+    }
+    .below-map .map-options {
+      height: 100%;
+      text-align: center;
+      width: 0;
+      min-width: 90px;
+      margin: auto 0;
+    }
+    .below-map .map-options button {
+      padding: 10px 7px;
+      margin: 10px 5px;
+      border: 3px solid black;
+      border-radius: 2px;
+      background-color: #fff;
+      font-weight: bold;
+      font-size: 14px;
+      color: black;
+    }
+    .below-map .map-legend {
+      margin: 0 auto;
+    }
+    .below-map .map-legend img {
+      padding-top: 10px;
+      max-height: 150px;
+      max-width: 100%;
+    }
+  </style>
+  <div id="map"></div>
+  <div id="credits">
+    <a href="https://ticekralt.com"><img src="https://jayoe.com/wp-content/uploads/google-maps/img/ticekralt.png" alt="Go To Tice Kralt"><span>Made by Tice Kralt</span></a>
+  </div>
+  <div class="below-map">
+    <div class="map-legend">
+      <img src="https://jayoe.com/wp-content/uploads/google-maps/img/longlegend.png" alt="map legend">
+    </div>
+  </div>
+</div>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzDSC3ZUo1GFyGCinNy70i5LajHjn1oOY&callback=initMap" onerror="googleError()"></script>
+<script>
+  /* global google */
+  // The lines object contains all the trips (lines) and those contain all the markers.
+  const lines = {
+    none: [],
+    ImHere: [],
+    country: [],
+    // Add your lines here: LINENAME: [];
+    jayoetour1: [],
+    jayoetour2: [],
+    jayoetour3: [],
+    planned: []
+  };
+  const lineIntervals = {
+    none: 1,
+    ImHere: 1,
+    country: 1,
+    // Add intervals here
+    jayoetour1: 20,
+    jayoetour2: 20,
+    jayoetour3: 20,
+    planned: 1
+  }
+  // Here you can style your lines if you need to
+  const lineStyles = {
+    jayoetour1: {
+      name: 'jayoetour1',
+      strokeWeight: 1.5
+    },
+    jayoetour2: {
+      name: 'jayoetour2',
+      strokeWeight: 1.5
+    },
+    jayoetour3: {
+      name: 'jayoetour3',
+      strokeWeight: 1.5
+    },
+    planned: {
+      name: 'planned',
+      strokeWeight: 1,
+      strokeOpacity: 0.5
+    }
+  }
+  // Add optional KML Lines
+  const kmlLines = {
+  }
+  // urls
+  const _url = 'https://jayoe.com';
+  const iconPath = _url + '/wp-content/uploads/google-maps/icons/';
+  const imgPath = _url + '/wp-content/uploads/google-maps/img/';
+  const jsonPath = _url + '/wp-content/uploads/google-maps/';
+  let map; // Global variables map
+  // Status of the map
+  let mapLoaded = false;
+  // Status of KML layer on the map
+  let isKmlOnMap = false;
+  // Status of country checklist on the map
+  let isChecklist = false;
+  // All of our polylines
+  let polylines = [];
+  // All of our KML layers
+  let kmlLayers = [];
+  // Map gets initialized
+  function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: {
+        lat: 23.713194,
+        lng: 120.940400
+      },
+      zoom: 7
+    });
+    getMarkers();
+    //getKmlLines();
+    //addBtnListeners();
+  }
+  // Get markers from database
+  function getMarkers() {
+    let locations = [];
+    // Get info of all locations
+    fetch(`${jsonPath}locations.json`).then(resp => resp.json()).then(resp => {
+      locations = resp;
+      makeMarkers(locations);
+    });
+  }
+  // Instantiate marker objects from the markers we passed in
+  function makeMarkers(locations) {
+    // Create 1 infowindow so 1 gets shared by all the markers
+    const infoWindow = new google.maps.InfoWindow();
+    locations.forEach((location, i) => {
+      // Check if location has these optional props
+      const links = location.links ? location.links : null;
+      const youtube = location.youtube ? location.youtube : null;
+      const img = location.img ? imgPath + location.img : null;
+      const rideData = location.rideData ? location.rideData : null;
+      const icon = location.icon ? iconPath + location.icon : null;
+      const line = location.line ? location.line : 'none';
+      const zIndex = location.zIndex ? location.zIndex : 1;
+      let animation;
+      if (location.animation === false || location.line === 'country') {
+        animation = null;
+      } else {
+        animation = google.maps.Animation.DROP;
+      }
+      // Create marker object
+      const marker = new google.maps.Marker({
+        map: null,
+        animation,
+        id: i,
+        // Assign props all locations have
+        position: location.location,
+        title: location.title,
+        date: location.date,
+        description: location.description,
+        // Optional props
+        youtube,
+        img,
+        rideData,
+        links,
+        icon,
+        zIndex,
+        line
+      });
+      // Push all markers to appropriate array
+      for (const lineName in lines) {
+        if (marker.line === lineName) {
+          lines[lineName].push(marker)
+        }
+      }
+      // Create click event to open/close infowindow at each marker
+      marker.addListener('click', function() {
+        if (infoWindow.marker != marker) {
+          populateInfoWindow(this, infoWindow);
+          map.addListener('click', function() {
+            infoWindow.close();
+            infoWindow.marker = null;
+          })
+        } else {
+          infoWindow.close();
+          infoWindow.marker = null;
+        }
+      });
+    });
+    openMarkers();
+  }
+  function openMarkers() {
+    // Go through all marker arrays and filter them so right animation is applied.
+    if (!mapLoaded) {
+      let longestArray = [];
+      let longestArrayName;
+      let interval;
+      let longestInterval;
+      for (const line in lines) {
+        const markerArray = lines[line];
+        // Set longestArray to this array if it is the longest
+        if (markerArray.length > longestArray.length) {
+          longestArray = markerArray;
+          longestArrayName = line;
+        }
+        // Choose interval for our arrays
+        for (const thisLine in lineIntervals) {
+          if (longestArrayName === thisLine) {
+            longestInterval = lineIntervals[thisLine];
+          }
+          if (thisLine === line) {
+            if (line !== 'ImHere') {
+              interval = lineIntervals[line];
+              openMarkerArray(markerArray, 0, interval, line)
+            }
+          }
+        }
+      }
+      interval = longestArray.length * longestInterval + 2000;
+      //openImHereMarker(interval);
+    }
+  }
+  // The 'I'm Here' marker will be spawned last
+  // function openImHereMarker(interval) {
+  //   for (const line in lines) {
+  //     if (line === 'ImHere') {
+  //       const ImHereMarker = lines[line];
+  //       openMarkerArray(ImHereMarker, 0, interval, line);
+  //     }
+  //   }
+  //   mapLoaded = true;
+  // }
+    // This sets each marker in the array to map except for the line country!
+  function openMarkerArray(array, i, interval, line) {
+    setTimeout(() => {
+      const marker = array[i];
+      ++i;
+      // For my model, the country markers will not be spawn in the beginning, I have a button for that.
+      if (i <= array.length && line !== 'country') {
+        marker.setMap(map);
+        // Last marker is ImHere, so after this, our map is loaded!
+        if (line === 'ImHere') {
+          mapLoaded = true;
+        }
+        openMarkerArray(array, i, interval, line);
+      } else {
+        switch (line) {
+          case 'none':
+          case 'country':
+          case 'ImHere':
+            // Open no line
+            break;
+          default:
+            openLine(array, line);
+        }
+      }
+    }, interval);
+  }
+  // This one draws the line to the map
+  function openLine(array, line) {
+    const points = [];
+    array.forEach(marker => {
+      points.push(marker.position);
+    });
+    let polylineOptions = {
+      strokeWeight: 1.5,
+      name: line
+    };
+    // Options for the polyline (derived from lineStyles)
+    for (const styleLine in lineStyles) {
+      if (styleLine === line) {
+        polylineOptions = lineStyles[styleLine];
+      }
+    }
+    // Create polyline
+    const polyline = new google.maps.Polyline(polylineOptions);
+    // Set path to path we created using the markers
+    polyline.setPath(points);
+    // Set polyline to our map
+    polyline.setMap(map);
+    // Push to polyline array
+    polylines.push(polyline);
+  }
+  // Open infowindow at marker
+  function populateInfoWindow(marker, infowindow) {
+    // Check to make sure infowindow is not open already on this marker
+    const html = generateHtmlInfowindow(marker);
+    infowindow.marker = marker;
+    infowindow.setContent(html);
+    infowindow.open(map, marker);
+    // make sure marker is properly cleared if infowindow is closed
+    infowindow.addListener('closeclick', () => infowindow.marker = null);
+  }
+  // Return html that is content of our infowindow
+  function generateHtmlInfowindow(marker) {
+    let html = `<div class="infowindow"><div class="heading"><img id="icon" src="${marker.icon}" alt="marker"><h1>${marker.title}</h1></div><div class="main-infowindow-content">`;
+    // Check if marker has description, img, yt etc.. And generate html accordingly
+    // has description
+    if (marker.description) {
+      html += '<div class="left-panel">';
+      // has date
+      if (marker.date) {
+        html += `<p class="date">${marker.date}</p>`;
+      }
+      html += `<p class="description">${marker.description}</p>`;
+    } else if (marker.date) {
+      // has no description but has date
+      html += `<div class="left-panel"><p class="date">${marker.date}</p>`;
+    } else {
+      // has no description and no date
+      html += '<div class="left-panel">';
+    }
+    // has links
+    if (marker.links) {
+      html += `<div class="links"><p>${marker.links.title}</p>`;
+      marker.links.links.forEach(link => {
+        html += `<a href="${link.link}" target="_blank">${link.name}</a><br>`;
+      });
+      html += '</div>';
+    }
+    if (marker.rideData) {
+      html += `<div class="rideData"><a href="${marker.rideData}" target="_blank">View ride data</a></div>`
+    }
+    html += '</div>'
+    if (marker.img) {
+      html += `<img src="${marker.img}" alt="${marker.title}">`;
+    }
+    if (marker.youtube) {
+      html += `<iframe width="391" height="220" src="https://www.youtube.com/embed/${marker.youtube}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+    }
+    html += '</div>';
+    return html;
+  }
+  function googleError() {
+    const theMap = document.getElementById('map');
+    const html = 'Unfortunately the map was not able to load 😢. Try reloading the page. If you are using Safari, Opera or Internet Explorer, it might not work for now. Try using <a href="https://www.google.com/chrome/">Google Chrome</a>.';
+    theMap.innerHTML = html;
+  }
+</script>
